@@ -1,0 +1,12 @@
+{
+  "name": "smartfarmingplatform",
+  "version": "1.0.0",
+  "description": "<<<<<<< HEAD\r # Smart Farming Platform",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

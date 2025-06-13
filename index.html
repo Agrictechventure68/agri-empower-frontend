@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agri_Empower Platform</title>
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+   <!-- Scripts -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">Agri_Empower</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <ul class="nav-social">
+      <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+      <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+      <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+    </ul>
+  </header>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <video autoplay muted loop id="hero-video">
+      <source src="assets/agri_intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Welcome to Agri_Empower</h1>
+      <p>Empowering Farmers with Knowledge and Tools</p>
+      <p>Smart Farming Starts with knowledge, tools, and technology.</p>
+       <p>Training • Disease ID • Marketplace • Financial Access</p>
+      <p>Smart solutions for modern farming — powered by data, driven by innovation.</p>
+      <button onclick="alertWelcome()">Get Started</button>
+      <a href="#mission" class="btn">Discover More</a>
+      <a href="#content" class="cta-button">Explore Features</a>
+    </div>
+  </section>
+<!-- Language Selector -->
+  <div id="language-selector" style="text-align: right; padding: 10px;">
+    <label for="languageSelector">Language:</label>
+    <select id="languageSelector">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="yo">Yoruba</option>
+      <option value="ig">Igbo</option>
+      <option value="ha">Hausa</option>
+      <option value="pidgin">Pidgin English</option>
+    </select>
+  </div>
+   <!-- Mission Section -->
+  <section id="mission" class="mission-section">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to bridge knowledge gaps, simplify farming processes, and connect
+        agricultural stakeholders through practical e-learning, smart diagnostics, and 
+        a vibrant e-commerce ecosystem – empowering every farmer with accessible technology, 
+        data-driven insights, and inclusive opportunities for growth and sustainability.
+      </p>
+    </div>
+  </section>
+     <h3>Online Training</h3>
+        <p>Self-paced agricultural knowledge for all.</p>
+      </div>
+      <div class="card">
+        <h3>Disease Detection</h3>
+        <p>Identify and manage pests and crop and livestock diseases using AI.</p>
+      </div>
+      <div class="card">
+        <h3>Marketplace</h3>
+        <p>Connect with buyers, input sellers, and logistics providers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Section -->
+  <section id="vision" class="vision">
+    <div class="container">
+      <h2>Our Vision</h2>
+      <p>
+        To be the leading digital platform transforming agriculture through smart tools, 
+        inclusive education, and sustainable practices.
+      </p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="section">
+    <div class="container">
+      <h2>Our Products/What We Offer</h2>
+      <ul>
+        <li>Smart diagnostic tools for disease and pest</li>
+        <li>Farming tutorials & e-learning modules</li>
+        <li>E-commerce for seeds, tools & produce</li>
+        <li>>Financial profiling for support</li>
+        <li>Weather & soil condition trackers</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section id="content" class="section">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <p>
+        Agri_Empower provides a full suite of tools and services for farmers and agricultural entrepreneurs:
+      </p>
+      <ul>
+        <li>Customized learning experiences in local languages</li>
+        <li>Access to farming inputs and online marketplaces</li>
+        <li>Tech-enabled farm diagnosis and solutions</li>
+        <li>Community support and mentorship programs</li>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Name: Agri_Empower</p>
+      <p>Email: brightdoroagrictechventure@gmail.com</p>
+      <p>Phone: +234 8026279249; 2347065520223</p>
+      <p>Location: Lagos, Nigeria</p>
+        <textarea placeholder="Kindly leave us a message- whether it's a question, feedback, 
+        inquiry, or partnership opportunity. We are always excited to hear from you 
+        and will respond as soon as possible." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Agrictechventure68. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('languageSelector').addEventListener('change', function() {
+      const selectedLanguage = this.value;
+      console.log(`Language changed to: ${selectedLanguage}`);
+    });
+
+    function alertWelcome() {
+      alert("Welcome to Agri_Empower! Let's start your smart farming journey.");
+    }
+  </script>
+
+</body>
+</html>
