@@ -35,43 +35,91 @@
       <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
     </ul>
   </header>
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <video autoplay muted loop id="hero-video">
-      <source src="assets/agri_intro.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-content">
-      <h1>Welcome to Agri_Empower</h1>
-      <p>Empowering Farmers with Knowledge and Tools</p>
-      <p>Smart Farming Starts with knowledge, tools, and technology.</p>
-       <p>Training • Disease ID • Marketplace • Financial Access</p>
-      <p>Smart solutions for modern farming — powered by data, driven by innovation.</p>
-      <!--Tagline-->
-      <h2 class="tagline">Empowering Farmers with Knowledge, Tools and Market Access</h2>
-      <!--Intro message-->
-      <p class="intro-message">Welcome to Agri_Empower-your digital partner in modern agriculture.
-        Exploring training, connect with buyers, and grow beyond boundaries!</p>
-      <button onclick="alertWelcome()">Get Started</button>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <video controls width="100%" poster="/assets/banner.jpg">
+  <source src="/assets/agri_empower_intro.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+<nav>
+  <a href="index.html">Home</a>
+  <a href="modules.html">Modules</a>
+  <a href="diagnostics.html">Diagnostics</a>
+  <a href="ecommerce.html">Marketplace</a>
+  <a href="profiling.html">Profiling</a>
+</nav>
+<div class="hero-content"></div>
+  <div class="overlay"></div>
+  <h1>Welcome to Agri_Empower</h1>
+  <p>Empowering Farmers with Knowledge and Tools</p>
+  <p>Smart Farming Starts with knowledge, tools, and technology.</p>
+  <p>Training • Disease ID • Marketplace • Financial Access</p>
+  <p>Smart solutions for modern farming — powered by data, driven by innovation.</p>
+  <!--Tagline-->
+  <h2 class="tagline">Empowering Farmers with Knowledge, Tools and Market Access</h2>
+  <!--Intro message-->
+  <p class="intro-message">Welcome to Agri_Empower-your digital partner in modern agriculture.
+    Exploring training, connect with buyers, and grow beyond boundaries!</p>
+  <button onclick="alertWelcome()">Get Started</button>
+  <a href="#mission" class="btn">Discover More</a>
+  <a href="#content" class="cta-button">Explore Features</a>
+</div>
+
+<!-- Training Modules Section -->
+<section id="modules">
+  <h2>Training Modules</h2>
+  <ul>
+    <li><a href="modules/crops_curriculum.pdf" target="_blank">Crops Curriculum (PDF)</a></li>
+    <li><a href="modules/vegetables_curriculum.pdf" target="_blank">Vegetables Curriculum (PDF)</a></li>
+    <li><a href="modules/livestock_curriculum.pdf" target="_blank">Livestock Curriculum (PDF)</a></li>
+    <li><a href="modules/rabbit_curriculum.pdf" target="_blank">Rabbit Farming Guide (PDF)</a></li>
+    <li><a href="modules/ugu_farming_curriculum.pdf" target="_blank">Ugu Farming Curriculum (PDF)</a></li>
+    <li><a href="modules/agritech_vocational_curriculum.pdf" target="_blank">Agritech Vocational Curriculum</a></li>
+  </ul>
+</section>
+
+</section>
+
+<!-- Add Rabbit Rearing Curriculum link to the curriculum section -->
+<li>
+  <a href="assets/slides/rabbit/rabbit_rearing.pdf" target="_blank">Rabbit Rearing Curriculum</a>
+</li>
+
+<!-- Curriculum Section -->
+<section id="curriculum">
+  <h2>📚 Explore Our Curriculum</h2>
+  <p>Download or preview any module below. Start your agribusiness journey now!</p>
+  <h3>Download Processing Modules</h3>
+  <ul>
+    <h2>Download Our Vision Pitch Deck</h2>
+<a href="docs/pitch/Agri_Empower_Pitch_Deck.pdf" target="_blank">
+  View or Download Our Full Vision Pitch Deck (PDF)
+<li>
+  <h2>Download Our Vision Pitch Deck</h2>
+  <a href="docs/pitch/Agri_Empower_Pitch_Deck.pdf" target="_blank">
+    View or Download Our Full Vision Pitch Deck (PDF)
+  </a>
+</li> <li><a href="modules/Agri_Empower_Crop_Processing.pdf" target="_blank">Crop Processing</a></li>
+    <li><a href="modules/Agri_Empower_Vegetable_Processing.pdf" target="_blank">Vegetable Processing</a></li>
+    <li><a href="modules/Agri_Empower_Livestock_Processing.pdf" target="_blank">Livestock Processing</a></li>
+    <li><a href="modules/crops/module1-intro.pdf" target="_blank">Module 1: Introduction to Agribusiness</a></li>
+    <li><a href="modules/vegetables/vmodule1.pdf" target="_blank">V1: Introduction to Vegetable Farming</a></li>
+    <!-- Continue listing modules -->
+    <li><a href="modules/livestock/module1-livestock-intro.pdf" target="_blank">L1: Introduction to Livestock Agribusiness</a></li>
+  </ul>
+</section>
+
 <!-- About Us Section -->
 <section id="about" class="section about">
   <div class="container">
     <h2>About Us</h2>
     <p>
       Agri_Empower is a digital smart farming platform focused on training, disease identification,
-      access to input suppliers, logistics, and market connections for farmers in Africa and beyond.</p>p>
+      access to input suppliers, logistics, and market connections for farmers in Africa and beyond.
     </p>
-    <p>
-      Our team is made up of agricultural experts, software engineers, and rural development advocates
-      passionate about bridging the digital divide in farming through data, design, and inclusiveness.
-    </p>
+    <p>Our team is made up of agricultural experts, software engineers, and rural development advocates
+      passionate about bridging the digital divide in farming through data, design, and inclusiveness.</p>
   </div>
 </section>
-
-      <a href="#mission" class="btn">Discover More</a>
-      <a href="#content" class="cta-button">Explore Features</a>
-    </div>
-  </section>
 <!-- Language Selector -->
   <div id="language-selector" style="text-align: right; padding: 10px;">
     <label for="languageSelector">Language:</label>
@@ -94,9 +142,11 @@
         a vibrant e-commerce ecosystem – empowering every farmer with accessible technology, 
         data-driven insights, and inclusive opportunities for growth and sustainability.
       </p>
-    </div>
-  </section>
-     <h3>Online Training</h3>
+  <!-- Features Section -->
+  <section id="features" class="section features">
+    <div class="container">
+      <div class="card">
+        <h3>Online Training</h3>
         <p>Self-paced agricultural knowledge for all.</p>
       </div>
       <div class="card">
@@ -109,6 +159,8 @@
       </div>
     </div>
   </section>
+    </div>
+  </section>
 
   <!-- Vision Section -->
   <section id="vision" class="vision">
@@ -119,18 +171,18 @@
         inclusive education, and sustainable practices.
       </p>
     </div>
-  </section>
-
-  <!-- Products Section -->
-  <section id="products" class="section">
-    <div class="container">
-      <h2>Our Products/What We Offer</h2>
       <ul>
         <li>Smart diagnostic tools for disease and pest</li>
         <li>Farming tutorials & e-learning modules</li>
         <li>E-commerce for seeds, tools & produce</li>
+        <li>Financial profiling for support</li>
+        <li>Weather & soil condition trackers</li>
+      </ul>
+    </div>
+  </section>
         <li>>Financial profiling for support</li>
         <li>Weather & soil condition trackers</li>
+      </li>
       </ul>
     </div>
   </section>
@@ -151,17 +203,18 @@
       </ul>
     </div>
   </section>
-  
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Us</h2>
       <p>Name: Agri_Empower</p>
       <p>Email: brightdoroagrictechventure@gmail.com</p>
       <p>Phone: +234 8026279249; 2347065520223</p>
       <p>Location: Lagos, Nigeria</p>
+      <form>
         <textarea placeholder="Kindly leave us a message- whether it's a question, feedback, 
         inquiry, or partnership opportunity. We are always excited to hear from you 
+        and will respond as soon as possible." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
         and will respond as soon as possible." required></textarea>
       <button type="submit">Send Message</button>
     </form>
