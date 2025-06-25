@@ -4,33 +4,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Agri_Empower Curriculum Viewer Section -->
-  <section class="p-6">
-    <h2 class="text-2xl font-bold text-green-700 mb-4">📚 Agri_Empower Curriculum Viewer</h2>
-    <div class="space-y-4">
-      <details class="bg-white shadow rounded-lg p-4">
-        <summary class="cursor-pointer text-lg font-semibold text-green-800">🌿 Ugu (Fluted Pumpkin) Farming</summary>
-        <div class="mt-2 text-sm text-gray-700">
-          <p>Learn about land prep, seed selection, watering, pest management, value chains, and commercial uses of Ugu.</p>
-          <a href="/public/pdfs/ugu_farming_module.pdf" class="text-green-600 underline">📥 Download PDF</a>
-        </div>
-      </details>
-      <details class="bg-white shadow rounded-lg p-4">
-        <summary class="cursor-pointer text-lg font-semibold text-green-800">🐐 Sheep & Goat Farming</summary>
-        <div class="mt-2 text-sm text-gray-700">
-          <p>Explore breed selection, housing, nutrition, health care, and value chains for small ruminants.</p>
-          <a href="/pdfs/sheep_goat_farming.pdf" class="text-green-600 underline">📥 Download PDF</a>
-        </div>
-      </details>
-      <details class="bg-white shadow rounded-lg p-4">
-        <summary class="cursor-pointer text-lg font-semibold text-green-800">🏡 Greenhouse Farming</summary>
-        <div class="mt-2 text-sm text-gray-700">
-          <p>Controlled environment farming for vegetables and high-value crops with irrigation, sensors, and pest control.</p>
-          <a href="/pdfs/greenhouse_farming.pdf" class="text-green-600 underline">📥 Download PDF</a>
-        </div>
-      </details>
-    </div>
-  </section> <!-- Agri_Empower Curriculum Viewer Section -->
+  <title>Curriculum Viewer | Agri_Empower</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f4f9f4; }
+    h1 { color: #2e7d32; }
+    .pdf-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 2rem; }
+    .pdf-card {
+      background: white; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .pdf-card:hover { transform: scale(1.02); }
+    .pdf-card h3 { margin-bottom: 0.5rem; }
+    .pdf-card a { color: #ffffff; background: #388e3c; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; }
+    .pdf-card a:hover { background: #2e7d32; }
+  </style>
+  <!-- Add Curriculum Viewer Button to Navigation -->
+  <nav style="margin-top: 1rem; margin-bottom: 1rem; text-align: right;">
+    <a href="curriculum_viewer.html" class="btn">📚 Curriculum Viewer</a>
+  </nav>
   <section class="p-6">
     <h2 class="text-2xl font-bold text-green-700 mb-4">📚 Agri_Empower Curriculum Viewer</h2>
     <div class="space-y-4">
