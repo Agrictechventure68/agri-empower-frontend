@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Rabbit Farming Guide",
+        "description": "Comprehensive rearing, breeding, housing, and feeding strategies.",
+        "link": "public/pdfs/Rabbit_Farming.pdf"
+    },
+    {
+        "title": "Ugu Farming",
+        "description": "Fluted pumpkin guide for leaf and seed production.",
+        "link": "public/pdfs/Ugu_Farming.pdf"
+    },
+    {
+        "title": "Greenhouse Farming",
+        "description": "Controlled environment farming modules and practices.",
+        "link": "public/pdfs/Greenhouse_Farming.pdf"
+    }
+]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disease & Pest Diagnostic Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="diagnostic-style.css">
+</head>
+<body>
+  <header>
+    <h1>Disease & Pest Diagnostic Tool</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="curriculum_viewer.html">Curriculum</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="diagnostic-form">
+      <label for="crop-select">Select Crop:</label>
+      <select id="crop-select">
+        <option value="">--Choose Crop--</option>
+        <option value="maize">Maize</option>
+        <option value="tomato">Tomato</option>
+        <option value="cassava">Cassava</option>
+        <option value="rice">Rice</option>
+        <option value="pepper">Pepper</option>
+        <option value="fluted_pumpkin">Fluted Pumpkin (Ugu)</option>
+      </select>
+
+      <label for="symptom-select">Select Symptom:</label>
+      <select id="symptom-select">
+        <option value="">--Choose Symptom--</option>
+        <option value="yellowing leaves">Yellowing Leaves</option>
+        <option value="leaf spots">Leaf Spots</option>
+        <option value="wilting">Wilting</option>
+        <option value="stunted growth">Stunted Growth</option>
+        <option value="insect holes">Holes in Leaves</option>
+      </select>
+
+      <button onclick="diagnose()">Diagnose</button>
+    </section>
+
+    <section id="result-display" class="diagnostic-result">
+      <!-- Diagnosis results will show here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Agri_Empower Initiative | Bright Doro AgricTech Venture</p>
+  </footer>
+
+  <script src="diagnostic.js"></script>
+</body>
+</html>
