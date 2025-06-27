@@ -10,6 +10,8 @@
 <body>
   <header>
     <h1>Disease & Pest Diagnostic Tool</h1>
+    <p>Select a crop,vegetables, livestock and disease symptoms for diagnosis</p>
+  </header>
     <nav>
       <a href="index.html">Home</a>
       <a href="curriculum_viewer.html">Curriculum</a>
@@ -20,14 +22,19 @@
 
   <main>
     <section class="diagnostic-form">
-      <label for="crop-select">Select Crop:</label>
-      <select id="crop-select">
+      <label for="crop-select, livestock-select">Select Crop:</label>
+      <select id="crop-select",livestock-select>
         <option value="">--Choose Crop--</option>
+        <option value="goat">Goat</option>
         <option value="maize">Maize</option>
         <option value="tomato">Tomato</option>
         <option value="cassava">Cassava</option>
         <option value="rice">Rice</option>
         <option value="pepper">Pepper</option>
+        <option value="goat">Goat</option>
+<option value="sheep">Sheep</option>
+<option value="rabbit">Rabbit</option>
+<option value="ugu">Ugu</option>
         <option value="fluted_pumpkin">Fluted Pumpkin (Ugu)</option>
       </select>
 
@@ -40,7 +47,9 @@
         <option value="stunted growth">Stunted Growth</option>
         <option value="insect holes">Holes in Leaves</option>
       </select>
-
+<div id="symptom-suggestions" class="symptom-hint">
+  <strong>Common Symptoms:</strong> <span id="symptom-list">Select an item above to see suggestions.</span>
+</div>
       <button onclick="diagnose()">Diagnose</button>
     </section>
 

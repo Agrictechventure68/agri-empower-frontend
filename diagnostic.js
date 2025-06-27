@@ -42,4 +42,39 @@ function diagnose() {
   }
 
   resultDisplay.style.display = 'block';
+}document.getElementById('crop').addEventListener('change', function () {
+  const selected = this.value;
+  const suggestionBox = document.getElementById('symptom-list');
+
+  const suggestions = {
+    ugu: ["yellow leaves", "leaf holes", "wilting", "powdery spots", "root rot"],
+    rice: ["stunted growth", "brown spots", "leaf curling", "grain discoloration"],
+    goat: ["coughing", "diarrhea", "nasal discharge", "loss of appetite", "swollen joints"],
+    sheep: ["lameness", "wool loss", "diarrhea", "eye discharge", "bloating"],
+    rabbit: ["soft stool", "hair loss", "head tilt", "runny nose", "not eating"]
+  };
+
+  suggestionBox.textContent = suggestions[selected]?.join(', ') || "Select a valid option to view symptoms.";
+});
+else if (crop === 'ugu' && symptoms.includes('holes')) {
+  result = "Likely pest infestation by caterpillars or beetles. Consider neem-based spray.";
+} else if (crop === 'goat' && symptoms.includes('cough') || symptoms.includes('nasal')) {
+  result = "Could be pneumonia. Keep animal warm, dry, and consult vet for antibiotics.";
+} else if (crop === 'rabbit' && symptoms.includes('diarrhea')) {
+  result = "Likely due to diet imbalance or infection. Ensure clean water and check feed.";
 }
+document.getElementById('diagnostic-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const crop = document.getElementById('crop').value;
+  const symptoms = document.getElementById('symptoms').value.toLowerCase();
+  let result = "No diagnosis available. Try using specific symptoms.";
+
+  if (crop === 'ugu' && symptoms.includes('yellow')) {
+    result = "Likely Nitrogen Deficiency or Fungal Infection. Apply compost and copper-based fungicide.";
+  } else if (crop === 'rice' && symptoms.includes('brown spots')) {
+    result = "Possible Rice Blast. Use resistant varieties and apply fungicide.";
+  } else if (crop === 'rabbit' && symptoms.includes('sore')) {
+    result = "Check for Sore Hocks. Ensure cage flooring is smooth and clean.";
+  }
+
+  document.getElementById('result').innerText = result;
