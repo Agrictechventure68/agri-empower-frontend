@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agri_Empower E-Commerce</title>
+  <link rel="stylesheet" href="ecommerce-style.css" />
+  <link rel="stylesheet" href="ecommerce-style.css" />
+  <!-- Add icon library for cart -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    - 1. Global Navigation Bar -->
+  <!-- ========================= -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../curriculum_viewer.html">Curriculum</a></li>
+      <li><a href="../modules/diagnostic/diagnostic.html">Diagnostics</a></li>
+      <li><a href="../modules/profile.html">Profile</a></li>
+      <li class="active"><a href="ecommerce.html">Marketplace</a></li>
+      <li class="cart-icon"><a href="#"><i class="fa fa-shopping-cart"></i><span>0</span></a></li>
+    </ul>
+  </nav>
+   <!-- 2. E-Commerce Hero / Intro Section   -->
+  <!-- ====================================== -->
+  <header class="ecom-hero">
+    <h1>Welcome to the Agri_Empower Marketplace</h1>
+    <p>Connect directly with producers—buy fresh farm produce, livestock products, and agro-inputs safely and sustainably.</p>
+  </header>
+    <h1>🛒 Agri_Empower E-Commerce Hub</h1>
+    <p>Buy & Sell Farm Products and Inputs</p>
+  </header>
+ 3. Search & Filter Controls           -->
+  <!-- ====================================== -->
+  <section class="ecom-controls">
+    <input type="text" id="searchInput" placeholder="🔍 Search products...">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="vegetables">Vegetables</option>
+      <option value="livestock">Livestock</option>
+      <option value="fertilizer">Fertilizers</option>
+      <option value="services">Services</option>
+    </select>
+  </section>
+  <main>
+    <!-- ========================= -->
+  <!-- 4. Product Grid Container -->
+  <!-- ========================= -->
+  <main>
+    <section class="product-listing">
+      <div class="products" id="productContainer">
+        <!-- cards injected via ecommerce.js -->
+      </div>
+    </section>
+  </main>
+   <!-- ========================= -->
+  <!-- 5. Footer with QR & Info -->
+  <!-- ========================= -->
+  <footer class="ecom-footer">
+    <div class="footer-content">
+      <div>
+        <h4>Contact Us</h4>
+        <p>Email: agriempower4dcentury@gmail.com</p>
+        <p>Phone: +2347065520223, +2348026279249</p>
+      </div>
+      <div>
+        <h4>Scan to Visit</h4>
+        <img src="../assets/qr-code-agri.png" alt="QR Code to Agri_Empower" width="100">
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Agri_Empower Initiative</p>
+  </footer>
+    <section class="product-listing">
+      <h2>Marketplace</h2>
+      <div class="products" id="productContainer"></div>
+    </section>
+  </main>
+ <!-- ====================================== -->
+  <!-- 6. Hook in Your Existing JS File      -->
+  <!-- ====================================== -->
+  <script src="ecommerce.js"></script>
+  <script>
+    // Simple JS to filter & search
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const productContainer = document.getElementById('productContainer');
+
+    function filterProducts() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const category = categoryFilter.value;
+      Array.from(productContainer.children).forEach(card => {
+        const name = card.querySelector('h3').innerText.toLowerCase();
+        const price = card.querySelector('p').innerText.toLowerCase();
+        const cat = card.dataset.category; // ensure you set data-category in ecommerce.js
+        const matchesSearch = name.includes(searchTerm) || price.includes(searchTerm);
+        const matchesCategory = (category === 'all' || cat === category);
+        card.style.display = (matchesSearch && matchesCategory) ? '' : 'none';
+      });
+    }
+
+    searchInput.addEventListener('input', filterProducts);
+    categoryFilter.addEventListener('change', filterProducts);
+  </script>
+</body>
+</html>
+  <script src="ecommerce.js"></script>
+</body>
+</html>
