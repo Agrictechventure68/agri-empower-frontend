@@ -19,51 +19,74 @@
     .pdf-card a { color: #ffffff; background: #388e3c; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; }
     .pdf-card a:hover { background: #2e7d32; }
   </style>
-  <!-- Add Curriculum Viewer Button to Navigation -->
-  <nav style="margin-top: 1rem; margin-bottom: 1rem; text-align: right;">
-    <a href="curriculum_viewer.html" class="btn">📚 Curriculum Viewer</a>
-  <div class="bg-white bg-opacity-80 text-gray-900 p-4 rounded-xl shadow-md">
-    <h3 class="text-xl font-semibold">Rabbit Farming</h3>
-    <p class="text-sm">Learn all steps of raising rabbits...</p>
-  <a href="curriculum_viewer.html">Curriculum Viewer</a> <a href="curriculum_viewer.html" class="btn">📚 Curriculum Viewer</a> <section class="p-6"></section>
-  <h2 class="text-2xl font-bold text-green-700 mb-4">📚 Agri_Empower Curriculum Viewer</h2>
-  <div class="space-y-4">
-    <details class="bg-white shadow rounded-lg p-4">
-      <summary class="cursor-pointer text-lg font-semibold text-green-800">🌿 Ugu (Fluted Pumpkin) Farming</summary>
-      <div class="mt-2 text-sm text-gray-700">
-        <a href="modules/diagnostic/diagnostic.html" class="btn">Disease & Pest Diagnostic Tool</a> <p>Learn about land prep, seed selection, watering, pest management, value chains, and commercial uses of Ugu.</p>
-        <a href="/pdfs/ugu_farming_module.pdf" class="text-green-600 underline">📥 Download PDF</a>
-      </div>
-    </details>
-    <details class="bg-white shadow rounded-lg p-4">
-      <summary class="cursor-pointer text-lg font-semibold text-green-800">🐐 Sheep & Goat Farming</summary>
-      <div class="mt-2 text-sm text-gray-700">
-        <p>Explore breed selection, housing, nutrition, health care, and value chains for small ruminants.</p>
-        <a href="/pdfs/sheep_goat_farming.pdf" class="text-green-600 underline">📥 Download PDF</a>
-      </div>
-    </details>
-    <details class="bg-white shadow rounded-lg p-4">
-      <summary class="cursor-pointer text-lg font-semibold text-green-800">🏡 Greenhouse Farming</summary>
-      <div class="mt-2 text-sm text-gray-700">
-        <p>Controlled environment farming for vegetables and high-value crops with irrigation, sensors, and pest control.</p>
-        <a href="/pdfs/greenhouse_farming.pdf" class="text-green-600 underline">📥 Download PDF</a>
-      </div>
-    </details>
-  </div>
   <!-- Fonts & Styles -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
-   <!-- Scripts -->
+  <!-- Scripts -->
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Add Curriculum Viewer Button to Navigation -->
+  <nav style="margin-top: 1rem; margin-bottom: 1rem; text-align: right;">
+    <a href="curriculum_viewer.html" class="btn">📚 Curriculum Viewer</a>
+  </nav>
+  <!-- Example Curriculum Cards (move out of head) -->
+  <div class="bg-white bg-opacity-80 text-gray-900 p-4 rounded-xl shadow-md">
+    <h3 class="text-xl font-semibold">Rabbit Farming</h3>
+    <p class="text-sm">Learn all steps of raising rabbits...</p>
+    <a href="curriculum_viewer.html">Curriculum Viewer</a>
+    <a href="curriculum_viewer.html" class="btn">📚 Curriculum Viewer</a>
+  </div>
+  <section class="p-6">
+    <h2 class="text-2xl font-bold text-green-700 mb-4">📚 Agri_Empower Curriculum Viewer</h2>
+    <div class="space-y-4">
+      <details class="bg-white shadow rounded-lg p-4">
+        <summary class="cursor-pointer text-lg font-semibold text-green-800">🌿 Ugu (Fluted Pumpkin) Farming</summary>
+        <div class="mt-2 text-sm text-gray-700">
+          <a href="modules/diagnostic/diagnostic.html" class="btn">Disease & Pest Diagnostic Tool</a>
+          <p>Learn about land prep, seed selection, watering, pest management, value chains, and commercial uses of Ugu.</p>
+          <a href="/pdfs/ugu_farming_module.pdf" class="text-green-600 underline">📥 Download PDF</a>
+        </div>
+      </details>
+      <details class="bg-white shadow rounded-lg p-4">
+        <summary class="cursor-pointer text-lg font-semibold text-green-800">🐐 Sheep & Goat Farming</summary>
+        <div class="mt-2 text-sm text-gray-700">
+          <p>Explore breed selection, housing, nutrition, health care, and value chains for small ruminants.</p>
+          <a href="/pdfs/sheep_goat_farming.pdf" class="text-green-600 underline">📥 Download PDF</a>
+        </div>
+      </details>
+      <details class="bg-white shadow rounded-lg p-4">
+        <summary class="cursor-pointer text-lg font-semibold text-green-800">🏡 Greenhouse Farming</summary>
+        <div class="mt-2 text-sm text-gray-700">
+          <p>Controlled environment farming for vegetables and high-value crops with irrigation, sensors, and pest control.</p>
+          <a href="/pdfs/greenhouse_farming.pdf" class="text-green-600 underline">📥 Download PDF</a>
+        </div>
+      </details>
+    </div>
+  </section>
   <!-- Navigation Bar -->
   <header class="navbar">
     <div class="logo">Agri_Empower</div>
     <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+      <a href="modules/profile/profile.html">Farmer Profile</a>
+      <section id="quick-links" class="dashboard-cards">
+        <div class="card">
+          <img src="assets/icons/profile-icon.png" alt="Profile">
+          <h3>Your Profile</h3>
+          <p>View and update your farming & financial details.</p>
+          <a href="modules/profile/profile.html" class="btn">Go to Profile</a>
+        </div>
+        <!-- other cards… -->
+      </section> <ul></ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="curriculum_viewer.html">Curriculum</a></li>
+          <li><a href="modules/diagnostic/diagnostic.html">Diagnostics</a></li>
+          <li><a href="modules/ecommerce/ecommerce.html">Marketplace</a></li>
+          <li><a href="modules/profile/profile.html">Profile</a></li>
+          <li><a href="modules/video/video.html">Media</a></li>
+        </ul>
+      </nav> <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#mission">Mission</a></li>
         <li><a href="#vision">Vision</a></li>
@@ -121,34 +144,26 @@
     <li><a href="modules/vegetables_curriculum.pdf" target="_blank">Vegetables Curriculum (PDF)</a></li>
     <li><a href="modules/livestock_curriculum.pdf" target="_blank">Livestock Curriculum (PDF)</a></li>
     <li><a href="modules/rabbit_curriculum.pdf" target="_blank">Rabbit Farming Guide (PDF)</a></li>
-    <li><a href="modules/ugu_farming_curriculum.pdf" target="_blank">Ugu Farming Curriculum (PDF)</a></li>
-    <li><a href="modules/agritech_vocational_curriculum.pdf" target="_blank">Agritech Vocational Curriculum</a></li>
-  </ul>
-</section>
-
-</section>
-
-<!-- Add Rabbit Rearing Curriculum link to the curriculum section -->
-<li>
-  <a href="assets/slides/rabbit/rabbit_rearing.pdf" target="_blank">Rabbit Rearing Curriculum</a>
-</li>
-
 <!-- Curriculum Section -->
 <section id="curriculum">
   <h2>📚 Explore Our Curriculum</h2>
   <p>Download or preview any module below. Start your agribusiness journey now!</p>
   <h3>Download Processing Modules</h3>
   <ul>
-    <h2>Download Our Vision Pitch Deck</h2>
-<a href="docs/pitch/Agri_Empower_Pitch_Deck.pdf" target="_blank">
-  View or Download Our Full Vision Pitch Deck (PDF)
-<li>
-  <h2>Download Our Vision Pitch Deck</h2>
-  <a href="docs/pitch/Agri_Empower_Pitch_Deck.pdf" target="_blank">
-    View or Download Our Full Vision Pitch Deck (PDF)
-  </a>
-</li> <li><a href="modules/Agri_Empower_Crop_Processing.pdf" target="_blank">Crop Processing</a></li>
+    <li>
+      <a href="docs/pitch/Agri_Empower_Pitch_Deck.pdf" target="_blank">
+        View or Download Our Full Vision Pitch Deck (PDF)
+      </a>
+    </li>
+    <li><a href="modules/Agri_Empower_Crop_Processing.pdf" target="_blank">Crop Processing</a></li>
     <li><a href="modules/Agri_Empower_Vegetable_Processing.pdf" target="_blank">Vegetable Processing</a></li>
+    <li><a href="modules/Agri_Empower_Livestock_Processing.pdf" target="_blank">Livestock Processing</a></li>
+    <li><a href="modules/crops/module1-intro.pdf" target="_blank">Module 1: Introduction to Agribusiness</a></li>
+    <li><a href="modules/vegetables/vmodule1.pdf" target="_blank">V1: Introduction to Vegetable Farming</a></li>
+    <li><a href="modules/livestock/module1-livestock-intro.pdf" target="_blank">L1: Introduction to Livestock Agribusiness</a></li>
+    <li><a href="assets/slides/rabbit/rabbit_rearing.pdf" target="_blank">Rabbit Rearing Curriculum</a></li>
+  </ul>
+</section>
     <li><a href="modules/Agri_Empower_Livestock_Processing.pdf" target="_blank">Livestock Processing</a></li>
     <li><a href="modules/crops/module1-intro.pdf" target="_blank">Module 1: Introduction to Agribusiness</a></li>
     <li><a href="modules/vegetables/vmodule1.pdf" target="_blank">V1: Introduction to Vegetable Farming</a></li>
