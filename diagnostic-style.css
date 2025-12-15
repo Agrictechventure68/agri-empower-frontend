@@ -34,3 +34,7 @@
   padding: 8px;
   border-left: 3px solid #4CAF50;
 }
+diagnosti.c-result.error {
+  background: #ffecec;
+  border-left: 4px solid #d32f2f;
+}
