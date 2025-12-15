@@ -1,0 +1,23 @@
+‎{
+‎  "loss_of_appetite": {
+‎    "issue": "Digestive problem or stress",
+‎    "treatment": "Check feed quality, ensure clean water, reduce stress. If persistent, consult a vet."
+‎  },
+‎  "diarrhea": {
+‎    "issue": "Enteritis or poor diet",
+‎    "treatment": "Remove watery vegetables, provide hay only, isolate affected rabbit."
+‎  },
+‎  "runny_nose": {
+‎    "issue": "Snuffles (respiratory infection)",
+‎    "treatment": "Improve ventilation, isolate rabbit, seek veterinary antibiotics."
+‎  },
+‎  "hair_loss": {
+‎    "issue": "Mange or fungal infection",
+‎    "treatment": "Apply anti-mange treatment, clean housing, isolate infected rabbit."
+‎  },
+‎  "lethargy": {
+‎    "issue": "Heat stress or illness",
+‎    "treatment": "Move to cool area, provide clean water, observe closely and consult a vet."
+‎  }
+‎}
+‎
