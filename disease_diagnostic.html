@@ -1,67 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Disease & Pest Diagnostic Tool</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="diagnostic-style.css">
-</head>
-<body>
-  <header>
-    <h1>Disease & Pest Diagnostic Tool</h1>
-    <p>Select a crop,vegetables, livestock and disease symptoms for diagnosis</p>
-  </header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="curriculum_viewer.html">Curriculum</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="diagnostic-form">
-      <label for="crop-select, livestock-select">Select Crop:</label>
-      <select id="crop-select",livestock-select>
-        <option value="">--Choose Crop--</option>
-        <option value="goat">Goat</option>
-        <option value="maize">Maize</option>
-        <option value="tomato">Tomato</option>
-        <option value="cassava">Cassava</option>
-        <option value="rice">Rice</option>
-        <option value="pepper">Pepper</option>
-        <option value="goat">Goat</option>
-<option value="sheep">Sheep</option>
-<option value="rabbit">Rabbit</option>
-<option value="ugu">Ugu</option>
-        <option value="fluted_pumpkin">Fluted Pumpkin (Ugu)</option>
-      </select>
-
-      <label for="symptom-select">Select Symptom:</label>
-      <select id="symptom-select">
-        <option value="">--Choose Symptom--</option>
-        <option value="yellowing leaves">Yellowing Leaves</option>
-        <option value="leaf spots">Leaf Spots</option>
-        <option value="wilting">Wilting</option>
-        <option value="stunted growth">Stunted Growth</option>
-        <option value="insect holes">Holes in Leaves</option>
-      </select>
-<div id="symptom-suggestions" class="symptom-hint">
-  <strong>Common Symptoms:</strong> <span id="symptom-list">Select an item above to see suggestions.</span>
-</div>
-      <button onclick="diagnose()">Diagnose</button>
-    </section>
-
-    <section id="result-display" class="diagnostic-result">
-      <!-- Diagnosis results will show here -->
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Agri_Empower Initiative | Bright Doro AgricTech Venture</p>
-  </footer>
-
-  <script src="diagnostic.js"></script>
-</body>
-</html>
+‎<!DOCTYPE html>
+‎<html lang="en">
+‎<head>
+‎  <meta charset="UTF-8">
+‎  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎  <title>Disease & Pest Diagnostic Tool</title>
+‎  <link rel="stylesheet" href="style.css">
+‎  <link rel="stylesheet" href="diagnostic-style.css">
+‎</head>
+‎
+‎<body>
+‎
+‎<header>
+‎  <h1>Disease & Pest Diagnostic Tool</h1>
+‎  <p>Select a crop or livestock and symptoms for diagnosis</p>
+‎</header>
+‎
+‎<nav>
+‎  <a href="index.html">Home</a>
+‎  <a href="curriculum_viewer.html">Curriculum</a>
+‎  <a href="about.html">About</a>
+‎  <a href="contact.html">Contact</a>
+‎</nav>
+‎
+‎<main>
+‎  <section class="diagnostic-form">
+‎
+‎    <!-- CATEGORY -->
+‎    <label for="category-select">Select Category:</label>
+‎    <select id="category-select">
+‎      <option value="">--Choose Category--</option>
+‎      <option value="crop">Crop / Vegetable</option>
+‎      <option value="livestock">Livestock</option>
+‎    </select>
+‎
+‎    <!-- ITEM -->
+‎    <label for="item-select">Select Item:</label>
+‎    <select id="item-select" disabled>
+‎      <option value="">--Select Category First--</option>
+‎    </select>
+‎
+‎    <!-- SYMPTOMS -->
+‎    <label for="symptom-select">Select Symptom:</label>
+‎    <select id="symptom-select" disabled>
+‎      <option value="">--Select Item First--</option>
+‎    </select>
+‎
+‎    <div id="symptom-suggestions" class="symptom-hint">
+‎      <strong>Common Symptoms:</strong>
+‎      <span id="symptom-list">Choose an item to see symptoms.</span>
+‎    </div>
+‎
+‎    <button id="diagnoseBtn">Diagnose</button>
+‎  </section>
+‎
+‎  <section id="result-display" class="diagnostic-result">
+‎    <!-- Diagnosis result -->
+‎  </section>
+‎</main>
+‎
+‎<footer>
+‎  <p>&copy; 2025 Agri_Empower Initiative | Bright Doro AgricTech Venture</p>
+‎</footer>
+‎
+‎<script src="diagnostic.js"></script>
+‎</body>
+‎</html>
+‎
