@@ -1,35 +1,47 @@
-console.log("Rabbit module loaded");
+console.log("Rabbit Health Diagnostic loaded");
 
-/* Sample Rabbit Data */
-const rabbitBreeds = [
-  "New Zealand White",
-  "Californian",
-  "Dutch",
-  "Chinchilla",
-  "Flemish Giant"
-];
+/* Rabbit health knowledge base */
+const rabbitDiagnostics = {
+  loss_of_appetite: {
+    issue: "Digestive problem or stress",
+    treatment: "Check feed quality, ensure clean water, reduce stress. If persistent, consult a vet."
+  },
+  diarrhea: {
+    issue: "Enteritis or poor diet",
+    treatment: "Remove watery vegetables, provide hay only, isolate affected rabbit."
+  },
+  runny_nose: {
+    issue: "Snuffles (respiratory infection)",
+    treatment: "Improve ventilation, isolate rabbit, seek veterinary antibiotics."
+  },
+  hair_loss: {
+    issue: "Mange or fungal infection",
+    treatment: "Apply anti-mange treatment, clean housing, isolate infected rabbit."
+  },
+  lethargy: {
+    issue: "Heat stress or illness",
+    treatment: "Move to cool area, provide clean water, observe closely and consult a vet."
+  }
+};
 
-const rabbitRecords = [
-  "Buck – 6 months – Healthy",
-  "Doe – 8 months – Pregnant",
-  "Doe – 1 year – Nursing",
-  "Grower – 3 months – Weaning stage"
-];
-
-/* Inject data after page loads */
 document.addEventListener("DOMContentLoaded", () => {
-  const breedList = document.getElementById("breedList");
-  const recordList = document.getElementById("recordList");
+  const diagnoseBtn = document.getElementById("diagnoseBtn");
+  const symptomSelect = document.getElementById("symptomSelect");
+  const result = document.getElementById("diagnosisResult");
 
-  rabbitBreeds.forEach(breed => {
-    const li = document.createElement("li");
-    li.textContent = breed;
-    breedList.appendChild(li);
-  });
+  diagnoseBtn.addEventListener("click", () => {
+    const symptom = symptomSelect.value;
 
-  rabbitRecords.forEach(record => {
-    const li = document.createElement("li");
-    li.textContent = record;
-    recordList.appendChild(li);
+    if (!symptom) {
+      result.innerHTML = "⚠️ Please select a symptom.";
+      return;
+    }
+
+    const diagnosis = rabbitDiagnostics[symptom];
+
+    result.innerHTML = `
+      <strong>Possible Issue:</strong> ${diagnosis.issue}<br>
+      <strong>Recommended Action:</strong> ${diagnosis.treatment}
+    `;
   });
 });
