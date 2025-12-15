@@ -3,79 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Curriculum Viewer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 32px;
-            background: #f8f9fa;
-        }
-        h1 {
-            text-align: center;
-            color: #2d3e50;
-        }
-        #curriculum-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 32px;
-        }
-        .curriculum-card {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            padding: 20px;
-            width: 300px;
-            box-sizing: border-box;
-            transition: box-shadow 0.2s;
-        }
-        .curriculum-card:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-        }
-        .curriculum-card h3 {
-            margin-top: 0;
-            color: #1976d2;
-        }
-        .curriculum-card a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #388e3c;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .curriculum-card a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Curriculum Viewer</h1>
-    <div id="curriculum-list">
-        <!-- Curriculum cards will be injected here -->
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch('public/curriculum-data.json')
-                .then(response => response.json())
-                .then(data => {
-                    const list = document.getElementById('curriculum-list');
-                    list.innerHTML = ''; // Prevent duplication
-                    data.forEach(item => {
-                        const card = document.createElement('div');
-                        card.className = 'curriculum-card';
-                        card.innerHTML = `
-                            <h3>${item.title}</h3>
-                            <p>${item.description}</p>
-                            ${item.link ? `<a href="${item.link}" target="_blank">View PDF</a>` : ''}
-                        `;
-                        list.appendChild(card);
-                    });
-                })
-                .catch(err => {
-                    console.error('Error loading curriculum:', err);
-                });
-        });
-    </script>
+
+<h1>Curriculum Viewer</h1>
+
+<div id="curriculum-list"></div>
+
+<script src="js/curriculum.js"></script>
 </body>
 </html>
