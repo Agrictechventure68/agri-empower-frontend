@@ -1,80 +1,120 @@
-function diagnose() {
-  const crop = document.getElementById('crop-select').value;
-  const symptom = document.getElementById('symptom-select').value;
-  const resultDisplay = document.getElementById('result-display');
+console.log("Diagnostic engine loaded");
 
-  if (!crop || !symptom) {
-    resultDisplay.innerHTML = `<p>Please select both crop and symptom.</p>`;
-    resultDisplay.style.display = 'block';
+// ================= DATA =================
+const diagnosticData = {
+  crop: {
+    maize: {
+      "yellowing leaves": {
+        disease: "Nitrogen Deficiency or Maize Streak Virus",
+        treatment: "Apply nitrogen-rich fertilizer or remove infected plants if viral."
+      },
+      "stunted growth": {
+        disease: "Phosphorus Deficiency",
+        treatment: "Apply phosphorus fertilizer and improve soil fertility."
+      }
+    },
+    tomato: {
+      "leaf spots": {
+        disease: "Early Blight",
+        treatment: "Use neem oil spray and avoid overhead irrigation."
+      },
+      wilting: {
+        disease: "Fusarium Wilt",
+        treatment: "Remove infected plants and improve drainage."
+      }
+    },
+    fluted_pumpkin: {
+      "insect holes": {
+        disease: "Leaf Beetle Infestation",
+        treatment: "Apply neem extract or wood ash early morning."
+      }
+    }
+  },
+
+  livestock: {
+    goat: {
+      coughing: {
+        disease: "Pneumonia",
+        treatment: "Keep animal warm and consult a vet for antibiotics."
+      },
+      diarrhea: {
+        disease: "Worm infestation or poor diet",
+        treatment: "Deworm and provide clean water."
+      }
+    },
+    rabbit: {
+      diarrhea: {
+        disease: "Enteritis",
+        treatment: "Remove watery feeds, provide hay only, isolate rabbit."
+      },
+      "runny nose": {
+        disease: "Snuffles",
+        treatment: "Improve ventilation and consult a vet."
+      }
+    }
+  }
+};
+
+// ================= UI LOGIC =================
+const categorySelect = document.getElementById("category-select");
+const itemSelect = document.getElementById("item-select");
+const symptomSelect = document.getElementById("symptom-select");
+const resultDisplay = document.getElementById("result-display");
+const diagnoseBtn = document.getElementById("diagnoseBtn");
+
+// Populate items
+categorySelect.addEventListener("change", () => {
+  itemSelect.innerHTML = `<option value="">--Choose Item--</option>`;
+  symptomSelect.innerHTML = `<option value="">--Choose Symptom--</option>`;
+  symptomSelect.disabled = true;
+
+  const category = categorySelect.value;
+  if (!category) return;
+
+  Object.keys(diagnosticData[category]).forEach(item => {
+    const option = document.createElement("option");
+    option.value = item;
+    option.textContent = item.replace("_", " ");
+    itemSelect.appendChild(option);
+  });
+
+  itemSelect.disabled = false;
+});
+
+// Populate symptoms
+itemSelect.addEventListener("change", () => {
+  symptomSelect.innerHTML = `<option value="">--Choose Symptom--</option>`;
+  const category = categorySelect.value;
+  const item = itemSelect.value;
+
+  if (!item) return;
+
+  Object.keys(diagnosticData[category][item]).forEach(symptom => {
+    const option = document.createElement("option");
+    option.value = symptom;
+    option.textContent = symptom;
+    symptomSelect.appendChild(option);
+  });
+
+  symptomSelect.disabled = false;
+});
+
+// Diagnose
+diagnoseBtn.addEventListener("click", () => {
+  const category = categorySelect.value;
+  const item = itemSelect.value;
+  const symptom = symptomSelect.value;
+
+  if (!category || !item || !symptom) {
+    resultDisplay.innerHTML = "<p>Please complete all selections.</p>";
     return;
   }
 
-  const diagnoses = {
-    "maize_yellowing leaves": {
-      disease: "Nitrogen Deficiency or Maize Streak Virus",
-      treatment: "Apply organic nitrogen-rich fertilizer or remove affected plants if viral."
-    },
-    "tomato_leaf spots": {
-      disease: "Early Blight (Alternaria)",
-      treatment: "Use neem oil spray and avoid overhead irrigation."
-    },
-    "cassava_wilting": {
-      disease: "Cassava Bacterial Blight",
-      treatment: "Use disease-resistant varieties and rotate crops."
-    },
-    "fluted_pumpkin_insect holes": {
-      disease: "Leaf Beetle Infestation",
-      treatment: "Apply neem extract or wood ash early in the morning."
-    }
-  };
+  const info = diagnosticData[category][item][symptom];
 
-  const key = `${crop}_${symptom}`;
-  const info = diagnoses[key];
-
-  if (info) {
-    resultDisplay.innerHTML = `
-      <h3>Diagnosis Result</h3>
-      <p><strong>Disease/Pest:</strong> ${info.disease}</p>
-      <p><strong>Suggested Remedy:</strong> ${info.treatment}</p>
-    `;
-  } else {
-    resultDisplay.innerHTML = `<p>No specific match found. Try manual inspection or consult an agronomist.</p>`;
-  }
-
-  resultDisplay.style.display = 'block';
-}document.getElementById('crop').addEventListener('change', function () {
-  const selected = this.value;
-  const suggestionBox = document.getElementById('symptom-list');
-
-  const suggestions = {
-    ugu: ["yellow leaves", "leaf holes", "wilting", "powdery spots", "root rot"],
-    rice: ["stunted growth", "brown spots", "leaf curling", "grain discoloration"],
-    goat: ["coughing", "diarrhea", "nasal discharge", "loss of appetite", "swollen joints"],
-    sheep: ["lameness", "wool loss", "diarrhea", "eye discharge", "bloating"],
-    rabbit: ["soft stool", "hair loss", "head tilt", "runny nose", "not eating"]
-  };
-
-  suggestionBox.textContent = suggestions[selected]?.join(', ') || "Select a valid option to view symptoms.";
+  resultDisplay.innerHTML = `
+    <h3>Diagnosis Result</h3>
+    <p><strong>Issue:</strong> ${info.disease}</p>
+    <p><strong>Recommended Action:</strong> ${info.treatment}</p>
+  `;
 });
-else if (crop === 'ugu' && symptoms.includes('holes')) {
-  result = "Likely pest infestation by caterpillars or beetles. Consider neem-based spray.";
-} else if (crop === 'goat' && symptoms.includes('cough') || symptoms.includes('nasal')) {
-  result = "Could be pneumonia. Keep animal warm, dry, and consult vet for antibiotics.";
-} else if (crop === 'rabbit' && symptoms.includes('diarrhea')) {
-  result = "Likely due to diet imbalance or infection. Ensure clean water and check feed.";
-}
-document.getElementById('diagnostic-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const crop = document.getElementById('crop').value;
-  const symptoms = document.getElementById('symptoms').value.toLowerCase();
-  let result = "No diagnosis available. Try using specific symptoms.";
-
-  if (crop === 'ugu' && symptoms.includes('yellow')) {
-    result = "Likely Nitrogen Deficiency or Fungal Infection. Apply compost and copper-based fungicide.";
-  } else if (crop === 'rice' && symptoms.includes('brown spots')) {
-    result = "Possible Rice Blast. Use resistant varieties and apply fungicide.";
-  } else if (crop === 'rabbit' && symptoms.includes('sore')) {
-    result = "Check for Sore Hocks. Ensure cage flooring is smooth and clean.";
-  }
-
-  document.getElementById('result').innerText = result;
