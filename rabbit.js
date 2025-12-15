@@ -45,3 +45,22 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   });
 });
+‎/* Medication & vaccination tracker */
+‎const medForm = document.getElementById("medForm");
+‎const medicationList = document.getElementById("medicationList");
+‎
+‎medForm.addEventListener("submit", (e) => {
+‎  e.preventDefault();
+‎
+‎  const rabbitName = document.getElementById("rabbitName").value;
+‎  const medicine = document.getElementById("medicine").value;
+‎  const date = document.getElementById("dateGiven").value;
+‎
+‎  const li = document.createElement("li");
+‎  li.textContent = `${rabbitName} – ${medicine} (${date})`;
+‎
+‎  medicationList.appendChild(li);
+‎  medForm.reset();
+‎});
+‎
+‎
