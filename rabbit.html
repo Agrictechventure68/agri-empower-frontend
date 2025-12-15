@@ -1,34 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Rabbit Farming Dashboard</title>
-</head>
-<body>
-  <h2>🐇 Rabbit Breeds</h2>
-  <ul id="breedList"></ul>
-
-  <h2>📋 Rabbit Records</h2>
-  <ul id="recordList"></ul>
-‎<h2>💉 Vaccination & Medication Tracker</h2>
+‎<!DOCTYPE html>
+‎<html lang="en">
+‎<head>
+‎  <meta charset="UTF-8">
+‎  <title>Rabbit Farming Dashboard</title>
+‎</head>
+‎<body>
 ‎
-‎<form id="medForm">
-‎  <input type="text" id="rabbitName" placeholder="Rabbit name / ID" required />
-‎  <br><br>
+‎  <h2>🐇 Rabbit Health Diagnosis</h2>
 ‎
-‎  <input type="text" id="medicine" placeholder="Vaccine / Medication name" required />
-‎  <br><br>
+‎  <select id="symptomSelect">
+‎    <option value="">-- Select symptom --</option>
+‎    <option value="loss_of_appetite">Loss of appetite</option>
+‎    <option value="diarrhea">Diarrhea</option>
+‎    <option value="runny_nose">Runny nose</option>
+‎    <option value="hair_loss">Hair loss</option>
+‎    <option value="lethargy">Lethargy</option>
+‎  </select>
 ‎
-‎  <input type="date" id="dateGiven" required />
-‎  <br><br>
+‎  <button id="diagnoseBtn">Diagnose</button>
 ‎
-‎  <button type="submit">Save Record</button>
-‎</form>
+‎  <p id="diagnosisResult"></p>
 ‎
-‎<ul id="medicationList"></ul>
+‎  <hr>
 ‎
-
-
-  <script src="rabbit.js"></script>
-</body>
-</html>
+‎  <h2>💉 Vaccination & Medication Tracker</h2>
+‎
+‎  <form id="medForm">
+‎    <input type="text" id="rabbitName" placeholder="Rabbit name / ID" required><br><br>
+‎    <input type="text" id="medicine" placeholder="Vaccine / Medication name" required><br><br>
+‎    <input type="date" id="dateGiven" required><br><br>
+‎    <button type="submit">Save Record</button>
+‎  </form>
+‎
+‎  <ul id="medicationList"></ul>
+‎
+‎  <script src="rabbit.js"></script>
+‎</body>
+‎</html>
