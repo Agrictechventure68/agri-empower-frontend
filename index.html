@@ -134,12 +134,11 @@
   <p>&copy; 2025 Agri_Empower | Bright Doro AgricTech Venture</p>
   <p>Lagos, Nigeria | agriempower4dcentury@gmail.com</p>
 </footer>
-
-<script>
-
- <!-- SUPABASE CLIENT -->
+<!-- Supabase Client -->
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
 <script>
+  // Supabase configuration
   const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
 
@@ -147,7 +146,8 @@
     SUPABASE_URL,
     SUPABASE_ANON_KEY
   );
-script>
+
+  // Test Supabase connection
   async function testSupabaseConnection() {
     const { data, error } = await supabase
       .from("farmers")
@@ -161,11 +161,12 @@ script>
   }
 
   testSupabaseConnection();
-</script>
-</script> document.getElementById('languageSelector').addEventListener('change', function () {
-    alert("Language switching coming soon 🚜");
-  });
-</script>
 
+  // Language selector (temporary)
+  document.getElementById("languageSelector")
+    .addEventListener("change", function () {
+      alert("Language switching coming soon 🚜");
+    });
+</script>
 </body>
 </html>
