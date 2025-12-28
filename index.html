@@ -136,7 +136,18 @@
 </footer>
 
 <script>
-  document.getElementById('languageSelector').addEventListener('change', function () {
+
+ <!-- SUPABASE CLIENT -->
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
+
+  const supabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+  );
+</script> document.getElementById('languageSelector').addEventListener('change', function () {
     alert("Language switching coming soon 🚜");
   });
 </script>
