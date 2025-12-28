@@ -1,11 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Farmer Profile</title>
+  <meta charset="UTF-8" />
+  <title>Farmer Registration | Agri_Empower</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f9f4;
+      padding: 20px;
+    }
+    h1 {
+      color: #2e7d32;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+    }
+    button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1b5e20;
+    }
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Farmer Profiling</h1>
-  <p>Profile module loading…</p>
+
+<h1>👨‍🌾 Farmer Registration</h1>
+<p>Register farmers into the Agri_Empower platform</p>
+
+<form id="farmerForm">
+  <label>Full Name</label>
+  <input type="text" id="full_name" required />
+
+  <label>Phone Number</label>
+  <input type="text" id="phone" required />
+
+  <label>Location</label>
+  <input type="text" id="location" />
+
+  <label>Specialization</label>
+  <input type="text" id="specialization" placeholder="e.g Crop Farming, Poultry" />
+
+  <label>Preferred Language</label>
+  <select id="language">
+    <option value="English">English</option>
+    <option value="Yoruba">Yoruba</option>
+    <option value="Igbo">Igbo</option>
+    <option value="Hausa">Hausa</option>
+    <option value="Pidgin">Pidgin</option>
+  </select>
+
+  <button type="submit">Register Farmer</button>
+</form>
+
+<p id="message"></p>
+
+<!-- Supabase Client -->
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+<script>
+  // 🔐 Supabase credentials
+  const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
+
+  const supabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+  );
+
+  // Handle form submission
+  document.getElementById("farmerForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const full_name = document.getElementById("full_name").value;
+    const phone = document.getElementById("phone").value;
+    const location = document.getElementById("location").value;
+    const specialization = document.getElementById("specialization").value;
+    const language = document.getElementById("language").value;
+
+    const { data, error } = await supabase
+      .from("farmers")
+      .insert([
+        {
+          full_name,
+          phone,
+          location,
+          specialization,
+          language
+        }
+      ]);
+
+    const message = document.getElementById("message");
+
+    if (error) {
+      message.style.color = "red";
+      message.textContent = "❌ Error: " + error.message;
+      console.error(error);
+    } else {
+      message.style.color = "green";
+      message.textContent = "✅ Farmer registered successfully!";
+      document.getElementById("farmerForm").reset();
+      console.log("Inserted:", data);
+    }
+  });
+</script>
+
 </body>
 </html>
