@@ -83,50 +83,56 @@
 <!-- Supabase Client -->
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
 <script>
-  // 🔐 Supabase credentials
-  const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
+  // Wait until everything loads (IMPORTANT for GitHub Pages)
+  window.addEventListener("DOMContentLoaded", () => {
 
-  const supabase = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_ANON_KEY
-  );
+    const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
+    const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
 
-  // Handle form submission
-  document.getElementById("farmerForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
+    const supabase = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY
+    );
 
-    const full_name = document.getElementById("full_name").value;
-    const phone = document.getElementById("phone").value;
-    const location = document.getElementById("location").value;
-    const specialization = document.getElementById("specialization").value;
-    const language = document.getElementById("language").value;
-
-    const { data, error } = await supabase
-      .from("farmers")
-      .insert([
-        {
-          full_name,
-          phone,
-          location,
-          specialization,
-          language
-        }
-      ]);
-
+    const form = document.getElementById("farmerForm");
     const message = document.getElementById("message");
 
-    if (error) {
-      message.style.color = "red";
-      message.textContent = "❌ Error: " + error.message;
-      console.error(error);
-    } else {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault(); // ⛔ stop page reload
+
+      message.style.color = "black";
+      message.textContent = "⏳ Registering farmer...";
+
+      const payload = {
+        full_name: document.getElementById("full_name").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        location: document.getElementById("location").value.trim(),
+        specialization: document.getElementById("specialization").value.trim(),
+        language: document.getElementById("language").value
+      };
+
+      console.log("Submitting:", payload);
+
+      const { data, error } = await supabase
+        .from("farmers")
+        .insert([payload])
+        .select();
+
+      if (error) {
+        console.error("Insert failed:", error);
+        message.style.color = "red";
+        message.textContent = "❌ " + error.message;
+        return;
+      }
+
+      console.log("Insert success:", data);
       message.style.color = "green";
       message.textContent = "✅ Farmer registered successfully!";
-      document.getElementById("farmerForm").reset();
-      console.log("Inserted:", data);
-    }
+      form.reset();
+    });
   });
 </script>
 
