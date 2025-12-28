@@ -147,6 +147,21 @@
     SUPABASE_URL,
     SUPABASE_ANON_KEY
   );
+script>
+  async function testSupabaseConnection() {
+    const { data, error } = await supabase
+      .from("farmers")
+      .select("*");
+
+    if (error) {
+      console.error("Supabase error:", error.message);
+    } else {
+      console.log("Farmers loaded:", data);
+    }
+  }
+
+  testSupabaseConnection();
+</script>
 </script> document.getElementById('languageSelector').addEventListener('change', function () {
     alert("Language switching coming soon 🚜");
   });
