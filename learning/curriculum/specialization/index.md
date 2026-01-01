@@ -12,3 +12,18 @@ and simple production practices.
 
 ## Outcome
 Learners can start small-scale farming or assist on farms safely and effectively.
+
+## Specialized Learning Tracks
+
+### Value Chains
+- Cassava processing (garri, starch, ethanol)
+- Poultry processing & cold chain
+- Fish smoking, drying & packaging
+- Avocado oil processing
+- Vegetable value addition
+
+### Focus
+- Enterprise development
+- Certification & standards
+- Export readiness
+- Employment creation
