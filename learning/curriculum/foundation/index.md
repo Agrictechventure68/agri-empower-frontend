@@ -10,5 +10,23 @@ and simple production practices.
 4. Processing & Value Addition (Introductory)
 5. Agribusiness & Markets (Basics)
 
+
+## Applicable Learning Tracks
+
+### Crops
+- Cassava
+- Rice
+- Ugu (Vegetables)
+- Pepper & Tomato
+
+### Livestock
+- Poultry
+- Fish (Aquaculture)
+- Beekeeping
+
+### Focus
+- Basic production
+- Safety and hygiene
+- Simple processing awareness
 ## Outcome
 Learners can start small-scale farming or assist on farms safely and effectively.
