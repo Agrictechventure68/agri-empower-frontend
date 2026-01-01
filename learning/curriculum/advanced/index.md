@@ -12,3 +12,21 @@ and simple production practices.
 
 ## Outcome
 Learners can start small-scale farming or assist on farms safely and effectively.
+
+## Applicable Learning Tracks
+
+### Crops
+- Cassava (commercial scale)
+- Rice (mechanized systems)
+- Avocado (orchard management)
+
+### Livestock
+- Poultry (commercial)
+- Fish (intensive systems)
+- Sheep, Goats & Pigs
+
+### Focus
+- Processing systems
+- Quality control
+- Storage & logistics
+- Market scaling
