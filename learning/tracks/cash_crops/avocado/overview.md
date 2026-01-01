@@ -1,0 +1,1 @@
+showing the 5 pillars of avocado management 
