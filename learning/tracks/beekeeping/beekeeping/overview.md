@@ -19,3 +19,9 @@ This track follows the Agri_Empower 5-module learning structure:
 - Processing
 - Input supply
 - Marketing
+
+## Cross-Cutting References
+
+- **Production Systems:** See `learning/frameworks/production_systems`
+- **Biosecurity & Hygiene:** See `learning/frameworks/food_safety_quality`
+- **Feed & Inputs:** See `learning/frameworks/organic_inputs_fertilizers`
