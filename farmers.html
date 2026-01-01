@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registered Farmers | Agri_Empower</title>
+  <style>
+    body { font-family: Arial; background:#f4f6f8; padding:20px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:15px; }
+    .card {
+      background:#fff; padding:15px; border-radius:10px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+    h3 { margin:0 0 5px; }
+  </style>
+</head>
+<body>
+
+<h1>👨‍🌾 Registered Farmers</h1>
+
+<div class="grid" id="farmersGrid"></div>
+
+<script>
+const farmers = [
+  { name:"Abdulah Lawal", phone:"08020773025", location:"Ogun", specialisation:"Cassava" },
+  { name:"Victoria Doro", phone:"09036873039", location:"Lagos", specialisation:"Vegetables" },
+  { name:"Festus Oguh", phone:"08081536173", location:"Delta", specialisation:"Poultry" },
+  { name:"Ikechukwu Faith", phone:"08023218351", location:"Anambra", specialisation:"Rice" },
+  { name:"Juliet One", phone:"08035267386", location:"Oyo", specialisation:"Processing" }
+];
+
+const grid = document.getElementById("farmersGrid");
+
+farmers.forEach(f => {
+  grid.innerHTML += `
+    <div class="card">
+      <h3>${f.name}</h3>
+      <p><strong>Phone:</strong> ${f.phone}</p>
+      <p><strong>Location:</strong> ${f.location}</p>
+      <p><strong>Specialisation:</strong> ${f.specialisation}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>
