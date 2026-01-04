@@ -44,15 +44,12 @@
 <p class="empty" id="emptyMsg"></p>
 
 <!-- Supabase -->
-<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script type="module">
+  import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
-<script>
-  const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
-
-  const supabase = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_ANON_KEY
+  const supabase = createClient(
+    "https://jdhmhavvqfeeyostvoai.supabase.co",
+    "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ"
   );
 
   async function loadFarmers() {
