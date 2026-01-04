@@ -81,58 +81,45 @@
 <p id="message"></p>
 
 <!-- Supabase Client -->
-<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script type="module">
+  import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
-<script>
-  // Wait until everything loads (IMPORTANT for GitHub Pages)
-  window.addEventListener("DOMContentLoaded", () => {
+  const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
 
-    const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
-    const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
+  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    const supabase = window.supabase.createClient(
-      SUPABASE_URL,
-      SUPABASE_ANON_KEY
-    );
+  const form = document.getElementById("farmerForm");
+  const message = document.getElementById("message");
 
-    const form = document.getElementById("farmerForm");
-    const message = document.getElementById("message");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault(); // ⛔ stop page reload
+    message.style.color = "black";
+    message.textContent = "⏳ Registering farmer...";
 
-      message.style.color = "black";
-      message.textContent = "⏳ Registering farmer...";
+    const payload = {
+      full_name: document.getElementById("full_name").value.trim(),
+      phone: document.getElementById("phone").value.trim(),
+      location: document.getElementById("location").value.trim(),
+      specialisation: document.getElementById("specialisation").value.trim(),
+      language: document.getElementById("language").value
+    };
 
-      const payload = {
-        full_name: document.getElementById("full_name").value.trim(),
-        phone: document.getElementById("phone").value.trim(),
-        location: document.getElementById("location").value.trim(),
-        specialisation: document.getElementById("specialisation").value.trim(),
-        language: document.getElementById("language").value
-      };
+    const { error } = await supabase
+      .from("farmers")
+      .insert([payload]);
 
-      console.log("Submitting:", payload);
+    if (error) {
+      message.style.color = "red";
+      message.textContent = "❌ " + error.message;
+      return;
+    }
 
-      const { data, error } = await supabase
-        .from("farmers")
-        .insert([payload])
-        .select();
-
-      if (error) {
-        console.error("Insert failed:", error);
-        message.style.color = "red";
-        message.textContent = "❌ " + error.message;
-        return;
-      }
-
-      console.log("Insert success:", data);
-      message.style.color = "green";
-      message.textContent = "✅ Farmer registered successfully!";
-      form.reset();
-    });
+    message.style.color = "green";
+    message.textContent = "✅ Farmer registered successfully!";
+    form.reset();
   });
 </script>
-
 </body>
 </html>
