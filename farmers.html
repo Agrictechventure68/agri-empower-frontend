@@ -75,16 +75,20 @@
     grid.innerHTML = "";
 
     data.forEach(f => {
-      grid.innerHTML += `
-        <div class="card">
-          <h3>${f.full_name}</h3>
-          <p><strong>Phone:</strong> ${f.phone}</p>
-          <p><strong>Location:</strong> ${f.location || "—"}</p>
-          <p><strong>Specialisation:</strong> ${f.specialisation || "—"}</p>
-          <p><strong>Language:</strong> ${f.language || "—"}</p>
-        </div>
-      `;
-    });
+  grid.innerHTML += `
+    <div class="card">
+      <h3>${f.full_name}</h3>
+      <p><strong>Phone:</strong> ${f.phone}</p>
+      <p><strong>Location:</strong> ${f.location || "—"}</p>
+      <p><strong>Specialisation:</strong> ${f.specialisation || "—"}</p>
+      <p><strong>Language:</strong> ${f.language || "—"}</p>
+
+      <a href="learning/index.html" class="btn">
+        Go to Learning
+      </a>
+    </div>
+  `;
+});
   }
 
   loadFarmers();
