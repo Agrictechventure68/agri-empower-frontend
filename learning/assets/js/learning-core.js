@@ -1,4 +1,6 @@
+/**
  * Agri_Empower Learning Core
+ */
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("✅ Agri_Empower Learning Module Loaded");
