@@ -1,0 +1,79 @@
+# Disease Management & Biosecurity
+
+## Common Poultry Diseases
+## Biosecurity Measures
+## Vaccination & Health Programs
+## Hygiene & Sanitation
+## Disease Prevention Strategies
+
+
+## Foundation Level
+
+### Common Fish Diseases
+- Fungal infections
+- Bacterial infections
+- Parasitic infestations
+
+### Basic Biosecurity Measures
+- Use clean water and proper aeration
+- Avoid introducing diseased fish
+- Simple tank or pond hygiene
+
+### Hygiene Practices
+- Regular pond cleaning
+- Feed storage hygiene
+- Observing fish behavior for early signs of illness
+
+> **Curriculum Level:** Foundation
+
+
+## Intermediate Level
+
+### Disease Prevention
+- Quarantine new fish before introduction
+- Vaccination where applicable
+- Pond disinfection protocols
+
+### Water Quality Management
+- Monitoring pH, dissolved oxygen, and ammonia
+- Partial water exchanges to reduce disease risk
+
+### Record Keeping
+- Document mortality rates
+- Track disease occurrence and treatments
+
+> **Curriculum Level:** Intermediate
+
+
+## Advanced Level
+
+### Integrated Health Management
+- Use of probiotics and balanced nutrition to reduce disease
+- Laboratory water and fish health testing
+- Biosecure farm layout
+
+### Risk Management
+- Disease outbreak response plans
+- Use of protective equipment for staff
+- Advanced water filtration or aeration systems
+
+> **Curriculum Level:** Advanced
+
+
+## Specialization & Enterprise Focus
+
+### Specialized Disease Diagnostics
+- Farm-based diagnostic kits
+- Collaboration with aquaculture health labs
+- Data-driven management interventions
+
+### Biosecurity Protocols
+- Standard operating procedures for commercial fish farms
+- Integration with processing plants and supply chains
+
+### Employment & Enterprise Opportunities
+- Aquaculture health consultancy
+- Fish farm auditing services
+- Training and extension for other farmers
+
+> **Curriculum Level:** Specialization
