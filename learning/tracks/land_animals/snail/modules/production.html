@@ -1,0 +1,2 @@
+🐌 SNAIL FARMING (if applicable)
+Snail farming is a low-risk livestock enterprise producing high-protein meat with medicinal value. It requires minimal space and is suitable for backyard and commercial systems
