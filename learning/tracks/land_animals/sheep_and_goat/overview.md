@@ -11,6 +11,13 @@ Goat farming is a resilient livestock enterprise adapted to diverse environments
 ## Overview
 Brief description of importance, uses, and opportunities.
 
+Sheep and goat farming involves the rearing of small ruminants for meat,
+    milk, skin, and breeding purposes. These animals are hardy, adaptable to
+    various environments, and suitable for extensive, semi-intensive, and
+    intensive production systems. Sheep and goats play a vital role in
+    household income, food security, and rural livelihoods.
+
+
 ## Learning Coverage
 This track follows the Agri_Empower 5-module learning structure:
 1. Production & Farm Management
