@@ -1,0 +1,32 @@
+# Sheep and Goats 
+
+🐑 SHEEP FARMING
+Sheep farming focuses on meat, wool, and skin production. Sheep are hardy animals suitable for grazing systems and play a key role in rural livelihoods and protein supply.
+
+🐐 GOAT FARMING
+Goat farming is a resilient livestock enterprise adapted to diverse environments. Goats are raised for meat, milk, skin, and manure and perform well under extensive and semi-intensive systems.
+
+## Category:- Livestock
+
+## Overview
+Brief description of importance, uses, and opportunities.
+
+## Learning Coverage
+This track follows the Agri_Empower 5-module learning structure:
+1. Production & Farm Management
+2. Pest, Disease & Soil Health
+3. Post-Harvest Handling & Storage
+4. Processing & Value Addition
+5. Agribusiness & Markets
+
+## Employment Opportunities
+- Farming
+- Processing
+- Input supply
+- Marketing
+
+## Cross-Cutting References
+
+- **Production Systems:** See `learning/frameworks/production_systems`
+- **Biosecurity & Hygiene:** See `learning/frameworks/food_safety_quality`
+- **Feed & Inputs:** See `learning/frameworks/organic_inputs_fertilizers`
