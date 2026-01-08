@@ -8,6 +8,13 @@ Pig farming is a high-efficiency livestock enterprise known for rapid growth and
 ## Overview
 Brief description of importance, uses, and opportunities.
 
+Pig farming is a highly productive livestock enterprise focused on the
+    rearing of pigs for meat production. Pigs grow rapidly, convert feed
+    efficiently into body weight, and reproduce quickly. With proper housing,
+    nutrition, and health management, pig farming offers strong income
+    potential for both smallholder and commercial operations.
+  </p>
+
 ## Learning Coverage
 This track follows the Agri_Empower 5-module learning structure:
 1. Production & Farm Management
