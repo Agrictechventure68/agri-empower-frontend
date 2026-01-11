@@ -16,10 +16,7 @@ Use hand harvesting or simple tools
 Avoid dropping fruits during harvest
 Harvest during cool hours of the day (morning or evening)
 Basic Handling After Harvest
-Handle fruits gently to avoid bruises
-Do not throw or pile fruits excessively
-Keep harvested fruits under shade immediately
-Avoid washing fruits with dirty water
+H
 Basic Storage Methods
 Store fruits in cool, shaded, and ventilated areas
 Keep fruits on clean surfaces
