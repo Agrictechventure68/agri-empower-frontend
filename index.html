@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Agri_Empower | Smart Farming Platform</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f4f9f4; }
     header { background: #2e7d32; padding: 1rem; color: #fff; }
     nav a { color: #fff; margin-right: 1rem; text-decoration: none; font-weight: bold; }
-    section { padding: 2rem; }
+    section { padding: 2.5rem; }
     h2 { color: #2e7d32; }
-    .hero { background: #e8f5e9; padding: 3rem 2rem; text-align: center; }
+    .hero { background: #e8f5e9; padding: 3.5rem 2rem; text-align: center; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5rem; }
     .card {
       background: #fff;
@@ -24,18 +25,17 @@
     .btn {
       background: #2e7d32;
       color: #fff;
-      padding: 0.6rem 1.2rem;
+      padding: 0.7rem 1.4rem;
       border-radius: 5px;
       text-decoration: none;
       display: inline-block;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
     }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <h1>Agri_Empower</h1>
   <nav>
@@ -49,74 +49,72 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <h2>Empowering Farmers with Knowledge, Tools & Market Access</h2>
+  <h2>Building Capable Farmers. Strengthening Food Systems.</h2>
   <p>
-    Agri_Empower is a smart farming platform delivering training, disease diagnosis,
-    processing knowledge, and digital markets for farmers across Africa.
+    Agri_Empower is a professional smart farming platform dedicated to
+    practical agricultural training, ethical agribusiness development,
+    and human capacity building across Africa.
   </p>
-  <a href="#features" class="btn">Explore Features</a>
+  <a href="about.html" class="btn">Understand Our Philosophy</a>
 </section>
 
-<!-- FEATURES -->
 <section id="features">
-  <h2>What Agri_Empower Offers</h2>
+  <h2>What Agri_Empower Delivers</h2>
   <div class="cards">
     <div class="card">
-      <h3>🌱 Crop Farming</h3>
-      <p>Best practices for crops and vegetables, from land prep to harvest.</p>
+      <h3>🌱 Structured Crop Learning</h3>
+      <p>Trainer-led programs covering food crops, vegetables, and value-driven farming.</p>
       <a href="curriculum.html">View Curriculum</a>
     </div>
     <div class="card">
       <h3>🐄 Livestock & Aquaculture</h3>
-      <p>Guides for poultry, goats, sheep, cattle, rabbits & fish farming.</p>
+      <p>Responsible livestock and fish farming practices grounded in productivity and welfare.</p>
       <a href="curriculum.html">Explore Modules</a>
     </div>
     <div class="card">
-      <h3>🦠 Disease & Pest Diagnosis</h3>
-      <p>Identify crop and livestock problems early with practical solutions.</p>
+      <h3>🦠 Diagnostics & Advisory</h3>
+      <p>Early detection of pests, diseases, and production risks with guided solutions.</p>
       <a href="modules/diagnostic/diagnostic.html">Run Diagnosis</a>
     </div>
     <div class="card">
       <h3>🏭 Processing & Value Addition</h3>
-      <p>Learn food processing, preservation, packaging, and agribusiness value chains.</p>
+      <p>From raw produce to market-ready products — processing as a business.</p>
       <a href="curriculum.html">Processing Modules</a>
     </div>
     <div class="card">
-      <h3>🛒 Digital Marketplace</h3>
-      <p>Buy inputs and connect to buyers for your farm produce.</p>
+      <h3>🛒 Digital Market Access</h3>
+      <p>Connecting farmers to inputs, buyers, and structured agribusiness opportunities.</p>
       <a href="modules/ecommerce/ecommerce.html">Go to Market</a>
     </div>
     <div class="card">
       <h3>👨‍🌾 Farmer Profiling</h3>
-      <p>Create your digital farmer profile for training, support, and opportunities.</p>
-      <a href="profile.html">Farmers</a>
+      <p>Professional farmer records for training, monitoring, and growth pathways.</p>
+      <a href="profile.html">Farmer Profiles</a>
     </div>
   </div>
 </section>
 
-<!-- MISSION -->
 <section id="mission">
   <h2>Our Mission</h2>
   <p>
-    To bridge agricultural knowledge gaps and empower farmers with practical education,
-    smart diagnostics, processing skills, and inclusive digital markets.
+    To develop competent farmers and agripreneurs through structured education,
+    ethical practices, reliable systems, and professional support — enabling
+    sustainable food production and human development.
   </p>
 </section>
 
-<!-- VISION -->
-<section id="vision">
-  <h2>Our Vision</h2>
+<section id="values">
+  <h2>Our Values & Commitments</h2>
   <ul>
-    <li>Smarter farming through data and diagnostics</li>
-    <li>Stronger food security and farmer income</li>
-    <li>Inclusive access to training and markets</li>
-    <li>Sustainable agribusiness development</li>
+    <li><strong>Integrity:</strong> Truthful knowledge, honest systems, accountable operations.</li>
+    <li><strong>Reliability:</strong> Consistent training, dependable information, trusted outcomes.</li>
+    <li><strong>Excellence:</strong> High standards in content, trainers, and platform delivery.</li>
+    <li><strong>Professionalism:</strong> Clear rules, qualified trainers, respectful engagement.</li>
+    <li><strong>Human Development:</strong> Farmers as people first — skills, dignity, growth.</li>
   </ul>
 </section>
 
-<!-- LANGUAGE SELECTOR -->
 <section>
   <label for="languageSelector"><strong>Select Language:</strong></label>
   <select id="languageSelector">
@@ -129,44 +127,17 @@
   </select>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>&copy; 2025 Agri_Empower | Bright Doro AgricTech Venture</p>
   <p>Lagos, Nigeria | agriempower4dcentury@gmail.com</p>
 </footer>
-<!-- Supabase Client -->
-<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 <script>
-  // Supabase configuration
   const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
-
-  const supabase = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_ANON_KEY
-  );
-
-  // Test Supabase connection
-  async function testSupabaseConnection() {
-    const { data, error } = await supabase
-      .from("farmers")
-      .select("*");
-
-    if (error) {
-      console.error("Supabase error:", error.message);
-    } else {
-      console.log("Farmers loaded:", data);
-    }
-  }
-
-  testSupabaseConnection();
-
-  // Language selector (temporary)
-  document.getElementById("languageSelector")
-    .addEventListener("change", function () {
-      alert("Language switching coming soon 🚜");
-    });
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 </script>
+
 </body>
 </html>
