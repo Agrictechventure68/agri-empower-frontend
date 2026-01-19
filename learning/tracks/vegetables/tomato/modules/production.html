@@ -2,40 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tomato Production</title>
+  <title>Tomato Production | Agri_Empower</title>
   <link rel="stylesheet" href="../../../assets/css/style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>Production & Farm Management</h1>
+  <h1>Tomato Production</h1>
+  <p>Complete learning modules from beginner to advanced.</p>
 </header>
 
-<main class="card active module-content">
+<!-- SUB NAVIGATION -->
+<nav class="sub-nav">
+  <button class="tab active" onclick="showModule('overview', this)">Overview</button>
+  <button class="tab" onclick="showModule('level-1', this)">Beginner</button>
+  <button class="tab" onclick="showModule('level-2', this)">Intermediate</button>
+  <button class="tab" onclick="showModule('level-3', this)">Advanced</button>
+</nav>
 
-  <h2>Foundation Level</h2>
-  <ul>
-    <li>Site and soil selection</li>
-    <li>Seed selection and nursery raising</li>
-    <li>Transplanting techniques</li>
-  </ul>
-
-<h2>Intermediate Level</h2>
-  <ul>
-    <li>Spacing and staking</li>
-    <li>Irrigation and fertilization</li>
-    <li>Weed and field management</li>
-  </ul>
-
-  <h2>Advanced Level</h2>
-  <ul>
-    <li>Dry-season tomato production</li>
-    <li>Greenhouse tomato systems</li>
-    <li>Yield optimization strategies</li>
-  </ul>
-
+<!-- MODULE CONTENT -->
+<main id="overview" class="module-content active">
+  <h2>Overview</h2>
+  <p>
+    Tomato is a high-value vegetable crop cultivated widely for fresh
+    consumption and processing.
+  </p>
 </main>
 
+<main id="level-1" class="module-content">
+  <h2>Beginner Level</h2>
+  <ul>
+    <li>Land preparation</li>
+    <li>Seed selection</li>
+    <li>Nursery management</li>
+  </ul>
+</main>
+
+<main id="level-2" class="module-content">
+  <h2>Intermediate Level</h2>
+  <ul>
+    <li>Transplanting techniques</li>
+    <li>Fertilizer application</li>
+    <li>Irrigation management</li>
+  </ul>
+</main>
+
+<main id="level-3" class="module-content">
+  <h2>Advanced Level</h2>
+  <ul>
+    <li>Pest & disease management</li>
+    <li>Yield optimization</li>
+    <li>Post-harvest handling</li>
+  </ul>
+</main>
+
+<script src="../../../assets/js/modules.js"></script>
 </body>
 </html>
