@@ -56,6 +56,72 @@
           "Soil mapping and optimization"
         ]
       }
+    },
+
+    {
+      "id": "post_harvest",
+      "title": "Post-Harvest & Storage",
+      "levels": {
+        "foundation": [
+          "Harvest tender pods at correct maturity",
+          "Sorting and grading",
+          "Short-term storage under cool conditions"
+        ],
+        "intermediate": [
+          "Drying for extended shelf life",
+          "Packaging and labelling",
+          "Cold chain management"
+        ],
+        "advanced": [
+          "Post-harvest loss reduction techniques",
+          "Shelf-life extension using modern methods",
+          "Storage facility design"
+        ]
+      }
+    },
+
+    {
+      "id": "processing",
+      "title": "Processing & Value Addition",
+      "levels": {
+        "foundation": [
+          "Sun-drying sliced okra",
+          "Powdered okra for soup thickening",
+          "Packaging dried okra products"
+        ],
+        "intermediate": [
+          "Okra-based snacks",
+          "Pickles and condiments",
+          "Nutrient retention techniques"
+        ],
+        "advanced": [
+          "Commercial product scaling",
+          "Branding and labeling",
+          "Quality control standards"
+        ]
+      }
+    },
+
+    {
+      "id": "agribusiness",
+      "title": "Agribusiness & Markets",
+      "levels": {
+        "foundation": [
+          "Local fresh produce markets",
+          "Small-scale sales strategies",
+          "Basic record-keeping"
+        ],
+        "intermediate": [
+          "Bulk buyers and processors",
+          "Market research and pricing",
+          "Supply chain management"
+        ],
+        "advanced": [
+          "Commercial okra farming",
+          "Dry-season production planning",
+          "Export opportunities"
+        ]
+      }
     }
   ]
 }
