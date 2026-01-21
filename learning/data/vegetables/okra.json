@@ -1,1 +1,61 @@
-json 
+{
+  "id": "okra",
+  "name": "Okra (Abelmoschus esculentus)",
+  "category": "Vegetables",
+
+  "overview": {
+    "summary": "Fast-growing vegetable crop for food, nutrition, and income",
+    "description": "Okra is a widely cultivated vegetable crop valued for its tender pods, nutritional benefits, and adaptability to diverse agro-ecological zones. It is suitable for smallholder and commercial farming."
+  },
+
+  "modules": [
+    {
+      "id": "production",
+      "title": "Production & Farm Management",
+      "levels": {
+        "foundation": [
+          "Site selection and land preparation",
+          "Seed selection and planting methods",
+          "Spacing and thinning"
+        ],
+        "intermediate": [
+          "Weed management",
+          "Fertilizer and organic manure application",
+          "Irrigation management"
+        ],
+        "advanced": [
+          "Improved varieties and hybrids",
+          "Dry-season okra production",
+          "Yield optimization techniques"
+        ]
+      }
+    },
+
+    {
+      "id": "pest_disease_soil",
+      "title": "Pest, Disease & Soil Health",
+      "levels": {
+        "foundation": [
+          "Identification of common pests",
+          "Basic disease recognition",
+          "Soil drainage requirements"
+        ],
+        "intermediate": [
+          "Neem and organic control methods",
+          "Spacing to reduce disease pressure",
+          "Soil fertility management"
+        ],
+        "advanced": [
+          "Integrated Pest Management (IPM)",
+          "Disease surveillance and diagnostics",
+          "Crop rotation strategies"
+        ],
+        "specialization": [
+          "Precision pest monitoring",
+          "Disease forecasting models",
+          "Soil mapping and optimization"
+        ]
+      }
+    }
+  ]
+}
