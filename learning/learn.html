@@ -1,1 +1,29 @@
-learn 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agri-Empower Learning</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <main id="learning-container">
+    <h1 id="lesson-title"></h1>
+    <p id="lesson-description"></p>
+
+    <div id="video-container"></div>
+
+    <p>
+      <a id="pdf-link" href="#" target="_blank">📄 Download PDF</a>
+    </p>
+  </main>
+
+  <!-- Load curriculum FIRST -->
+  <script src="data/curriculum.js"></script>
+
+  <!-- Load learning logic -->
+  <script src="learn.js"></script>
+
+</body>
+</html>
