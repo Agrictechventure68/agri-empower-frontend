@@ -60,7 +60,9 @@
 
 <script src="../../../scripts/curriculum.js"></script>
 <script>
-  loadCurriculum("okra");
+loadCurriculum("okra").then(data => {
+  alert("Okra curriculum loaded successfully");
+});
 </script>
 
 </body>
