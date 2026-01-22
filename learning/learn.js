@@ -20,10 +20,12 @@ const lesson =
   curriculum?.[track]?.topics?.[topic]?.modules?.[moduleKey]?.levels?.[level];
 
 if (!lesson) {
-  document.getElementById("learning-container").innerHTML =
-    "<p>❌ Lesson not found.</p>";
-  throw new Error("Lesson not found in curriculum");
-}
+  // Breadcrumbs
+document.getElementById("breadcrumbs").innerHTML = `
+  <small>
+    ${track} → ${topic} → ${moduleKey} → <strong>${level}</strong>
+  </small>
+`;
 
 // Render content
 document.getElementById("lesson-title").textContent = lesson.title;
@@ -37,5 +39,34 @@ document.getElementById("video-container").innerHTML = `
   </iframe>
 `;
 
-const pdfLink = document.getElementById("pdf-link");
-pdfLink.href = lesson.pdf;
+document.getElementById("pdf-link").href = lesson.pdf;
+
+// Navigation logic
+const levels = Object.keys(
+  curriculum[track].topics[topic].modules[moduleKey].levels
+);
+
+const currentIndex = levels.indexOf(level);
+
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+if (currentIndex > 0) {
+  const prevLevel = levels[currentIndex - 1];
+  prevBtn.onclick = () => {
+    window.location.href =
+      `learn.html?track=${track}&topic=${topic}&module=${moduleKey}&level=${prevLevel}`;
+  };
+} else {
+  prevBtn.disabled = true;
+}
+
+if (currentIndex < levels.length - 1) {
+  const nextLevel = levels[currentIndex + 1];
+  nextBtn.onclick = () => {
+    window.location.href =
+      `learn.html?track=${track}&topic=${topic}&module=${moduleKey}&level=${nextLevel}`;
+  };
+} else {
+  nextBtn.disabled = true;
+}
