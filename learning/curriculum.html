@@ -1,1 +1,123 @@
-curriculum 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agri_Empower Curriculum</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .track, .topic, .module {
+      margin: 10px 0;
+    }
+
+    .topic, .module, .levels {
+      margin-left: 20px;
+    }
+
+    .levels a {
+      display: inline-block;
+      margin: 4px 8px 4px 0;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background: #eef6ee;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .levels a:hover {
+      background: #d6ead6;
+    }
+
+    details > summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Agri_Empower Curriculum</h1>
+  <p>Select a learning track, module, and level</p>
+</header>
+
+<main id="curriculum-container">
+  <p>Loading curriculum…</p>
+</main>
+
+<footer>
+  <p>&copy; 2025 Agri_Empower</p>
+</footer>
+
+<!-- Load curriculum data -->
+<script src="data/curriculum.js"></script>
+
+<script>
+  const container = document.getElementById("curriculum-container");
+  container.innerHTML = "";
+
+  const curriculum = window.AGRI_CURRICULUM;
+
+  for (const trackKey in curriculum) {
+    const track = curriculum[trackKey];
+
+    const trackEl = document.createElement("details");
+    trackEl.className = "track";
+    trackEl.open = true;
+
+    const trackSummary = document.createElement("summary");
+    trackSummary.textContent = track.name;
+    trackEl.appendChild(trackSummary);
+
+    const topics = track.topics;
+
+    for (const topicKey in topics) {
+      const topic = topics[topicKey];
+
+      const topicEl = document.createElement("details");
+      topicEl.className = "topic";
+
+      const topicSummary = document.createElement("summary");
+      topicSummary.textContent = topic.name;
+      topicEl.appendChild(topicSummary);
+
+      const modules = topic.modules;
+
+      for (const moduleKey in modules) {
+        const module = modules[moduleKey];
+
+        const moduleEl = document.createElement("details");
+        moduleEl.className = "module";
+
+        const moduleSummary = document.createElement("summary");
+        moduleSummary.textContent = module.name;
+        moduleEl.appendChild(moduleSummary);
+
+        const levelsEl = document.createElement("div");
+        levelsEl.className = "levels";
+
+        for (const levelKey in module.levels) {
+          const level = module.levels[levelKey];
+
+          const link = document.createElement("a");
+          link.href = `learn.html?track=${trackKey}&topic=${topicKey}&module=${moduleKey}&level=${levelKey}`;
+          link.textContent = level.title || levelKey;
+
+          levelsEl.appendChild(link);
+        }
+
+        moduleEl.appendChild(levelsEl);
+        topicEl.appendChild(moduleEl);
+      }
+
+      trackEl.appendChild(topicEl);
+    }
+
+    container.appendChild(trackEl);
+  }
+</script>
+
+</body>
+</html>
