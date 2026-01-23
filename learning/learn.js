@@ -20,7 +20,12 @@ const lesson =
   curriculum?.[track]?.topics?.[topic]?.modules?.[moduleKey]?.levels?.[level];
 
 if (!lesson) {
-  // Breadcrumbs
+  document.getElementById("learning-container").innerHTML =
+    "<p>❌ Lesson not found.</p>";
+  throw new Error("Lesson not found");
+}
+
+ // Breadcrumbs
 document.getElementById("breadcrumbs").innerHTML = `
   <small>
     ${track} → ${topic} → ${moduleKey} → <strong>${level}</strong>
@@ -29,10 +34,12 @@ document.getElementById("breadcrumbs").innerHTML = `
 
 // Render content
 document.getElementById("lesson-title").textContent = lesson.title;
-document.getElementById("lesson-description").textContent = lesson.description;
 
-document.getElementById("video-container").innerHTML = `
-  <iframe width="100%" height="400"
+// Render NOTES (THIS WAS MISSING)
+document.getElementById("lesson-content").innerHTML = `
+  <p>${lesson.intro || ""}</p>
+  <div>${lesson.notes || "<em>No content yet.</em>"}</div>
+`;
     src="https://www.youtube.com/embed/${lesson.videoId}"
     frameborder="0"
     allowfullscreen>
