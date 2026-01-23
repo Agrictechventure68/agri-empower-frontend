@@ -13,9 +13,11 @@ window.AGRI_CURRICULUM = {
                 title: "Foundation Level – Tomato Production",
                 intro: "Tomato production is a high-value vegetable enterprise suitable for smallholders and beginner farmers.",
 
-      video: "https://youtu.be/4EkmtSpM4nc",
-  notes: `...`
-}          objectives: [
+video: {
+    url: "https://youtu.be/4EkmtSpM4nc",
+    caption: "Practical overview of tomato production techniques"
+  },
+          objectives: [
                   "Understand site and soil requirements",
                   "Select suitable tomato varieties",
                   "Establish a healthy nursery",
