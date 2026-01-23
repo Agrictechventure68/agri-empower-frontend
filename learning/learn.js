@@ -40,13 +40,6 @@ document.getElementById("lesson-content").innerHTML = `
   <p>${lesson.intro || ""}</p>
   <div>${lesson.notes || "<em>No content yet.</em>"}</div>
 `;
-    src="https://www.youtube.com/embed/${lesson.videoId}"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-`;
-
-document.getElementById("pdf-link").href = lesson.pdf;
 
 // Navigation logic
 const levels = Object.keys(
