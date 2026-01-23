@@ -1,4 +1,3 @@
-
 function getParam(name) {
   return new URLSearchParams(window.location.search).get(name);
 }
@@ -25,23 +24,23 @@ if (!lesson) {
   throw new Error("Lesson not found");
 }
 
- // Breadcrumbs
+// Breadcrumbs
 document.getElementById("breadcrumbs").innerHTML = `
   <small>
     ${track} → ${topic} → ${moduleKey} → <strong>${level}</strong>
   </small>
 `;
 
-// Render content
+// Lesson title
 document.getElementById("lesson-title").textContent = lesson.title;
 
-// Render NOTES (THIS WAS MISSING)
+// Lesson content
 document.getElementById("lesson-content").innerHTML = `
   <p>${lesson.intro || ""}</p>
   <div>${lesson.notes || "<em>No content yet.</em>"}</div>
 `;
 
-// Navigation logic
+// Navigation
 const levels = Object.keys(
   curriculum[track].topics[topic].modules[moduleKey].levels
 );
@@ -52,20 +51,18 @@ const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 
 if (currentIndex > 0) {
-  const prevLevel = levels[currentIndex - 1];
   prevBtn.onclick = () => {
     window.location.href =
-      `learn.html?track=${track}&topic=${topic}&module=${moduleKey}&level=${prevLevel}`;
+      `learn.html?track=${track}&topic=${topic}&module=${moduleKey}&level=${levels[currentIndex - 1]}`;
   };
 } else {
   prevBtn.disabled = true;
 }
 
 if (currentIndex < levels.length - 1) {
-  const nextLevel = levels[currentIndex + 1];
   nextBtn.onclick = () => {
     window.location.href =
-      `learn.html?track=${track}&topic=${topic}&module=${moduleKey}&level=${nextLevel}`;
+      `learn.html?track=${track}&topic=${topic}&module=${moduleKey}&level=${levels[currentIndex + 1]}`;
   };
 } else {
   nextBtn.disabled = true;
