@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diagnostics | Agri_Empower</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <h1>Disease & Pest Diagnostics</h1>
-  <p>Module under active development.</p>
+  
+  <form id="diagnosticForm">
+    <label for="category">Category:</label>
+    <select id="category" required>
+      <option value="">Select category</option>
+      <option value="crops">Crops</option>
+      <option value="livestock">Livestock</option>
+    </select>
+<label for="species">Species:</label>
+    <select id="species" required>
+      <option value="">Select species</option>
+    </select>
+
+    <label for="symptom">Symptom:</label>
+    <input type="text" id="symptom" placeholder="Enter symptom" required>
+
+    <button type="submit">Diagnose</button>
+  </form>
+
+  <div id="result"></div>
 
   <script src="diagnostic.js"></script>
 </body>
