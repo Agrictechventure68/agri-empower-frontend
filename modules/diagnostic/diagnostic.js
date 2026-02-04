@@ -1,48 +1,49 @@
-document.getElementById('diagnosticForm').addEventListener('submit', function(e) {
+const categorySelect = document.getElementById('category');
+const speciesSelect = document.getElementById('species');
+const diagnosticForm = document.getElementById('diagnosticForm');
+const resultSection = document.getElementById('result');
+
+// Species mapping per category
+const speciesOptions = {
+  crops: ["vegetables", "food_crops", "cash_crops", "medicinal_crops"],
+  livestock: ["aquaculture", "beekeeping", "land_animals", "poultry"]
+};
+
+// Update species dropdown when category changes
+categorySelect.addEventListener('change', () => {
+  const category = categorySelect.value;
+  speciesSelect.innerHTML = '<option value="">Select species</option>';
+if (speciesOptions[category]) {
+    speciesOptions[category].forEach(species => {
+      const option = document.createElement('option');
+      option.value = species;
+      option.textContent = species.replace(/_/g, ' ');
+      speciesSelect.appendChild(option);
+    });
+  }
+});
+
+// Form submit: fetch JSON and show diagnosis
+diagnosticForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const crop = document.getElementById('crop').value;
-  const symptom = document.getElementById('symptom').value;
-  const resultSection = document.getElementById('result');
+  const category = categorySelect.value;
+  const species = speciesSelect.value;
+  const symptom = document.getElementById('symptom').value.toLowerCase().trim();
 
-  const diagnoses = {
-    ugu: {
-      yellowing: "Likely Nitrogen Deficiency or Aphid Infestation.",
-      spots: "Possibly Fungal Leaf Spot.",
-      wilting: "Could be Root Rot due to overwatering.",
-      holes: "Check for Leaf Beetles or Caterpillars.",
-      rot: "Stem Rot or Fungal Infection likely."
-    },
-    maize: {
-      yellowing: "Nutrient deficiency or Downy Mildew.",
-      spots: "May be caused by Leaf Blight.",
-      wilting: "Check for Stem Borers or Root Rot.",
-      holes: "Fall Armyworm damage likely.",
-      rot: "Fusarium stalk rot or poor drainage."
-    },
-    tomato: {
-      yellowing: "Possible early blight or nutrient deficiency.",
-      spots: "Fungal spot diseases common in tomatoes.",
-      wilting: "Verticillium or Fusarium wilt likely.",
-      holes: "Tomato hornworms or caterpillars suspected.",
-      rot: "Bacterial soft rot or blossom end rot."
-    },
-    cassava: {
-      yellowing: "Cassava Mosaic Virus or iron deficiency.",
-      spots: "Possible Cercospora leaf spot.",
-      wilting: "Likely Cassava Brown Streak Disease.",
-      holes: "Grasshoppers or mites may be responsible.",
-      rot: "Root rot due to waterlogging."
-    },
-    rice: {
-      yellowing: "Nitrogen deficiency or Rice Yellow Mottle Virus.",
-      spots: "Blast disease or brown spot common.",
-      wilting: "Could indicate water stress or bacterial wilt.",
-      holes: "Likely from rice hispa or stem borers.",
-      rot: "Sheath rot or bacterial blight likely."
-    }
-  };
+ if (!category || !species || !symptom) {
+    resultSection.textContent = "Please select category, species and enter symptom.";
+    return;
+  }
 
-  const diagnosis = diagnoses[crop]?.[symptom] || "No diagnosis found. Please consult an expert.";
-  resultSection.textContent = `Diagnosis: ${diagnosis}`;
+  try {
+    const response = await fetch(`./data/${category}/${species}.json`);
+    const data = await response.json();
+
+    const diagnosis = data[symptom] || "No diagnosis found. Please consult an expert.";
+    resultSection.textContent = `Diagnosis: ${diagnosis}`;
+  } catch (err) {
+    console.error(err);
+    resultSection.textContent = "Error fetching diagnostic data. Check JSON files.";
+  }
 });
