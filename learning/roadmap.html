@@ -1,133 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agri_Empower Learning Roadmap</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Link to scalable CSS -->
+  <link rel="stylesheet" href="styles/learning.css">
 </head>
-
 <body>
 
 <header>
-  <h1>Agri_Empower Learning & Platform Roadmap</h1>
-  <p>Building a sustainable, scalable agro-knowledge ecosystem</p>
+  <h1>Agri_Empower Learning Roadmap</h1>
+  <p>Track your learning path across crops, livestock, processing, and agribusiness.</p>
 </header>
 
-<main class="container">
+<main id="roadmap-container">
 
-<section class="card">
-  <h2>🌍 Vision</h2>
-  <p>
-    Agri_Empower is designed as a long-term knowledge and services platform
-    that integrates learning, diagnostics, agribusiness, and digital tools
-    to support crops, livestock, processing, and food systems.
-  </p>
-</section>
+  <!-- Breadcrumb navigation -->
+  <nav id="breadcrumbs"></nav>
 
-<section class="card">
-  <h2>🧠 Learning Philosophy</h2>
-  <ul>
-    <li>Learning must be practical, ethical, and human-centered</li>
-    <li>Different learners require different depth levels</li>
-    <li>Knowledge must outlive individuals and adapt to future systems</li>
-    <li>Data-driven structure enables AI, diagnostics, and backend integration</li>
-  </ul>
-</section>
+  <!-- Roadmap content dynamically loaded -->
+  <section id="roadmap-content">
+    <p>Loading roadmap…</p>
+  </section>
 
-<section class="card">
-  <h2>📘 Learning Structure</h2>
-  <p>The Learning Hub is structured around:</p>
-  <ul>
-    <li><strong>Tracks:</strong> Crops, Livestock, Processing, Agribusiness</li>
-    <li><strong>Modules:</strong> Production, Pest & Disease, Post-Harvest, Processing, Markets</li>
-    <li><strong>Levels:</strong> Foundation → Intermediate → Advanced → Specialisation</li>
-  </ul>
-  <p>
-    Core modules (Pest & Disease, Post-Harvest, Processing, Agribusiness)
-    are designed as <strong>standalone bodies of knowledge</strong> that
-    feed into all species.
-  </p>
-</section>
-
-<section class="card">
-  <h2>🩺 Diagnostics Integration</h2>
-  <p>
-    The Diagnostics module will consume structured JSON data from learning modules
-    to assist farmers and processors in identifying pests, diseases, soil issues,
-    and food safety risks.
-  </p>
-  <ul>
-    <li>Phase 1: Rule-based diagnostics</li>
-    <li>Phase 2: Structured symptom-to-cause mapping</li>
-    <li>Phase 3: AI-assisted diagnostics and analytics</li>
-  </ul>
-</section>
-
-<section class="card">
-  <h2>🛒 Ecommerce & Services</h2>
-  <p>
-    Ecommerce will support:
-  </p>
-  <ul>
-    <li>Inputs (seeds, feeds, equipment)</li>
-    <li>Processed products</li>
-    <li>Services (training, diagnostics, certification)</li>
-  </ul>
-  <p>
-    Ecommerce is intentionally separated from learning logic
-    to maintain system clarity and scalability.
-  </p>
-</section>
-
-<section class="card">
-  <h2>🔗 Backend & Data Strategy</h2>
-  <ul>
-    <li>Frontend driven by JSON + JavaScript</li>
-    <li>Backend (Supabase / Django / APIs) connected later</li>
-    <li>Learning progress, diagnostics, and certifications stored centrally</li>
-    <li>AI tools built on clean, structured datasets</li>
-  </ul>
-</section>
-
-<section class="card">
-  <h2>🚀 Development Phases</h2>
-  <ol>
-    <li><strong>Phase 1:</strong> Frontend learning structure & content</li>
-    <li><strong>Phase 2:</strong> Diagnostics logic and testing</li>
-    <li><strong>Phase 3:</strong> Ecommerce & services</li>
-    <li><strong>Phase 4:</strong> Backend integration</li>
-    <li><strong>Phase 5:</strong> AI, analytics, and global expansion</li>
-  </ol>
-</section>
-
-<section class="card">
-  <h2>📌 Current Status</h2>
-  <ul>
-    <li>✔ Learning structure defined</li>
-    <li>✔ Core modules developed</li>
-    <li>✔ Assets cleaned and decoupled</li>
-    <li>⏳ Species population ongoing</li>
-    <li>⏳ Diagnostics restructuring</li>
-  </ul>
-</section>
-
-<section class="card">
-  <h2>🤝 Collaboration & Continuity</h2>
-  <p>
-    Agri_Empower is built to welcome contributors, partners,
-    and institutions while preserving architectural integrity.
-  </p>
-  <p>
-    The system is designed to evolve across generations.
-  </p>
-</section>
+  <!-- Optional PDF download -->
+  <section>
+    <p>
+      <a id="pdf-download" href="#" target="_blank">📄 Download Full Learning Roadmap PDF</a>
+    </p>
+  </section>
 
 </main>
 
 <footer>
-  <p>&copy; 2025 Agri_Empower | Bright Doro AgricTech Venture</p>
+  <p>&copy; 2026 Agri_Empower | Bright Doro AgricTech Venture</p>
 </footer>
+
+<!-- Load curriculum JSON -->
+<script src="data/curriculum.js"></script>
+
+<!-- Learning roadmap logic -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("roadmap-content");
+  container.innerHTML = ""; // Clear placeholder text
+
+  const curriculum = window.AGRI_CURRICULUM; // Ensure your curriculum.js exposes this global
+
+  // Loop through tracks
+  for (const trackKey in curriculum) {
+    const track = curriculum[trackKey];
+
+    const trackEl = document.createElement("details");
+    trackEl.className = "track";
+    trackEl.open = true;
+
+    const trackSummary = document.createElement("summary");
+    trackSummary.textContent = track.name;
+    trackEl.appendChild(trackSummary);
+
+    // Loop through topics
+    for (const topicKey in track.topics) {
+      const topic = track.topics[topicKey];
+
+      const topicEl = document.createElement("details");
+      topicEl.className = "topic";
+
+      const topicSummary = document.createElement("summary");
+      topicSummary.textContent = topic.name;
+      topicEl.appendChild(topicSummary);
+
+      // Loop through modules
+      for (const moduleKey in topic.modules) {
+        const module = topic.modules[moduleKey];
+
+        const moduleEl = document.createElement("details");
+        moduleEl.className = "module";
+
+        const moduleSummary = document.createElement("summary");
+        moduleSummary.textContent = module.name;
+        moduleEl.appendChild(moduleSummary);
+
+        // Levels links
+        const levelsEl = document.createElement("div");
+        levelsEl.className = "levels";
+
+        for (const levelKey in module.levels) {
+          const level = module.levels[levelKey];
+          const link = document.createElement("a");
+
+          // Link to learn.html with query parameters
+          link.href = `learn.html?track=${trackKey}&topic=${topicKey}&module=${moduleKey}&level=${levelKey}`;
+          link.textContent = level.title || levelKey;
+          levelsEl.appendChild(link);
+        }
+
+        moduleEl.appendChild(levelsEl);
+        topicEl.appendChild(moduleEl);
+      }
+
+      trackEl.appendChild(topicEl);
+    }
+
+    container.appendChild(trackEl);
+  }
+});
+</script>
 
 </body>
 </html>
