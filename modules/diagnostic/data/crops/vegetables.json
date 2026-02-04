@@ -1,0 +1,16 @@
+{
+  "tomato": {
+    "yellowing": "Possible early blight or nutrient deficiency.",
+    "spots": "Fungal spot diseases common in tomatoes.",
+    "wilting": "Verticillium or Fusarium wilt likely.",
+    "holes": "Tomato hornworms or caterpillars suspected.",
+    "rot": "Bacterial soft rot or blossom end rot."
+  },
+  "okra": {
+    "yellowing": "Nitrogen deficiency or Aphid infestation.",
+    "spots": "Fungal leaf spot.",
+    "wilting": "Root rot due to overwatering.",
+    "holes": "Leaf beetles or caterpillars.",
+    "rot": "Stem rot or fungal infection."
+  }
+}
