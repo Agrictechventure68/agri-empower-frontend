@@ -1,1 +1,127 @@
-learning page 
+/* ===================================================
+   Agri_Empower Learning Styles
+   File: styles/learning.css
+   Applies to roadmap.html, learn.html, curriculum.html
+=================================================== */
+
+/* Reset & base styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfdfd;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+header h1, footer p {
+  margin: 5px 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/* Breadcrumbs */
+#breadcrumbs {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Roadmap details/summary */
+details.track, details.topic, details.module {
+  border: 1px solid #c8e6c9;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 10px 0;
+  background-color: #f0fff0;
+}
+
+details > summary {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.05em;
+  color: #1b5e20;
+}
+
+/* Nested levels container */
+.levels {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.levels a {
+  display: inline-block;
+  margin: 4px 8px 4px 0;
+  padding: 6px 10px;
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: 0.2s background-color ease;
+}
+
+.levels a:hover {
+  background-color: #c8e6c9;
+}
+
+/* Buttons and navigation */
+#lesson-nav button, #lesson-nav a {
+  padding: 6px 12px;
+  margin: 3px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 0.95em;
+  text-decoration: none;
+}
+
+#lesson-nav button:hover, #lesson-nav a:hover {
+  background-color: #388e3c;
+}
+
+/* Lesson title and content */
+#lesson-title {
+  margin: 15px 0;
+  color: #2e7d32;
+}
+
+#lesson-content {
+  padding: 10px 0;
+}
+
+#video-container {
+  margin: 15px 0;
+}
+
+/* PDF link styling */
+#pdf-link {
+  color: #1b5e20;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#pdf-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .levels a {
+    display: block;
+    margin: 4px 0;
+  }
+}
