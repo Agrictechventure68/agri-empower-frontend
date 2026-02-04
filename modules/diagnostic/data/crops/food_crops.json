@@ -1,0 +1,23 @@
+{
+  "maize": {
+    "yellowing": "Nitrogen deficiency or Downy Mildew.",
+    "spots": "Leaf blight or rust disease.",
+    "wilting": "Root rot or drought stress.",
+    "holes": "Fall Armyworm or stem borers.",
+    "rot": "Fusarium stalk rot or poor storage."
+  },
+  "rice": {
+    "yellowing": "Nitrogen deficiency or Rice Yellow Mottle Virus.",
+    "spots": "Blast disease or brown spot.",
+    "wilting": "Bacterial wilt or water stress.",
+    "holes": "Rice hispa or stem borer damage.",
+    "rot": "Sheath rot or poor drainage."
+  },
+  "cassava": {
+    "yellowing": "Cassava Mosaic Virus or nutrient deficiency.",
+    "spots": "Cercospora leaf spot.",
+"wilting": "Cassava Brown Streak Disease.",
+    "holes": "Grasshoppers or mites.",
+    "rot": "Root rot due to waterlogging."
+  }
+}
