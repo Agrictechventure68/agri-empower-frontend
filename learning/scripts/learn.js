@@ -1,76 +1,64 @@
-function getParam(name) {
-  return new URLSearchParams(window.location.search).get(name);
-}
 
-const track = getParam("track");
-const topic = getParam("topic");
-const moduleKey = getParam("module");
-const levelKey = getParam("level");
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("✅ Agri_Empower Learning JS Loaded");
 
-const container = document.getElementById("learning-container");
+  const lessonTitle = document.getElementById("lesson-title");
+  const lessonContent = document.getElementById("lesson-content");
+  const pdfLink = document.getElementById("pdf-link");
+  const videoContainer = document.getElementById("video-container");
 
-if (!track || !topic || !moduleKey || !levelKey) {
-  container.innerHTML = "<p>❌ Invalid lesson link.</p>";
-  throw new Error("Missing URL parameters");
-}
+  // Read query parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const trackKey = urlParams.get("track");
+  const topicKey = urlParams.get("topic");
+  const moduleKey = urlParams.get("module");
+  const levelKey = urlParams.get("level");
 
-const curriculum = window.AGRI_CURRICULUM;
+  const curriculum = window.AGRI_CURRICULUM;
 
-const module =
-  curriculum?.[track]?.topics?.[topic]?.modules?.[moduleKey];
+  if (!trackKey || !topicKey || !moduleKey || !levelKey) {
+    lessonTitle.textContent = "No lesson selected";
+    lessonContent.textContent = "Please select a valid lesson from the curriculum.";
+    pdfLink.style.display = "none";
+    return;
+  }
 
-if (!module) {
-  container.innerHTML = "<p>❌ Module not found.</p>";
-  throw new Error("Module not found");
-}
+  // Fetch lesson data from curriculum.js
+  const lesson =
+    curriculum?.[trackKey]?.topics?.[topicKey]?.modules?.[moduleKey]?.levels?.[levelKey];
 
-const lesson = module.levels?.[levelKey];
+  if (!lesson) {
+    lessonTitle.textContent = "Lesson not found";
+    lessonContent.textContent = "The requested lesson data could not be located.";
+    pdfLink.style.display = "none";
+    return;
+  }
 
-if (!lesson) {
-  container.innerHTML = "<p>❌ Lesson level not found.</p>";
-  throw new Error("Lesson not found");
-}
+  // Populate title, content, PDF
+  lessonTitle.textContent = lesson.title || "Untitled Lesson";
+  lessonContent.innerHTML = lesson.content || "<p>No content available yet.</p>";
 
-/* ---------- Breadcrumbs ---------- */
-document.getElementById("breadcrumbs").innerHTML = `
-  <small>
-    ${track} → ${topic} → ${moduleKey} → <strong>${levelKey}</strong>
-  </small>
-`;
+  if (lesson.pdf) {
+    pdfLink.href = lesson.pdf;
+    pdfLink.style.display = "inline";
+  } else {
+    pdfLink.style.display = "none";
+  }
 
-/* ---------- Lesson title ---------- */
-document.getElementById("lesson-title").textContent =
-  lesson.title || "Lesson";
+  // Optional video
+  if (lesson.video) {
+    videoContainer.innerHTML = `
+      <video width="100%" controls>
+        <source src="${lesson.video}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    `;
+  }
 
-/* ---------- Lesson content ---------- */
-document.getElementById("lesson-content").innerHTML = `
-  ${lesson.intro ? `<p>${lesson.intro}</p>` : ""}
-  <div>${lesson.notes || "<em>No content yet.</em>"}</div>
-`;
+  // Placeholder for navigation (previous/next)
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
 
-/* ---------- Navigation ---------- */
-const levels = Object.keys(module.levels);
-const currentIndex = levels.indexOf(levelKey);
-
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
-
-if (currentIndex > 0) {
-  prevBtn.disabled = false;
-  prevBtn.onclick = () => {
-    window.location.href =
-      `learn.html?track=${track}&topic=${topic}&module=${moduleKey}&level=${levels[currentIndex - 1]}`;
-  };
-} else {
-  prevBtn.disabled = true;
-}
-
-if (currentIndex < levels.length - 1) {
-  nextBtn.disabled = false;
-  nextBtn.onclick = () => {
-    window.location.href =
-      `learn.html?track=${track}&topic=${topic}&module=${moduleKey}&level=${levels[currentIndex + 1]}`;
-  };
-} else {
-  nextBtn.disabled = true;
-}
+  prevBtn.addEventListener("click", () => alert("Previous lesson navigation coming soon!"));
+  nextBtn.addEventListener("click", () => alert("Next lesson navigation coming soon!"));
+});
