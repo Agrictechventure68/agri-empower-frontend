@@ -1,0 +1,11 @@
+{
+  "chicken": {
+    "diarrhea": "Possible coccidiosis or poor feed.",
+    "respiratory": "Newcastle disease or avian flu.",
+    "lethargy": "Likely bacterial infection."
+  },
+  "duck": {
+    "diarrhea": "Bacterial or viral infection.",
+    "feather_loss": "Parasites or nutritional deficiency."
+  }
+}
