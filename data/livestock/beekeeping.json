@@ -1,1 +1,8 @@
-honey 
+{
+  "honeybee": {
+    "weak_colony": "Nutrient deficiency or disease.",
+    "dead_bees": "Pesticide exposure or Varroa mite.",
+    "deformed_wings": "Deformed Wing Virus.",
+    "foul_smell": "Brood disease or hive contamination."
+  }
+}
