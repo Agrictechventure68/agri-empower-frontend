@@ -1,5 +1,3 @@
-// learning/data/species.js
-
 window.AGRI_SPECIES = {
   crops: {
     vegetables: [
@@ -24,7 +22,7 @@ window.AGRI_SPECIES = {
     ]
   },
 
-livestock: {
+  livestock: {
     poultry: [
       "broiler",
       "layer"
