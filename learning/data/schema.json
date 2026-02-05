@@ -1,1 +1,38 @@
-schema 
+{
+  "overview": {
+    "title": "string",
+    "description": "string"
+  },
+  "modules": [
+    {
+      "id": "string",
+      "title": "string",
+      "levels": {
+        "foundation": {
+          "summary": "string",
+          "content": ["string"],
+          "video": "string",
+          "pdf": "string"
+        },
+        "intermediate": {
+          "summary": "string",
+          "content": ["string"],
+          "video": "string",
+          "pdf": "string"
+        },
+        "advanced": {
+          "summary": "string",
+          "content": ["string"],
+          "video": "string",
+          "pdf": "string"
+        },
+        "specialisation": {
+          "summary": "string",
+          "content": ["string"],
+          "video": "string",
+          "pdf": "string"
+        }
+      }
+    }
+  ]
+}
