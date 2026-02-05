@@ -1,49 +1,47 @@
-const categorySelect = document.getElementById('category');
-const speciesSelect = document.getElementById('species');
-const diagnosticForm = document.getElementById('diagnosticForm');
-const resultSection = document.getElementById('result');
+const categorySelect = document.getElementById("category");
+const speciesSelect = document.getElementById("species");
+const form = document.getElementById("diagnosticForm");
+const resultDiv = document.getElementById("result");
 
-// Species mapping per category
-const speciesOptions = {
-  crops: ["vegetables", "food_crops", "cash_crops", "medicinal_crops"],
-  livestock: ["aquaculture", "beekeeping", "land_animals", "poultry"]
-};
+let loadedData = {};
 
-// Update species dropdown when category changes
-categorySelect.addEventListener('change', () => {
-  const category = categorySelect.value;
-  speciesSelect.innerHTML = '<option value="">Select species</option>';
-if (speciesOptions[category]) {
-    speciesOptions[category].forEach(species => {
-      const option = document.createElement('option');
-      option.value = species;
-      option.textContent = species.replace(/_/g, ' ');
-      speciesSelect.appendChild(option);
-    });
-  }
+async function loadCategory(category) {
+  const path = `/data/crops/${category}/${category}.json`;
+  const res = await fetch(path);
+  const json = await res.json();
+
+  loadedData = json.species;
+  speciesSelect.innerHTML = "";
+
+  Object.keys(loadedData).forEach(key => {
+    const opt = document.createElement("option");
+    opt.value = key;
+    opt.textContent = loadedData[key].name;
+    speciesSelect.appendChild(opt);
+  });
+}
+
+categorySelect.addEventListener("change", e => {
+  loadCategory(e.target.value);
 });
 
-// Form submit: fetch JSON and show diagnosis
-diagnosticForm.addEventListener('submit', async (e) => {
+form.addEventListener("submit", e => {
   e.preventDefault();
 
-  const category = categorySelect.value;
   const species = speciesSelect.value;
-  const symptom = document.getElementById('symptom').value.toLowerCase().trim();
+  const symptom = document.getElementById("symptom").value.trim();
 
- if (!category || !species || !symptom) {
-    resultSection.textContent = "Please select category, species and enter symptom.";
+  if (!loadedData[species]) {
+    resultDiv.textContent = "Species not found.";
     return;
   }
 
-  try {
-    const response = await fetch(`./data/${category}/${species}.json`);
-    const data = await response.json();
+  const diagnosis =
+    loadedData[species].symptoms[symptom] ||
+    "No direct match found. Consult an extension professional.";
 
-    const diagnosis = data[symptom] || "No diagnosis found. Please consult an expert.";
-    resultSection.textContent = `Diagnosis: ${diagnosis}`;
-  } catch (err) {
-    console.error(err);
-    resultSection.textContent = "Error fetching diagnostic data. Check JSON files.";
-  }
+  resultDiv.textContent = `Diagnosis: ${diagnosis}`;
 });
+
+// Initial load
+loadCategory(categorySelect.value);
