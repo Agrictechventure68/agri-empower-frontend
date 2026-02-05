@@ -1,1 +1,92 @@
-vegetables farming 
+{
+  "category": "Vegetables",
+  "philosophy": "Healthy soil, healthy crops, safe food, healthy people.",
+  "species": {
+    "tomato": {
+      "name": "Tomato",
+      "scientific_name": "Solanum lycopersicum",
+      "common_pests": [
+        "Aphids",
+        "Whiteflies",
+        "Tomato hornworm",
+        "Cutworms"
+      ],
+      "common_diseases": [
+        "Early blight",
+        "Late blight",
+        "Fusarium wilt",
+        "Bacterial wilt",
+        "Blossom end rot"
+      ],
+      "symptoms": {
+        "yellowing_leaves": "Possible nutrient deficiency, early blight, or viral infection.",
+        "leaf_spots": "Likely fungal or bacterial disease.",
+        "wilting": "Possible Fusarium or bacterial wilt.",
+        "fruit_rot": "Blossom end rot or fungal infection.",
+        "holes_in_leaves": "Insect pest damage."
+      },
+      "preventive_practices": [
+        "Crop rotation",
+        "Use of resistant varieties",
+        "Proper spacing and ventilation",
+        "Balanced fertilization",
+        "Good field sanitation"
+      ],
+      "food_safety_risks": [
+        "Chemical residue",
+        "Contamination from dirty water",
+        "Poor post-harvest handling"
+      ]
+    },
+
+    "okra": {
+      "name": "Okra",
+      "scientific_name": "Abelmoschus esculentus",
+      "common_pests": [
+        "Flea beetles",
+        "Aphids",
+        "Fruit borers"
+      ],
+      "common_diseases": [
+        "Powdery mildew",
+        "Leaf spot",
+        "Yellow vein mosaic virus"
+      ],
+      "symptoms": {
+        "yellow_veins": "Likely viral infection.",
+        "leaf_spots": "Fungal leaf spot disease.",
+        "poor_fruiting": "Nutrient imbalance or pest pressure."
+      },
+      "preventive_practices": [
+        "Field hygiene",
+        "Use of tolerant varieties",
+        "Early pest monitoring",
+        "Organic matter improvement"
+      ]
+    },
+
+    "ugu": {
+      "name": "Fluted Pumpkin (Ugu)",
+      "scientific_name": "Telfairia occidentalis",
+      "common_pests": [
+        "Leaf beetles",
+        "Grasshoppers"
+      ],
+      "common_diseases": [
+        "Leaf spot",
+        "Root rot"
+      ],
+      "symptoms": {
+        "holes_in_leaves": "Insect feeding damage.",
+        "wilting": "Root rot or water stress.",
+        "yellowing": "Nutrient deficiency."
+      },
+      "preventive_practices": [
+        "Well-drained soil",
+        "Organic manure use",
+        "Manual pest control",
+        "Clean planting materials"
+      ]
+    }
+  }
+}
