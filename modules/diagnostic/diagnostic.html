@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diagnostics | Agri_Empower</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <meta charset="UTF-8" />
+  <title>Disease & Pest Diagnostics | Agri_Empower</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
+
 <body>
-  <h1>Disease & Pest Diagnostics</h1>
-  
+
+<header>
+  <h1>🩺 Agri_Empower Diagnostic Tool</h1>
+  <p>Crop & Livestock Health | One Health Approach</p>
+</header>
+
+<main>
+
+<section class="card">
+  <h2>Quick Diagnosis</h2>
+
   <form id="diagnosticForm">
-    <label for="category">Category:</label>
-    <select id="category" required>
-      <option value="">Select category</option>
-      <option value="crops">Crops</option>
-      <option value="livestock">Livestock</option>
-    </select>
-<label for="species">Species:</label>
-    <select id="species" required>
-      <option value="">Select species</option>
-    </select>
+    <label>
+      Select Category:
+      <select id="category">
+        <option value="vegetables">Vegetables</option>
+        <option value="medicinal_crops">Medicinal Crops</option>
+      </select>
+    </label>
 
-    <label for="symptom">Symptom:</label>
-    <input type="text" id="symptom" placeholder="Enter symptom" required>
+    <label>
+      Select Crop:
+      <select id="species"></select>
+    </label>
 
-    <button type="submit">Diagnose</button>
+    <label>
+      Observed Symptom:
+      <input type="text" id="symptom" placeholder="e.g. yellowing_leaves" />
+    </label>
+
+    <button type="submit">Run Diagnosis</button>
   </form>
 
   <div id="result"></div>
+</section>
 
-  <script src="diagnostic.js"></script>
+</main>
+
+<footer>
+  <p>&copy; 2025 Agri_Empower | Safe Food • Healthy People</p>
+</footer>
+
+<script src="diagnostic.js"></script>
 </body>
 </html>
