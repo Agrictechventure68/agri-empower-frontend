@@ -1,1 +1,47 @@
-lemongrass 
+{
+  "category": "Medicinal and Aromatic Crops",
+  "philosophy": "Medicinal crops require higher safety, traceability, and purity standards.",
+  "species": {
+    "aloe_vera": {
+      "name": "Aloe Vera",
+      "scientific_name": "Aloe barbadensis miller",
+      "common_pests": [
+        "Mealybugs",
+        "Aphids"
+      ],
+      "common_diseases": [
+        "Root rot",
+        "Leaf spot"
+      ],
+      "symptoms": {
+        "soft_rotting_base": "Root rot due to overwatering.",
+        "leaf_spots": "Fungal infection.",
+        "yellowing": "Poor soil drainage or nutrient stress."
+      },
+      "special_safety_notes": [
+        "Avoid chemical pesticide residues",
+        "Use clean harvesting tools",
+        "Prevent contamination during processing"
+      ]
+    },
+
+    "lemongrass": {
+      "name": "Lemongrass",
+      "scientific_name": "Cymbopogon citratus",
+      "common_pests": [
+        "Stem borers"
+      ],
+      "common_diseases": [
+        "Leaf blight"
+      ],
+      "symptoms": {
+        "leaf_browning": "Fungal disease or drought stress.",
+        "stunted_growth": "Poor soil nutrition."
+      },
+      "special_safety_notes": [
+        "Essential oil purity is critical",
+        "Avoid polluted water sources"
+      ]
+    }
+  }
+}
