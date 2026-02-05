@@ -1,92 +1,119 @@
 {
-  "category": "Vegetables",
-  "philosophy": "Healthy soil, healthy crops, safe food, healthy people.",
+  "category": "vegetables",
   "species": {
     "tomato": {
-      "name": "Tomato",
-      "scientific_name": "Solanum lycopersicum",
-      "common_pests": [
-        "Aphids",
-        "Whiteflies",
-        "Tomato hornworm",
-        "Cutworms"
-      ],
-      "common_diseases": [
-        "Early blight",
-        "Late blight",
-        "Fusarium wilt",
-        "Bacterial wilt",
-        "Blossom end rot"
-      ],
-      "symptoms": {
-        "yellowing_leaves": "Possible nutrient deficiency, early blight, or viral infection.",
-        "leaf_spots": "Likely fungal or bacterial disease.",
-        "wilting": "Possible Fusarium or bacterial wilt.",
-        "fruit_rot": "Blossom end rot or fungal infection.",
-        "holes_in_leaves": "Insect pest damage."
+      "overview": {
+        "title": "Tomato Production",
+        "description": "Comprehensive tomato production across all learning levels, covering production, pest and disease management, post-harvest handling, processing, and agribusiness."
       },
-      "preventive_practices": [
-        "Crop rotation",
-        "Use of resistant varieties",
-        "Proper spacing and ventilation",
-        "Balanced fertilization",
-        "Good field sanitation"
-      ],
-      "food_safety_risks": [
-        "Chemical residue",
-        "Contamination from dirty water",
-        "Poor post-harvest handling"
+      "modules": [
+        {
+          "id": "production",
+          "title": "Tomato Production Systems",
+          "levels": {
+            "foundation": {
+              "summary": "Basic tomato growing principles",
+              "content": [
+                "Site and soil selection",
+                "Land preparation",
+                "Seed selection and nursery management",
+                "Basic watering and care"
+              ],
+              "video": "https://youtu.be/4EkmtSpM4nc",
+              "pdf": ""
+            },
+            "intermediate": {
+              "summary": "Improving yield and reducing losses",
+              "content": [
+                "Spacing and staking",
+                "Fertilizer and manure management",
+                "Early pest and disease identification",
+                "Simple record keeping"
+              ],
+              "video": "",
+              "pdf": ""
+            },
+            "advanced": {
+              "summary": "Risk-managed and market-oriented production",
+              "content": [
+                "Integrated pest and disease management",
+                "Soil health optimization",
+                "Climate risk mitigation",
+                "Quality control for market acceptance"
+              ],
+              "video": "",
+              "pdf": ""
+            },
+            "specialisation": {
+              "summary": "Commercial and technology-driven tomato systems",
+              "content": [
+                "Protected cultivation (greenhouse, screen house)",
+                "Precision irrigation and fertigation",
+                "AI-based disease monitoring",
+                "Traceability and export standards"
+              ],
+              "video": "",
+              "pdf": ""
+            }
+          }
+        }
       ]
     },
 
     "okra": {
-      "name": "Okra",
-      "scientific_name": "Abelmoschus esculentus",
-      "common_pests": [
-        "Flea beetles",
-        "Aphids",
-        "Fruit borers"
-      ],
-      "common_diseases": [
-        "Powdery mildew",
-        "Leaf spot",
-        "Yellow vein mosaic virus"
-      ],
-      "symptoms": {
-        "yellow_veins": "Likely viral infection.",
-        "leaf_spots": "Fungal leaf spot disease.",
-        "poor_fruiting": "Nutrient imbalance or pest pressure."
+      "overview": {
+        "title": "Okra Production",
+        "description": "Okra production systems from smallholder to commercial scale."
       },
-      "preventive_practices": [
-        "Field hygiene",
-        "Use of tolerant varieties",
-        "Early pest monitoring",
-        "Organic matter improvement"
+      "modules": [
+        {
+          "id": "production",
+          "title": "Okra Production Systems",
+          "levels": {
+            "foundation": {
+              "summary": "Introduction to okra farming",
+              "content": [
+                "Land preparation",
+                "Seed sowing methods",
+                "Basic weed control"
+              ],
+              "video": "",
+              "pdf": ""
+            }
+          }
+        }
       ]
     },
 
     "ugu": {
-      "name": "Fluted Pumpkin (Ugu)",
-      "scientific_name": "Telfairia occidentalis",
-      "common_pests": [
-        "Leaf beetles",
-        "Grasshoppers"
-      ],
-      "common_diseases": [
-        "Leaf spot",
-        "Root rot"
-      ],
-      "symptoms": {
-        "holes_in_leaves": "Insect feeding damage.",
-        "wilting": "Root rot or water stress.",
-        "yellowing": "Nutrient deficiency."
+      "overview": {
+        "title": "Ugu (Fluted Pumpkin) Production",
+        "description": "Vegetable leaf production for household nutrition and markets."
       },
-      "preventive_practices": [
-        "Well-drained soil",
-        "Organic manure use",
-        "Manual pest control",
-        "Clean planting materials"
+      "modules": [
+        {
+          "id": "production",
+          "title": "Ugu Production Systems",
+          "levels": {
+            "foundation": {
+              "summary": "Basic ugu cultivation",
+              "content": [
+                "Seed selection",
+                "Planting techniques",
+                "Harvesting of leaves"
+              ],
+              "video": "",
+              "pdf": ""
+            }
+          }
+        }
       ]
     }
   }
 }
+
+
+
+
+
+
