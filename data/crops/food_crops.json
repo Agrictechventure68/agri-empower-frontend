@@ -1,23 +1,12 @@
 {
-  "maize": {
-    "yellowing": "Nitrogen deficiency or Downy Mildew.",
-    "spots": "Leaf blight or rust disease.",
-    "wilting": "Root rot or drought stress.",
-    "holes": "Fall Armyworm or stem borers.",
-    "rot": "Fusarium stalk rot or poor storage."
+  "overview": {
+    "title": "Food Crops Production",
+    "description": "Comprehensive food crop production across all learning levels."
   },
-  "rice": {
-    "yellowing": "Nitrogen deficiency or Rice Yellow Mottle Virus.",
-    "spots": "Blast disease or brown spot.",
-    "wilting": "Bacterial wilt or water stress.",
-    "holes": "Rice hispa or stem borer damage.",
-    "rot": "Sheath rot or poor drainage."
-  },
-  "cassava": {
-    "yellowing": "Cassava Mosaic Virus or nutrient deficiency.",
-    "spots": "Cercospora leaf spot.",
-"wilting": "Cassava Brown Streak Disease.",
-    "holes": "Grasshoppers or mites.",
-    "rot": "Root rot due to waterlogging."
-  }
+  "modules": [
+    {"id":"production","title":"Food Crop Production Systems","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}, 
+    {"id":"processing","title":"Processing & Value Addition","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}, 
+    {"id":"postharvest","title":"Post-Harvest Handling & Storage","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}, 
+    {"id":"agribusiness","title":"Agribusiness & Markets","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}
+  ]
 }
