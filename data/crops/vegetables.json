@@ -1,116 +1,68 @@
-
-
-
 {
-  "category": "vegetables",
-  "species": {
-    "tomato": {
-      "overview": {
-        "title": "Tomato Production",
-        "description": "Comprehensive tomato production across all learning levels, covering production, pest and disease management, post-harvest handling, processing, and agribusiness."
-      },
-      "modules": [
-        {
-          "id": "production",
-          "title": "Tomato Production Systems",
-          "levels": {
-            "foundation": {
-              "summary": "Basic tomato growing principles",
-              "content": [
-                "Site and soil selection",
-                "Land preparation",
-                "Seed selection and nursery management",
-                "Basic watering and care"
-              ],
-              "video": "https://youtu.be/4EkmtSpM4nc",
-              "pdf": ""
-            },
-            "intermediate": {
-              "summary": "Improving yield and reducing losses",
-              "content": [
-                "Spacing and staking",
-                "Fertilizer and manure management",
-                "Early pest and disease identification",
-                "Simple record keeping"
-              ],
-              "video": "",
-              "pdf": ""
-            },
-            "advanced": {
-              "summary": "Risk-managed and market-oriented production",
-              "content": [
-                "Integrated pest and disease management",
-                "Soil health optimization",
-                "Climate risk mitigation",
-                "Quality control for market acceptance"
-              ],
-              "video": "",
-              "pdf": ""
-            },
-            "specialisation": {
-              "summary": "Commercial and technology-driven tomato systems",
-              "content": [
-                "Protected cultivation (greenhouse, screen house)",
-                "Precision irrigation and fertigation",
-                "AI-based disease monitoring",
-                "Traceability and export standards"
-              ],
-              "video": "",
-              "pdf": ""
-            }
-          }
+  "overview": {
+    "title": "Vegetables Production",
+    "description": "Comprehensive vegetable production across all learning levels."
+  },
+  "modules": [
+    {
+      "id": "production",
+      "title": "Vegetable Production Systems",
+      "levels": {
+        "foundation": {
+          "summary": "Basic vegetable growing principles",
+          "content": ["Land preparation", "Seed selection", "Basic care"],
+          "video": "https://youtu.be/4EkmtSpM4nc",
+          "pdf": ""
+        },
+        "intermediate": {
+          "summary": "Intermediate vegetable cultivation",
+          "content": ["Soil nutrient management", "Irrigation scheduling", "Pest monitoring"],
+          "video": "",
+          "pdf": ""
+        },
+        "advanced": {
+          "summary": "Advanced vegetable systems",
+          "content": ["Integrated pest management", "Greenhouse production", "Varietal selection"],
+          "video": "",
+          "pdf": ""
+        },
+        "specialisation": {
+          "summary": "Specialised vegetable practices",
+          "content": ["Hydroponics", "Precision farming", "Export market requirements"],
+          "video": "",
+          "pdf": ""
         }
-      ]
+      }
     },
-
-    "okra": {
-      "overview": {
-        "title": "Okra Production",
-        "description": "Okra production systems from smallholder to commercial scale."
-      },
-      "modules": [
-        {
-          "id": "production",
-          "title": "Okra Production Systems",
-          "levels": {
-            "foundation": {
-              "summary": "Introduction to okra farming",
-              "content": [
-                "Land preparation",
-                "Seed sowing methods",
-                "Basic weed control"
-              ],
-              "video": "",
-              "pdf": ""
-            }
-          }
-        }
-      ]
+    {
+      "id": "processing",
+      "title": "Processing & Value Addition",
+      "levels": {
+        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+      }
     },
-
-    "ugu": {
-      "overview": {
-        "title": "Ugu (Fluted Pumpkin) Production",
-        "description": "Vegetable leaf production for household nutrition and markets."
-      },
-      "modules": [
-        {
-          "id": "production",
-          "title": "Ugu Production Systems",
-          "levels": {
-            "foundation": {
-              "summary": "Basic ugu cultivation",
-              "content": [
-                "Seed selection",
-                "Planting techniques",
-                "Harvesting of leaves"
-              ],
-              "video": "",
-              "pdf": ""
-            }
-          }
-        }
-      ]
+    {
+      "id": "postharvest",
+      "title": "Post-Harvest Handling & Storage",
+      "levels": {
+        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+      }
+    },
+    {
+      "id": "agribusiness",
+      "title": "Agribusiness & Markets",
+      "levels": {
+        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+      }
     }
-  }
+  ]
 }
