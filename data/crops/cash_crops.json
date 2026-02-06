@@ -1,64 +1,26 @@
 {
-  "category": "cash_crops",
-  "species": {
-    "avocado": {
-      "overview": {
-        "title": "Avocado Production",
-        "description": "Commercial avocado production with emphasis on quality, markets, and sustainability."
-      },
-      "modules": [
-        {
-          "id": "production",
-          "title": "Avocado Production Systems",
-          "levels": {
-            "foundation": {
-              "summary": "Introduction to avocado farming",
-              "content": [
-                "Climate and soil requirements",
-                "Variety selection",
-                "Orchard establishment basics",
-                "Seedling handling"
-              ],
-              "video": "https://youtu.be/gQwF8jGUnSA",
-              "pdf": ""
-            },
-            "intermediate": {
-              "summary": "Improving orchard productivity",
-              "content": [
-                "Spacing and pruning",
-                "Soil fertility management",
-                "Pest and disease awareness",
-                "Harvest maturity indicators"
-              ],
-              "video": "",
-              "pdf": ""
-            },
-            "advanced": {
-              "summary": "Risk management and commercial scaling",
-              "content": [
-                "Integrated pest and disease management",
-                "Water management and irrigation",
-                "Post-harvest handling for quality preservation",
-                "Market standards and grading"
-              ],
-              "video": "",
-              "pdf": ""
-            },
-            "specialisation": {
-              "summary": "Export-oriented and technology-driven avocado systems",
-              "content": [
-                "Cold chain management",
-                "Quality certification and traceability",
-                "AI and digital orchard monitoring",
-                "Global market access and contracts"
-              ],
-              "video": "",
-              "pdf": ""
-            }
-          }
-        }
-      ]
-    }
-  }
+  "overview": {
+    "title": "Cash Crops Production",
+    "description": "Comprehensive cash crop production across all learning levels."
+  },
+  "modules": [
+    {
+      "id": "production",
+      "title": "Cash Crop Production Systems",
+      "levels": {
+        "foundation": {
+          "summary": "Basic cash crop growing principles",
+          "content": ["Land preparation", "Seedling management", "Basic care"],
+          "video": "https://youtu.be/gQwF8jGUnSA",
+          "pdf": ""
+        },
+        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+      }
+    },
+    {"id": "processing","title":"Processing & Value Addition","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}},
+    {"id":"postharvest","title":"Post-Harvest Handling & Storage","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}},
+    {"id":"agribusiness","title":"Agribusiness & Markets","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}
+  ]
 }
-
