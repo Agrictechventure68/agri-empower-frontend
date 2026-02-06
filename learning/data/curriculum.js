@@ -104,7 +104,7 @@ cash_crops: {
       }
     }
   }
-}
+},
    medicinal_crops: {
         name: "Medicinal & Aromatic Crops",
         modules: {
