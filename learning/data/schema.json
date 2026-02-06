@@ -1,1 +1,137 @@
-rice 
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agri_Empower Learning Schema",
+  "description": "Defines the structure for all learning content, species, modules, levels, and resources.",
+  "type": "object",
+  "properties": {
+    "tracks": {
+      "type": "object",
+      "description": "Main learning tracks (e.g., Crops, Livestock, Processing, Agribusiness)",
+      "patternProperties": {
+        "^[a-zA-Z0-9_]+$": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "topics": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-zA-Z0-9_]+$": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" },
+                    "description": { "type": "string" },
+                    "modules": {
+                      "type": "object",
+                      "patternProperties": {
+                        "^[a-zA-Z0-9_]+$": {
+                          "type": "object",
+                          "properties": {
+                            "name": { "type": "string" },
+                            "description": { "type": "string" },
+                            "levels": {
+                              "type": "object",
+                              "properties": {
+                                "foundation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "title": { "type": "string" },
+                                    "summary": { "type": "string" },
+                                    "content": { "type": "array", "items": { "type": "string" } },
+                                    "video": { "type": "string" },
+                                    "pdf": { "type": "string" }
+                                  },
+                                  "required": ["title", "content"]
+                                },
+                                "intermediate": {
+                                  "type": "object",
+                                  "properties": {
+                                    "title": { "type": "string" },
+                                    "summary": { "type": "string" },
+                                    "content": { "type": "array", "items": { "type": "string" } },
+                                    "video": { "type": "string" },
+                                    "pdf": { "type": "string" }
+                                  },
+                                  "required": ["title", "content"]
+                                },
+                                "advanced": {
+                                  "type": "object",
+                                  "properties": {
+                                    "title": { "type": "string" },
+                                    "summary": { "type": "string" },
+                                    "content": { "type": "array", "items": { "type": "string" } },
+                                    "video": { "type": "string" },
+                                    "pdf": { "type": "string" }
+                                  },
+                                  "required": ["title", "content"]
+                                },
+                                "specialisation": {
+                                  "type": "object",
+                                  "properties": {
+                                    "title": { "type": "string" },
+                                    "summary": { "type": "string" },
+                                    "content": { "type": "array", "items": { "type": "string" } },
+                                    "video": { "type": "string" },
+                                    "pdf": { "type": "string" }
+                                  },
+                                  "required": ["title", "content"]
+                                }
+                              },
+                              "required": ["foundation", "intermediate", "advanced", "specialisation"]
+                            }
+                          },
+                          "required": ["name", "levels"]
+                        }
+                      }
+                    }
+                  },
+                  "required": ["name", "modules"]
+                }
+              }
+            }
+          },
+          "required": ["name", "topics"]
+        }
+      }
+    },
+    "species": {
+      "type": "object",
+      "description": "Species definitions per track, used for diagnostics and learning content",
+      "properties": {
+        "crops": {
+          "type": "object",
+          "properties": {
+            "vegetables": { "type": "array", "items": { "type": "string" } },
+            "food_crops": { "type": "array", "items": { "type": "string" } },
+            "cash_crops": { "type": "array", "items": { "type": "string" } },
+            "medicinal_crops": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "livestock": {
+          "type": "object",
+          "properties": {
+            "poultry": { "type": "array", "items": { "type": "string" } },
+            "land_animals": { "type": "array", "items": { "type": "string" } },
+            "aquaculture": { "type": "array", "items": { "type": "string" } },
+            "beekeeping": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      },
+      "required": ["crops", "livestock"]
+    },
+    "resources": {
+      "type": "object",
+      "description": "Optional media or documents linked to modules",
+      "patternProperties": {
+        "^[a-zA-Z0-9_]+$": {
+          "type": "object",
+          "properties": {
+            "video": { "type": "string" },
+            "pdf": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+  "required": ["tracks", "species", "resources"]
+}
