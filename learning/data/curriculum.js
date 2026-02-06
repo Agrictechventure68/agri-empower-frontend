@@ -64,8 +64,48 @@ window.AGRI_CURRICULUM = {
           }
         }
       },
-
-      medicinal_crops: {
+cash_crops: {
+  name: "Cash Crops",
+  modules: {
+    cocoa: {
+      name: "Cocoa Production",
+      levels: {
+        foundation: {},
+        intermediate: {},
+        advanced: {},
+        specialisation: {}
+      }
+    },
+    coffee: {
+      name: "Coffee Production",
+      levels: {
+        foundation: {},
+        intermediate: {},
+        advanced: {},
+        specialisation: {}
+      }
+    },
+    oil_palm: {
+      name: "Oil Palm Production",
+      levels: {
+        foundation: {},
+        intermediate: {},
+        advanced: {},
+        specialisation: {}
+      }
+    },
+    avocado: {
+      name: "Avocado Production",
+      levels: {
+        foundation: {},
+        intermediate: {},
+        advanced: {},
+        specialisation: {}
+      }
+    }
+  }
+}
+   medicinal_crops: {
         name: "Medicinal & Aromatic Crops",
         modules: {
           aloe_vera: {
