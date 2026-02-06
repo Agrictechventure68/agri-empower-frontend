@@ -1,8 +1,12 @@
 {
-  "honeybee": {
-    "weak_colony": "Nutrient deficiency or disease.",
-    "dead_bees": "Pesticide exposure or Varroa mite.",
-    "deformed_wings": "Deformed Wing Virus.",
-    "foul_smell": "Brood disease or hive contamination."
-  }
+  "overview": {
+    "title": "Beekeeping",
+    "description": "Bee farm management and honey production."
+  },
+  "modules": [
+    {"id":"production","title":"Beekeeping Systems","levels":{"foundation":{"summary":"","content":[],"video":"https://youtu.be/zHs47eq8BLs","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}, 
+    {"id":"processing","title":"Processing & Value Addition","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}, 
+    {"id":"postharvest","title":"Post-Harvest Handling & Storage","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}, 
+    {"id":"agribusiness","title":"Agribusiness & Markets","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}
+  ]
 }
