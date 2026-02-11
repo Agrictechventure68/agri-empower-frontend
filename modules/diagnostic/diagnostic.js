@@ -8,7 +8,7 @@ const DOMAIN = "crops"; // future-proof (livestock later)
 
 async function loadCategory(category) {
   try {
-    const path = `/data/${DOMAIN}/${category}/${category}.json`;
+    const path = `/data/diagnostic/${domain}/${category}.json`;
     const res = await fetch(path);
 
     if (!res.ok) throw new Error("Category data not found");
