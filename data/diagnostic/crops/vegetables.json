@@ -1,0 +1,27 @@
+data/diagnostic/crops/vegetables.json
+Copy code
+Json
+{
+  "category": "vegetables",
+  "species": {
+    "tomato": {
+      "name": "Tomato",
+      "learning_category": "vegetables",
+      "learning_module": "production",
+      "symptoms": {
+        "yellowing_leaves": {
+          "keywords": ["yellow leaves", "yellowing", "pale leaves"],
+          "cause": "Nitrogen deficiency or overwatering",
+          "solution": "Apply balanced NPK fertilizer and improve drainage.",
+          "prevention": "Maintain regular soil testing and proper irrigation."
+        },
+        "leaf_curl": {
+          "keywords": ["leaf curl", "curled leaves"],
+          "cause": "Whitefly infestation or viral infection",
+          "solution": "Control whiteflies and remove infected plants.",
+          "prevention": "Use resistant varieties and field hygiene."
+        }
+      }
+    }
+  }
+}
