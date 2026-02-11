@@ -1,0 +1,12 @@
+{
+  "overview": {
+    "title": "Land Animals",
+    "description": "Farming land animals including snail pilot."
+  },
+  "modules": [
+    {"id":"production","title":"Land Animal Production","levels":{"foundation":{"summary":"","content":["Snail farming basics included"],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}, 
+    {"id":"processing","title":"Processing & Value Addition","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":[],"video":"","pdf":""}}}, 
+    {"id":"postharvest","title":"Post-Harvest Handling & Storage","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":[],"video":"","pdf":""},"advanced":{"summary":[],"video":"","pdf":""},"specialisation":{"summary":[],"video":"","pdf":""}}}, 
+    {"id":"agribusiness","title":"Agribusiness & Markets","levels":{"foundation":{"summary":[],"video":"","pdf":""},"intermediate":{"summary":[],"video":"","pdf":""},"advanced":{"summary":[],"video":"","pdf":""},"specialisation":{"summary":[],"video":"","pdf":""}}}
+  ]
+}
