@@ -1,6 +1,3 @@
-data/diagnostic/crops/vegetables.json
-Copy code
-Json
 {
   "category": "vegetables",
   "species": {
