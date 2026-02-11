@@ -1,1 +1,13 @@
-poultry farming 
+{
+  "overview": {
+    "title": "Poultry Farming",
+    "description": "Comprehensive poultry production."
+  },
+  "modules": [
+    {"id":"production","title":"Poultry Production","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":[],"video":"","pdf":""}}}, 
+    {"id":"processing","title":"Processing & Value Addition","levels":{"foundation":{"summary":[],"content":[],"video":"","pdf":""},"intermediate":{"summary":[],"content":[],"video":"","pdf":""},"advanced":{"summary":[],"content":[],"video":"","pdf":""},"specialisation":{"summary":[],"video":"","pdf":""}}}, 
+    {"id":"postharvest","title":"Post-Harvest Handling & Storage","levels":{"foundation":[],"intermediate":[],"advanced":[],"specialisation":[]}}, 
+    {"id":"agribusiness","title":"Agribusiness & Markets","levels":{"foundation":[],"intermediate":[],"advanced":[],"specialisation":[]}}
+  ]
+}
+
