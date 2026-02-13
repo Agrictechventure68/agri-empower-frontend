@@ -5,50 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Agri_Empower | Smart Farming Platform</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f9f4; }
-    header { background: #2e7d32; padding: 1rem; color: #fff; }
-    nav a { color: #fff; margin-right: 1rem; text-decoration: none; font-weight: bold; }
-    section { padding: 2.5rem; }
-    h2 { color: #2e7d32; }
-    .hero { background: #e8f5e9; padding: 3.5rem 2rem; text-align: center; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5rem; }
-    .card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .card a { color: #2e7d32; font-weight: bold; text-decoration: none; }
-    footer { background: #1b5e20; color: #fff; padding: 1rem; text-align: center; }
-    .btn {
-      background: #2e7d32;
-      color: #fff;
-      padding: 0.7rem 1.4rem;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Agri_Empower</h1>
-  <nav>
-    <a href="learning/index.html">Learning Hub</a>
-<a href="learning/curriculum.html">Curriculum</a>
-    <a href="curriculum.html">Curriculum</a>
-    <a href="modules/diagnostic/diagnostic.html">Diagnostics</a>
-    <a href="modules/ecommerce/ecommerce.html">Marketplace</a>
-    <a href="profile.html">Farmers</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<div id="header"></div>
 
 <section class="hero">
   <h2>Building Capable Farmers. Strengthening Food Systems.</h2>
@@ -66,28 +27,33 @@
     <div class="card">
       <h3>🌱 Structured Crop Learning</h3>
       <p>Trainer-led programs covering food crops, vegetables, and value-driven farming.</p>
-      <a href="curriculum.html">View Curriculum</a>
+      <a href="learning/curriculum.html">View Curriculum</a>
     </div>
+
     <div class="card">
       <h3>🐄 Livestock & Aquaculture</h3>
       <p>Responsible livestock and fish farming practices grounded in productivity and welfare.</p>
-      <a href="curriculum.html">Explore Modules</a>
+      <a href="learning/curriculum.html">Explore Modules</a>
     </div>
+
     <div class="card">
       <h3>🦠 Diagnostics & Advisory</h3>
       <p>Early detection of pests, diseases, and production risks with guided solutions.</p>
       <a href="modules/diagnostic/diagnostic.html">Run Diagnosis</a>
     </div>
+
     <div class="card">
       <h3>🏭 Processing & Value Addition</h3>
       <p>From raw produce to market-ready products — processing as a business.</p>
-      <a href="curriculum.html">Processing Modules</a>
+      <a href="learning/curriculum.html">Processing Modules</a>
     </div>
+
     <div class="card">
       <h3>🛒 Digital Market Access</h3>
       <p>Connecting farmers to inputs, buyers, and structured agribusiness opportunities.</p>
       <a href="modules/ecommerce/ecommerce.html">Go to Market</a>
     </div>
+
     <div class="card">
       <h3>👨‍🌾 Farmer Profiling</h3>
       <p>Professional farmer records for training, monitoring, and growth pathways.</p>
@@ -116,29 +82,9 @@
   </ul>
 </section>
 
-<section>
-  <label for="languageSelector"><strong>Select Language:</strong></label>
-  <select id="languageSelector">
-    <option value="en">English</option>
-    <option value="yo">Yoruba</option>
-    <option value="ig">Igbo</option>
-    <option value="ha">Hausa</option>
-    <option value="fr">French</option>
-    <option value="pidgin">Pidgin English</option>
-  </select>
-</section>
+<div id="footer"></div>
 
-<footer>
-  <p>&copy; 2025 Agri_Empower | Bright Doro AgricTech Venture</p>
-  <p>Lagos, Nigeria | agriempower4dcentury@gmail.com</p>
-</footer>
-
-<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-<script>
-  const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
-  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-</script>
+<script src="assets/js/layout.js"></script>
 
 </body>
 </html>
