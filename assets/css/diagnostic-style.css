@@ -1,1 +1,65 @@
-diagnosis 
+/* ======================================
+   Diagnostic Module Styling
+   ====================================== */
+
+.diagnostic-form {
+  padding: 25px;
+  max-width: 650px;
+  margin: 30px auto;
+  background: #f8fdf8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.diagnostic-form label {
+  display: block;
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+.diagnostic-form select,
+.diagnostic-form input,
+.diagnostic-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.diagnostic-form button {
+  margin-top: 20px;
+  background-color: #2e7d32;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.diagnostic-form button:hover {
+  background-color: #1b5e20;
+}
+
+.diagnostic-result {
+  margin: 30px auto;
+  max-width: 650px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #e8f5e9;
+  border-left: 5px solid #2e7d32;
+}
+
+.diagnostic-result.error {
+  background: #ffecec;
+  border-left: 5px solid #d32f2f;
+}
+
+.symptom-hint {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #555;
+  background: #fafafa;
+  padding: 10px;
+  border-left: 4px solid #4CAF50;
+  border-radius: 4px;
+}
