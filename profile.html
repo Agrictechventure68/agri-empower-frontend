@@ -4,48 +4,7 @@
   <meta charset="UTF-8" />
   <title>Farmer Registration | Agri_Empower</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f9f4;
-      padding: 20px;
-    }
-    h1 {
-      color: #2e7d32;
-    }
-    form {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 500px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    label {
-      display: block;
-      margin-top: 12px;
-      font-weight: bold;
-    }
-    input, select, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-    }
-    button {
-      background: #2e7d32;
-      color: white;
-      border: none;
-      margin-top: 20px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #1b5e20;
-    }
-    #message {
-      margin-top: 15px;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/profile.css">
 </head>
 
 <body>
@@ -80,46 +39,60 @@
 
 <p id="message"></p>
 
-<!-- Supabase Client -->
 <script type="module">
-  import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
-  const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
+const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
 
-  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-  const form = document.getElementById("farmerForm");
-  const message = document.getElementById("message");
+const form = document.getElementById("farmerForm");
+const message = document.getElementById("message");
+const submitBtn = form.querySelector("button");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    message.style.color = "black";
-    message.textContent = "⏳ Registering farmer...";
+  submitBtn.disabled = true;
+  submitBtn.textContent = "⏳ Registering farmer...";
+  message.textContent = "";
+  message.className = "";
 
-    const payload = {
-      full_name: document.getElementById("full_name").value.trim(),
-      phone: document.getElementById("phone").value.trim(),
-      location: document.getElementById("location").value.trim(),
-      specialisation: document.getElementById("specialisation").value.trim(),
-      language: document.getElementById("language").value
-    };
+  const full_name = document.getElementById("full_name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const location = document.getElementById("location").value.trim();
+  const specialisation = document.getElementById("specialisation").value.trim();
+  const language = document.getElementById("language").value;
 
-    const { error } = await supabase
-      .from("farmers")
-      .insert([payload]);
+  const phonePattern = /^[0-9]{10,15}$/;
+  if (!phonePattern.test(phone)) {
+    message.className = "error";
+    message.textContent = "❌ Invalid phone number. Enter 10-15 digits.";
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Register Farmer";
+    return;
+  }
 
-    if (error) {
-      message.style.color = "red";
-      message.textContent = "❌ " + error.message;
-      return;
-    }
+  const payload = { full_name, phone, location, specialisation, language };
 
-    message.style.color = "green";
+  try {
+    const { error } = await supabase.from("farmers").insert([payload]);
+
+    if (error) throw error;
+
+    message.className = "success";
     message.textContent = "✅ Farmer registered successfully!";
     form.reset();
-  });
+
+  } catch (err) {
+    message.className = "error";
+    message.textContent = "❌ " + err.message;
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Register Farmer";
+  }
+});
 </script>
 
 </body>
