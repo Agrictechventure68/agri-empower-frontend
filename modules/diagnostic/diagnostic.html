@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,17 +20,28 @@
   <h2>Quick Diagnosis</h2>
 
   <form id="diagnosticForm">
+
     <label>
-      Select Category:
-      <select id="category">
-        <option value="vegetables">Vegetables</option>
-        <option value="medicinal_crops">Medicinal Crops</option>
+      Select Domain:
+      <select id="domain">
+        <option value="">-- Select Domain --</option>
+        <option value="crops">Crops</option>
+        <option value="livestock">Livestock</option>
       </select>
     </label>
 
     <label>
-      Select Crop:
-      <select id="species"></select>
+      Select Category:
+      <select id="category">
+        <option value="">-- Select Category --</option>
+      </select>
+    </label>
+
+    <label>
+      Select Species:
+      <select id="species">
+        <option value="">-- Select Species --</option>
+      </select>
     </label>
 
     <label>
@@ -46,9 +58,12 @@
 </main>
 
 <footer>
-  <p>&copy; 2025 Agri_Empower | Safe Food • Healthy People</p>
+  <p>&copy; 2026 Agri_Empower | Safe Food • Healthy People</p>
 </footer>
 
-<script src="diagnostic.js"></script>
+<!-- JS FILES -->
+<script src="../../assets/js/dataService.js"></script>
+<script src="../../assets/js/diagnostic.js"></script>
+
 </body>
 </html>
