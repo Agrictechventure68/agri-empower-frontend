@@ -3,44 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <title>Agri-Empower Learning</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 
-  <main id="learning-container">
+<div id="header"></div>
 
-  <!-- Breadcrumbs -->
+<main id="learning-container">
+
   <nav id="breadcrumbs"></nav>
 
-  <!-- Navigation buttons -->
   <div id="lesson-nav" style="margin: 15px 0;">
     <button id="prev-btn">⬅ Previous</button>
     <button id="next-btn">Next ➡</button>
-    <a href="curriculum.html" style="margin-left: 10px;">📚 Back to Curriculum</a>
+    <a href="roadmap.html" style="margin-left: 10px;">📚 Back to Roadmap</a>
   </div>
 
-  <!-- Lesson title -->
   <h1 id="lesson-title"></h1>
 
-  <!-- Lesson content -->
   <div id="lesson-content"></div>
 
-  <!-- Video container (optional) -->
   <div id="video-container"></div>
 
-  <!-- PDF link (optional) -->
   <p>
     <a id="pdf-link" href="#" target="_blank">📄 Download PDF</a>
   </p>
 
 </main>
 
-  <!-- Load curriculum FIRST -->
-  <script src="data/curriculum.js"></script>
+<script src="../assets/js/layout.js"></script>
 
-  <!-- Load learning logic -->
-  <script src="learn.js"></script>
+<script src="data/curriculum.js"></script>
+<script src="scripts/learn.js"></script>
 
 </body>
 </html>
