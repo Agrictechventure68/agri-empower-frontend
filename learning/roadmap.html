@@ -45,8 +45,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("roadmap-content");
   container.innerHTML = ""; // Clear placeholder text
+const curriculum = window.AGRI_CURRICULUM;
 
-  const curriculum = window.AGRI_CURRICULUM; // Ensure your curriculum.js exposes this global
+if (!curriculum) {
+  container.innerHTML = "<p style='color:red;'>Curriculum data failed to load.</p>";
+  return;
+}
+
+   // Ensure your curriculum.js exposes this global
 
   // Loop through tracks
   for (const trackKey in curriculum) {
