@@ -7,24 +7,25 @@ document.addEventListener("DOMContentLoaded", async () => {
   const videoContainer = document.getElementById("video-container");
 
   const urlParams = new URLSearchParams(window.location.search);
-  const trackKey = urlParams.get("track");
-  const topicKey = urlParams.get("topic");
-  const moduleKey = urlParams.get("module");
-  const levelKey = urlParams.get("level");
+  const category = urlParams.get("category"); // crops or livestock
+  const topic = urlParams.get("topic");       // vegetables, poultry, etc.
+  const moduleKey = urlParams.get("module");  // production, processing
+  const levelKey = urlParams.get("level");    // foundation, intermediate
 
-  if (!trackKey || !topicKey || !moduleKey || !levelKey) {
+  if (!category || !topic || !moduleKey || !levelKey) {
     lessonTitle.textContent = "No lesson selected";
     lessonContent.textContent = "Please select a valid lesson from the curriculum.";
     pdfLink.style.display = "none";
     return;
   }
 
-  const jsonPath = `../data/${trackKey}/${topicKey}.json`;
+  const jsonPath = `../data/learning/${category}/${topic}.json`;
   console.log("📦 Loading lesson from:", jsonPath);
 
   try {
     const res = await fetch(jsonPath);
     if (!res.ok) throw new Error(`Lesson JSON not found (${jsonPath})`);
+
     const data = await res.json();
 
     const module = data.modules?.find(m => m.id === moduleKey);
@@ -34,20 +35,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!lesson) throw new Error(`Level not found: ${levelKey}`);
 
     /* ---------- TITLE ---------- */
-    lessonTitle.textContent = lesson.title || "Untitled Lesson";
+    lessonTitle.textContent =
+      `${data.overview.title} - ${module.title} (${levelKey.toUpperCase()})`;
 
     /* ---------- CONTENT ---------- */
-    if (Array.isArray(lesson.content)) {
-      lessonContent.innerHTML = `
+    let html = "";
+
+    if (lesson.summary) {
+      html += `<p><strong>${lesson.summary}</strong></p>`;
+    }
+
+    if (Array.isArray(lesson.content) && lesson.content.length > 0) {
+      html += `
         <ul>
           ${lesson.content.map(item => `<li>${item}</li>`).join("")}
         </ul>
       `;
-    } else if (typeof lesson.content === "string") {
-      lessonContent.innerHTML = lesson.content;
-    } else {
-      lessonContent.innerHTML = "<p>No content available yet.</p>";
     }
+
+    if (!html) {
+      html = "<p>No content available yet.</p>";
+    }
+
+    lessonContent.innerHTML = html;
 
     /* ---------- PDF ---------- */
     if (lesson.pdf) {
@@ -57,7 +67,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       pdfLink.style.display = "none";
     }
 
-    /* ---------- VIDEO (YouTube + MP4) ---------- */
+    /* ---------- VIDEO ---------- */
     videoContainer.innerHTML = "";
 
     if (lesson.video) {
@@ -103,4 +113,3 @@ document.addEventListener("DOMContentLoaded", async () => {
     alert("Next lesson navigation coming soon!")
   );
 });
-
