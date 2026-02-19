@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  const jsonPath = `/data/${trackKey}/${topicKey}.json`;
+  const jsonPath = `../data/${trackKey}/${topicKey}.json`;
   console.log("📦 Loading lesson from:", jsonPath);
 
   try {
