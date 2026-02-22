@@ -1,13 +1,62 @@
 {
   "overview": {
     "title": "Poultry Farming",
-    "description": "Comprehensive poultry production."
+    "description": "A complete 4-tier structured poultry training pathway covering production, biosecurity, post-harvest handling, processing, and agribusiness."
   },
   "modules": [
-    {"id":"production","title":"Poultry Production","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":[],"video":"","pdf":""}}}, 
-    {"id":"processing","title":"Processing & Value Addition","levels":{"foundation":{"summary":[],"content":[],"video":"","pdf":""},"intermediate":{"summary":[],"content":[],"video":"","pdf":""},"advanced":{"summary":[],"content":[],"video":"","pdf":""},"specialisation":{"summary":[],"video":"","pdf":""}}}, 
-    {"id":"postharvest","title":"Post-Harvest Handling & Storage","levels":{"foundation":[],"intermediate":[],"advanced":[],"specialisation":[]}}, 
-    {"id":"agribusiness","title":"Agribusiness & Markets","levels":{"foundation":[],"intermediate":[],"advanced":[],"specialisation":[]}}
+    {
+      "id": "complete-track",
+      "title": "Complete Poultry Learning Track",
+      "levels": {
+        "foundation": {
+          "summary": "Foundation level covering core poultry production principles, biosecurity basics, post-harvest handling, processing fundamentals and introduction to poultry agribusiness.",
+          "content": [
+            "Poultry production basics",
+            "Biosecurity fundamentals",
+            "Post-harvest handling",
+            "Processing introduction",
+            "Agribusiness foundations"
+          ],
+          "video": "",
+          "pdf": "https://drive.google.com/file/d/1EYk2kCUgRK48St2IXoSsloBlDZMSdeMn/view?usp=sharing"
+        },
+        "intermediate": {
+          "summary": "Intermediate level strengthening farm management, health systems, value addition, and market positioning.",
+          "content": [
+            "Improved farm management",
+            "Advanced biosecurity",
+            "Processing improvements",
+            "Market integration",
+            "Record keeping"
+          ],
+          "video": "",
+          "pdf": "https://drive.google.com/file/d/1adc_itHcUjYUn80NqSKRuze75xU4uHoA/view?usp=sharing"
+        },
+        "advanced": {
+          "summary": "Advanced commercial poultry operations with financial planning, disease control systems, and scaling strategies.",
+          "content": [
+            "Commercial production systems",
+            "Vaccination protocols",
+            "Business expansion",
+            "Profit optimisation",
+            "Operational efficiency"
+          ],
+          "video": "",
+          "pdf": "https://drive.google.com/file/d/1-OAi_dNJF2A3GdynqcdHCp8Ydywe1WbB/view?usp=sharing"
+        },
+        "specialisation": {
+          "summary": "Specialisation level for enterprise development, export readiness, integrated systems and institutional poultry models.",
+          "content": [
+            "Enterprise structuring",
+            "Integrated poultry systems",
+            "Export readiness",
+            "Institutional production models",
+            "High-level agribusiness strategy"
+          ],
+          "video": "",
+          "pdf": "https://drive.google.com/file/d/1fli1cktrBtIPhribWMKoNYloyZwtslN-/view?usp=sharing"
+        }
+      }
+    }
   ]
 }
-
