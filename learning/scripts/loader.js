@@ -89,14 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
 ‎    lessonBtn.className = "btn";
 ‎
 ‎    lessonBtn.onclick = () => {
-‎      const params = new URLSearchParams({
-‎        track: trackKey,
-‎        module: module.id,
-‎        level: levelKey
-‎      });
-‎
-‎      window.location.href = `lesson.html?${params.toString()}`;
-‎    };
+  const params = new URLSearchParams({
+    category: trackKey,
+    topic: topicKey,
+    enterprise: enterpriseKey,   // tomato or broilers
+    pillar: pillarKey,           // production_management etc.
+    level: levelKey
+  });
+
+  window.location.href = "learn.html?" + params.toString();
+};
 ‎
 ‎    levelEl.appendChild(lessonBtn);
 ‎    moduleEl.appendChild(levelEl);
