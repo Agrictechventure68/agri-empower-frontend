@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
 ‎  if (!container) return;
 ‎
 ‎  container.innerHTML = "<p>⏳ Loading curriculum...</p>";
+‎
+‎  // Get track from URL
+‎  const params = new URLSearchParams(window.location.search);
+‎  const track = params.get("track");
+‎
+‎  if (track) {
+‎    renderCurriculum(track);
+‎  } else {
+‎    container.innerHTML = "<p>⚠ No track selected.</p>";
+‎  }
 ‎});
 ‎
 ‎async function loadJSON(path) {
@@ -18,7 +28,46 @@ document.addEventListener("DOMContentLoaded", () => {
 ‎  }
 ‎}
 ‎
-function renderModule(module, container, trackKey) {
+‎async function renderCurriculum(trackKey) {
+‎  const curriculumContainer = document.getElementById("curriculum-container");
+‎  if (!curriculumContainer) return;
+‎
+‎  // IMPORTANT: GitHub Pages path fix
+‎  const jsonPath = `../data/${trackKey}.json`;
+‎
+‎  const data = await loadJSON(jsonPath);
+‎
+‎  if (!data) {
+‎    curriculumContainer.innerHTML = "<p>❌ Failed to load curriculum data.</p>";
+‎    return;
+‎  }
+‎
+‎  curriculumContainer.innerHTML = "";
+‎
+‎  if (data.species) {
+‎    data.species.forEach(specie => {
+‎      const specieTitle = document.createElement("h2");
+‎      specieTitle.textContent = specie.title;
+‎      curriculumContainer.appendChild(specieTitle);
+‎
+‎      specie.modules.forEach(module => {
+‎        renderModule(module, curriculumContainer, trackKey);
+‎      });
+‎    });
+‎  }
+‎
+‎  else if (data.modules) {
+‎    data.modules.forEach(module => {
+‎      renderModule(module, curriculumContainer, trackKey);
+‎    });
+‎  }
+‎
+‎  else {
+‎    curriculumContainer.innerHTML = "<p>⚠ No modules found.</p>";
+‎  }
+‎}
+‎
+‎function renderModule(module, container, trackKey) {
 ‎  const moduleEl = document.createElement("div");
 ‎  moduleEl.className = "module";
 ‎
@@ -37,7 +86,7 @@ function renderModule(module, container, trackKey) {
 ‎
 ‎    const lessonBtn = document.createElement("button");
 ‎    lessonBtn.textContent = "Open Lesson";
-‎    lessonBtn.style.display = "block";
+‎    lessonBtn.className = "btn";
 ‎
 ‎    lessonBtn.onclick = () => {
 ‎      const params = new URLSearchParams({
@@ -50,13 +99,9 @@ function renderModule(module, container, trackKey) {
 ‎    };
 ‎
 ‎    levelEl.appendChild(lessonBtn);
-‎
 ‎    moduleEl.appendChild(levelEl);
 ‎  }
 ‎
 ‎  container.appendChild(moduleEl);
 ‎}
 ‎
-‎  
-‎
-‎ 
