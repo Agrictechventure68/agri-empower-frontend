@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 ‎
 ‎  const title = document.createElement("h3");
 ‎  title.textContent = module.title;
-‎  moduleEl.appendChild(title);
+‎  levelEl.appendChild(lessonBtn);moduleEl.appendChild(title);
 ‎
 ‎  for (const [levelKey, level] of Object.entries(module.levels)) {
 ‎    const levelEl = document.createElement("div");
