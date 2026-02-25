@@ -56,11 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
 ‎    });
 ‎  }
 ‎
-‎  else if (data.modules) {
-‎    data.modules.forEach(module => {
-‎      renderModule(module, curriculumContainer, trackKey);
-‎    });
-‎  }
+‎  else if (data.enterprises) {
+  data.enterprises.forEach(enterprise => {
+    renderEnterprise(enterprise, curriculumContainer, trackKey);
+  });
+}
 ‎
 ‎  else {
 ‎    curriculumContainer.innerHTML = "<p>⚠ No modules found.</p>";
