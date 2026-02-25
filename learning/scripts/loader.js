@@ -18,54 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 ‎  }
 ‎}
 ‎
-‎// 🔥 Main Render Function (Now Species-Aware)
-‎async function renderCurriculum(trackKey) {
-‎  const curriculumContainer = document.getElementById("curriculum-container");
-‎  if (!curriculumContainer) return;
-‎
-‎  const jsonPath = `/data/${trackKey}.json`;
-‎  const data = await loadJSON(jsonPath);
-‎
-‎  if (!data) {
-‎    curriculumContainer.innerHTML = "<p>❌ Failed to load curriculum data.</p>";
-‎    return;
-‎  }
-‎
-‎  curriculumContainer.innerHTML = "";
-‎
-‎  // ✅ NEW STRUCTURE (Species-based like poultry.json)
-‎  if (data.species) {
-‎    data.species.forEach(specie => {
-‎      const specieTitle = document.createElement("h2");
-‎      specieTitle.textContent = specie.title;
-‎      curriculumContainer.appendChild(specieTitle);
-‎specie.modules.forEach(module => {
-  renderModule(module, curriculumContainer, trackKey);
-});
-‎    });
-‎  }
-‎
-‎  // ✅ OLD STRUCTURE (Direct modules like crops.json etc.)
-‎  else if (data.modules) {
-‎    data.modules.forEach(module => {
-‎      renderModule(module, curriculumContainer);
-‎    });
-‎  }
-‎
-‎  else {
-‎    curriculumContainer.innerHTML = "<p>⚠ No modules found in this curriculum.</p>";
-‎  }
-‎}
-‎
-‎
-‎// 🔹 Reusable Module Renderer
-‎function renderModule(module, container, trackKey)
+function renderModule(module, container, trackKey) {
 ‎  const moduleEl = document.createElement("div");
 ‎  moduleEl.className = "module";
 ‎
 ‎  const title = document.createElement("h3");
 ‎  title.textContent = module.title;
-‎  levelEl.appendChild(lessonBtn);moduleEl.appendChild(title);
+‎  moduleEl.appendChild(title);
 ‎
 ‎  for (const [levelKey, level] of Object.entries(module.levels)) {
 ‎    const levelEl = document.createElement("div");
@@ -76,42 +35,28 @@ document.addEventListener("DOMContentLoaded", () => {
 ‎      `${levelKey.charAt(0).toUpperCase() + levelKey.slice(1)} Level`;
 ‎    levelEl.appendChild(heading);
 ‎
-‎    if (level.content && level.content.length > 0) {
-‎      const ul = document.createElement("ul");
-‎      level.content.forEach(item => {
-‎        const li = document.createElement("li");
-‎        li.textContent = item;
-‎        ul.appendChild(li);
+‎    const lessonBtn = document.createElement("button");
+‎    lessonBtn.textContent = "Open Lesson";
+‎    lessonBtn.style.display = "block";
+‎
+‎    lessonBtn.onclick = () => {
+‎      const params = new URLSearchParams({
+‎        track: trackKey,
+‎        module: module.id,
+‎        level: levelKey
 ‎      });
-‎      levelEl.appendChild(ul);
-‎    }
 ‎
-‎    if (level.video) {
-‎      const videoLink = document.createElement("a");
-‎      videoLink.href = level.video;
-‎      videoLink.target = "_blank";
-‎      videoLink.textContent = "📺 Watch Video";
-‎      videoLink.style.display = "block";
-‎      levelEl.appendChild(videoLink);
-‎    }
+‎      window.location.href = `lesson.html?${params.toString()}`;
+‎    };
 ‎
-‎     const lessonBtn = document.createElement("button");
-lessonBtn.textContent = "Open Lesson";
-lessonBtn.style.display = "block";
-
-lessonBtn.onclick = () => {
-  const params = new URLSearchParams({
-    track: trackKey,
-    module: module.id,
-    level: levelKey
-  });
-
-  window.location.href = `lesson.html?${params.toString()}`;
-};
-
+‎    levelEl.appendChild(lessonBtn);
+‎
 ‎    moduleEl.appendChild(levelEl);
 ‎  }
 ‎
 ‎  container.appendChild(moduleEl);
 ‎}
 ‎
+‎  
+‎
+‎ 
