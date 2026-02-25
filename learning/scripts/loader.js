@@ -96,15 +96,20 @@ document.addEventListener("DOMContentLoaded", () => {
 ‎      levelEl.appendChild(videoLink);
 ‎    }
 ‎
-‎    if (level.pdf) {
-‎      const pdfLink = document.createElement("a");
-‎      pdfLink.href = level.pdf;
-‎      pdfLink.target = "_blank";
-‎      pdfLink.textContent = "📄 Download PDF";
-‎      pdfLink.style.display = "block";
-‎      levelEl.appendChild(pdfLink);
-‎    }
-‎
+‎     const lessonBtn = document.createElement("button");
+lessonBtn.textContent = "Open Lesson";
+lessonBtn.style.display = "block";
+
+lessonBtn.onclick = () => {
+  const params = new URLSearchParams({
+    track: trackKey,
+    module: module.id,
+    level: levelKey
+  });
+
+  window.location.href = `lesson.html?${params.toString()}`;
+};
+
 ‎    moduleEl.appendChild(levelEl);
 ‎  }
 ‎
