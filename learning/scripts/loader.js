@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 ‎
 ‎
 ‎// 🔹 Reusable Module Renderer
-‎function renderModule(module, container) {
+‎function renderModule(module, container, trackKey)
 ‎  const moduleEl = document.createElement("div");
 ‎  moduleEl.className = "module";
 ‎
