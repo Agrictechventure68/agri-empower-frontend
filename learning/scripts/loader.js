@@ -39,10 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
 ‎      const specieTitle = document.createElement("h2");
 ‎      specieTitle.textContent = specie.title;
 ‎      curriculumContainer.appendChild(specieTitle);
-‎
-‎      specie.modules.forEach(module => {
-‎        renderModule(module, curriculumContainer);
-‎      });
+‎specie.modules.forEach(module => {
+  renderModule(module, curriculumContainer, trackKey);
+});
 ‎    });
 ‎  }
 ‎
