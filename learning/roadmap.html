@@ -1,118 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agri_Empower Learning Roadmap</title>
-  <!-- Link to scalable CSS -->
-  <link rel="stylesheet" href="styles/learning.css">
-</head>
-<body>
-
-<header>
-  <h1>Agri_Empower Learning Roadmap</h1>
-  <p>Track your learning path across crops, livestock, processing, and agribusiness.</p>
-</header>
-
-<main id="roadmap-container">
-
-  <!-- Breadcrumb navigation -->
-  <nav id="breadcrumbs"></nav>
-
-  <!-- Roadmap content dynamically loaded -->
-  <section id="roadmap-content">
-    <p>Loading roadmap…</p>
-  </section>
-
-  <!-- Optional PDF download -->
-  <section>
-    <p>
-      <a id="pdf-download" href="#" target="_blank">📄 Download Full Learning Roadmap PDF</a>
-    </p>
-  </section>
-
-</main>
-
-<footer>
-  <p>&copy; 2026 Agri_Empower | Bright Doro AgricTech Venture</p>
-</footer>
-
-<!-- Load curriculum JSON -->
-<script src="data/curriculum.js"></script>
-
-<!-- Learning roadmap logic -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("roadmap-content");
-  container.innerHTML = ""; // Clear placeholder text
-const curriculum = window.AGRI_CURRICULUM;
-
-if (!curriculum) {
-  container.innerHTML = "<p style='color:red;'>Curriculum data failed to load.</p>";
-  return;
-}
-
-   // Ensure your curriculum.js exposes this global
-
-  // Loop through tracks
-  for (const trackKey in curriculum) {
-    const track = curriculum[trackKey];
-
-    const trackEl = document.createElement("details");
-    trackEl.className = "track";
-    trackEl.open = true;
-
-    const trackSummary = document.createElement("summary");
-    trackSummary.textContent = track.name;
-    trackEl.appendChild(trackSummary);
-
-    // Loop through topics
-    for (const topicKey in track.topics) {
-      const topic = track.topics[topicKey];
-
-      const topicEl = document.createElement("details");
-      topicEl.className = "topic";
-
-      const topicSummary = document.createElement("summary");
-      topicSummary.textContent = topic.name;
-      topicEl.appendChild(topicSummary);
-
-      // Loop through modules
-      for (const moduleKey in topic.modules) {
-        const module = topic.modules[moduleKey];
-
-        const moduleEl = document.createElement("details");
-        moduleEl.className = "module";
-
-        const moduleSummary = document.createElement("summary");
-        moduleSummary.textContent = module.name;
-        moduleEl.appendChild(moduleSummary);
-
-        // Levels links
-        const levelsEl = document.createElement("div");
-        levelsEl.className = "levels";
-
-        for (const levelKey in module.levels) {
-          const level = module.levels[levelKey];
-          const link = document.createElement("a");
-
-          // Link to learn.html with query parameters
-          link.href = `learn.html?track=${trackKey}&topic=${topicKey}&module=${moduleKey}&level=${levelKey}`;
-          link.textContent = level.title || levelKey;
-          levelsEl.appendChild(link);
-        }
-
-        moduleEl.appendChild(levelsEl);
-        topicEl.appendChild(moduleEl);
-      }
-
-      trackEl.appendChild(topicEl);
-    }
-
-    container.appendChild(trackEl);
-  }
-});
-</script>
-
-</body>
-</html>
+‎<!DOCTYPE html>
+‎<html lang="en">
+‎<head>
+‎  <meta charset="UTF-8">
+‎  <title>Agri_Empower Learning Roadmap</title>
+‎  <link rel="stylesheet" href="../assets/css/style.css">
+‎</head>
+‎
+‎<body>
+‎
+‎<div id="header"></div>
+‎
+‎<main id="roadmap-container">
+‎
+‎  <h1>Agri_Empower Learning Roadmap</h1>
+‎  <p>Select an enterprise and begin your structured learning journey.</p>
+‎
+‎  <section id="roadmap-content">
+‎    <p>Loading roadmap...</p>
+‎  </section>
+‎
+‎</main>
+‎
+‎<script src="../assets/js/layout.js"></script>
+‎<script src="scripts/roadmap.js"></script>
+‎
+‎</body>
+‎</html>
+‎
