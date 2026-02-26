@@ -139,16 +139,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 ‎    }
 ‎
 ‎    function navigateTo(targetLevel) {
-‎      const newParams = new URLSearchParams({
-‎        category,
-‎        topic,
-‎        enterprise,
-‎        pillar,
-‎        level: targetLevel
-‎      });
-‎
-‎      
-‎    }window.location.href = `${window.location.pathname}?${newParams.toString()}`;
+  const newParams = new URLSearchParams({
+    category,
+    topic,
+    enterprise,
+    pillar,
+    level: targetLevel
+  });
+
+  window.location.href = `${window.location.pathname}?${newParams.toString()}`;
+}
 ‎
 ‎  } catch (err) {
 ‎    console.error("❌ Lesson load error:", err);
