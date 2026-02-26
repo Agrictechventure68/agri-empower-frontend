@@ -105,57 +105,59 @@ document.addEventListener("DOMContentLoaded", async () => {
 ‎    }
 ‎
 ‎    // ===============================
-‎    // NAVIGATION (SAFE VERSION)
-‎    // ===============================
+‎// NAVIGATION (FIXED + STABLE)
+‎// ===============================
 ‎
-‎    const levelOrder = ["foundation", "intermediate", "advanced", "specialisation"];
+‎const levelOrder = ["foundation", "intermediate", "advanced", "specialisation"];
 ‎
-‎    const availableLevels = levelOrder.filter(l => pillarData.levels[l]);
-‎    const currentIndex = availableLevels.indexOf(level);
+‎// Ensure levels exist safely
+‎const availableLevels = levelOrder.filter(
+‎  l => pillarData.levels && pillarData.levels[l]
+‎);
 ‎
-‎    console.log("📍 Current level:", level);
-‎    console.log("📍 Current index:", currentIndex);
+‎// Normalize level from URL
+‎const normalizedLevel = level ? level.toLowerCase().trim() : "";
 ‎
-‎    if (prevBtn) {
-‎      if (currentIndex > 0) {
-‎        prevBtn.disabled = false;
-‎        prevBtn.onclick = () => {
-‎          navigateTo(availableLevels[currentIndex - 1]);
-‎        };
-‎      } else {
-‎        prevBtn.disabled = true;
-‎      }
+‎const currentIndex = availableLevels.indexOf(normalizedLevel);
+‎
+‎console.log("📍 Available Levels:", availableLevels);
+‎console.log("📍 Level from URL:", normalizedLevel);
+‎console.log("📍 Current Index:", currentIndex);
+‎
+‎// PREVIOUS BUTTON
+‎if (prevBtn) {
+‎  prevBtn.disabled = currentIndex <= 0;
+‎
+‎  prevBtn.onclick = () => {
+‎    if (currentIndex > 0) {
+‎      navigateTo(availableLevels[currentIndex - 1]);
 ‎    }
+‎  };
+‎}
 ‎
-‎    if (nextBtn) {
-‎      if (currentIndex < availableLevels.length - 1) {
-‎        nextBtn.disabled = false;
-‎        nextBtn.onclick = () => {
-‎          navigateTo(availableLevels[currentIndex + 1]);
-‎        };
-‎      } else {
-‎        nextBtn.disabled = true;
-‎      }
+‎// NEXT BUTTON
+‎if (nextBtn) {
+‎  nextBtn.disabled =
+‎    currentIndex === -1 || currentIndex >= availableLevels.length - 1;
+‎
+‎  nextBtn.onclick = () => {
+‎    if (currentIndex < availableLevels.length - 1) {
+‎      navigateTo(availableLevels[currentIndex + 1]);
 ‎    }
+‎  };
+‎}
 ‎
-‎    function navigateTo(targetLevel) {
-  const newParams = new URLSearchParams({
-    category,
-    topic,
-    enterprise,
-    pillar,
-    level: targetLevel
-  });
-
-  window.location.href = `${window.location.pathname}?${newParams.toString()}`;
-}
+‎// NAVIGATION FUNCTION
+‎function navigateTo(targetLevel) {
+‎  const newParams = new URLSearchParams({
+‎    category,
+‎    topic,
+‎    enterprise,
+‎    pillar,
+‎    level: targetLevel
+‎  });
 ‎
-‎  } catch (err) {
-‎    console.error("❌ Lesson load error:", err);
-‎    lessonTitle.textContent = "Error loading lesson";
-‎    lessonContent.textContent = err.message;
-‎  }
-‎});
+‎  window.location.href =
+‎    window.location.pathname + "?" + newParams.toString();
+‎}
 ‎
-  
-‎  
