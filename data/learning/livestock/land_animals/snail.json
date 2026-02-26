@@ -1,1 +1,34 @@
-snail farming 
+‎{
+‎  "enterprise": "snail",
+‎  "title": "Snail Farming",
+‎  "pillars": {
+‎    "production_management": {
+‎      "title": "Production & Farm Management",
+‎      "levels": {
+‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+‎      }
+‎    },
+‎    "postharvest_processing": {
+‎      "title": "Processing & Value Addition",
+‎      "levels": {
+‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+‎      }
+‎    },
+‎    "agribusiness_markets": {
+‎      "title": "Agribusiness & Markets",
+‎      "levels": {
+‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+‎      }
+‎    }
+‎  }
+‎}
+‎
