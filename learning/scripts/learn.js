@@ -82,6 +82,51 @@
 ‎            <source src="${levelData.video}" type="video/mp4">
 ‎            Your browser does not support the video tag.
 ‎          </video>
+// ---- Navigation logic ----
+‎const levels = Object.keys(pillarData.levels);
+‎const currentIndex = levels.indexOf(level);
+‎
+‎const prevBtn = document.getElementById("prev-btn");
+‎const nextBtn = document.getElementById("next-btn");
+‎
+‎if (prevBtn) {
+‎  if (currentIndex > 0) {
+‎    const prevLevel = levels[currentIndex - 1];
+‎    prevBtn.disabled = false;
+‎    prevBtn.onclick = () => {
+‎      const p = new URLSearchParams({
+‎        category,
+‎        topic,
+‎        enterprise,
+‎        pillar,
+‎        level: prevLevel
+‎      });
+‎      window.location.href = "learn.html?" + p.toString();
+‎    };
+‎  } else {
+‎    prevBtn.disabled = true;
+‎  }
+‎}
+‎
+‎if (nextBtn) {
+‎  if (currentIndex < levels.length - 1) {
+‎    const nextLevel = levels[currentIndex + 1];
+‎    nextBtn.disabled = false;
+‎    nextBtn.onclick = () => {
+‎      const p = new URLSearchParams({
+‎        category,
+‎        topic,
+‎        enterprise,
+‎        pillar,
+‎        level: nextLevel
+‎      });
+‎      window.location.href = "learn.html?" + p.toString();
+‎    };
+‎  } else {
+‎    nextBtn.disabled = true;
+‎  }
+‎}
+‎
 ‎        `;
 ‎      }
 ‎    }
@@ -94,12 +139,4 @@
 ‎    videoContainer.innerHTML = "";
 ‎  }
 ‎
-‎  // ---- Navigation placeholders ----
-‎  document.getElementById("prev-btn")?.addEventListener("click", () =>
-‎    alert("⬅ Previous lesson navigation coming soon!")
-‎  );
-‎  document.getElementById("next-btn")?.addEventListener("click", () =>
-‎    alert("Next ➡ lesson navigation coming soon!")
-‎  );
-‎});
-‎
+‎  
