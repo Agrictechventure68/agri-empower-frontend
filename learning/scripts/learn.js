@@ -82,7 +82,10 @@
 ‎            <source src="${levelData.video}" type="video/mp4">
 ‎            Your browser does not support the video tag.
 ‎          </video>
-// ---- Navigation logic ----
+‎        `;
+‎      }
+‎    }
+‎// ---- Navigation logic ----
 ‎const levels = Object.keys(pillarData.levels);
 ‎const currentIndex = levels.indexOf(level);
 ‎
@@ -126,11 +129,6 @@
 ‎    nextBtn.disabled = true;
 ‎  }
 ‎}
-‎
-‎        `;
-‎      }
-‎    }
-‎
 ‎  } catch (err) {
 ‎    console.error("❌ Lesson load error:", err);
 ‎    lessonTitle.textContent = "Error loading lesson";
