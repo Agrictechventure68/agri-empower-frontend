@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 ‎    return;
 ‎  }
 ‎
-‎  const jsonPath = `../data/${category}/${topic}/${enterprise}.json`;
+‎  const jsonPath = `../data/learning/${category}/${topic}/${enterprise}.json`;
 ‎  console.log("📦 Loading lesson from:", jsonPath);
 ‎
 ‎  try {
