@@ -147,8 +147,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 ‎        level: targetLevel
 ‎      });
 ‎
-‎      window.location.href = "learn.html?" + newParams.toString();
-‎    }
+‎      
+‎    }window.location.href = `${window.location.pathname}?${newParams.toString()}`;
 ‎
 ‎  } catch (err) {
 ‎    console.error("❌ Lesson load error:", err);
