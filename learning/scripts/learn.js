@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 ‎
 ‎    const data = await res.json();
 ‎
-‎    const pillarData = data.pillars?.[pillar];
+‎    const pillarData = data[pillar];
 ‎    if (!pillarData) throw new Error(`Pillar not found`);
 ‎
 ‎    const levelData = pillarData.levels?.[level];
