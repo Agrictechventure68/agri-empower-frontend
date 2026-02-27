@@ -1,3 +1,4 @@
+console.log("🚀 ROADMAP JS LOADED");
 ‎document.addEventListener("DOMContentLoaded", async () => {
 ‎
 ‎  const container = document.getElementById("roadmap-content");
