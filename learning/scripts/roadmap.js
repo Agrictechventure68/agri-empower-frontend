@@ -2,7 +2,13 @@ console.log("🚀 ROADMAP JS LOADED");
 ‎document.addEventListener("DOMContentLoaded", async () => {
 ‎
 ‎  const container = document.getElementById("roadmap-content");
-‎  container.innerHTML = "";
+
+if (!container) {
+  console.error("❌ roadmap-content not found");
+  return;
+}
+
+container.innerHTML = "";
 ‎
 ‎  // =====================================
 ‎  // STRUCTURE CONFIGURATION
