@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 ‎
 ‎    // ---- Display Title ----
 ‎    lessonTitle.textContent =
-‎      `${data.title} - ${pillarData.title} (${level.toUpperCase()})`;
+  `${enterprise.toUpperCase()} - ${pillarData.title} (${level.toUpperCase()})`;
 ‎
 ‎    // ---- Display Content ----
 ‎    let html = "";
