@@ -26,10 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 ‎  console.log("📦 Loading lesson from:", jsonPath);
 ‎
 ‎  try {
-‎    const res = await fetch(jsonPath);
-‎    if (!res.ok) throw new Error(`Lesson JSON not found`);
-‎
-‎    const data = await res.json();
+‎    const data = await fetchLearningData(category, topic, enterprise);
 ‎
 ‎    const pillarData = data[pillar];
 ‎    if (!pillarData) throw new Error(`Pillar not found`);
