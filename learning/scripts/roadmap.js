@@ -1,89 +1,97 @@
-console.log("🚀 ROADMAP JS LOADED");
+‎console.log("🚀 roadmap.js loaded");
+‎Then wrap the entire DOMContentLoaded logic in try/catch:
+‎Replace your current structure with this:
+‎Javascript
+‎Copy code
+‎console.log("🚀 roadmap.js loaded");
+‎
 ‎document.addEventListener("DOMContentLoaded", async () => {
 ‎
-‎  const container = document.getElementById("roadmap-content");
-
-if (!container) {
-  console.error("❌ roadmap-content not found");
-  return;
-}
-
-container.innerHTML = "";
+‎  try {
 ‎
-‎  // =====================================
-‎  // STRUCTURE CONFIGURATION
-‎  // =====================================
+‎    const container = document.getElementById("roadmap-content");
 ‎
-‎  const structure = {
-‎    crops: {
-‎      vegetables: ["tomato", "ugu"],
-‎      food_crops: ["maize", "cassava"],
-‎      medicinal_crops: ["moringa"]
-‎    },
-‎    livestock: {
-‎      poultry: ["broiler", "layer"],
-‎      beekeeping: ["honey_production"],
-‎      land_animals: ["goat"],
-‎      aquaculture: ["catfish"]
+‎    if (!container) {
+‎      console.error("❌ roadmap-content not found");
+‎      return;
 ‎    }
-‎  };
 ‎
-‎  const pillars = ["production", "processing", "agribusiness"];
-‎  const levels = ["foundation", "intermediate", "advanced", "specialisation"];
+‎    container.innerHTML = "";
 ‎
-‎  // =====================================
-‎  // GENERATE ROADMAP
-‎  // =====================================
+‎    const structure = {
+‎      crops: {
+‎        vegetables: ["tomato", "ugu"],
+‎        food_crops: ["maize", "cassava"],
+‎        medicinal_crops: ["moringa"]
+‎      },
+‎      livestock: {
+‎        poultry: ["broiler", "layer"],
+‎        beekeeping: ["honey_production"],
+‎        land_animals: ["goat"],
+‎        aquaculture: ["catfish"]
+‎      }
+‎    };
 ‎
-‎  for (const category in structure) {
+‎    const pillars = ["production", "processing", "agribusiness"];
+‎    const levels = ["foundation", "intermediate", "advanced", "specialisation"];
 ‎
-‎    const categoryBlock = document.createElement("div");
-‎    categoryBlock.innerHTML = `<h2>${category.toUpperCase()}</h2>`;
-‎    container.appendChild(categoryBlock);
+‎    for (const category in structure) {
 ‎
-‎    for (const topic in structure[category]) {
+‎      const categoryBlock = document.createElement("div");
+‎      categoryBlock.innerHTML = `<h2>${category.toUpperCase()}</h2>`;
+‎      container.appendChild(categoryBlock);
 ‎
-‎      const topicBlock = document.createElement("div");
-‎      topicBlock.innerHTML = `<h3>${topic.replace("_", " ").toUpperCase()}</h3>`;
-‎      container.appendChild(topicBlock);
+‎      for (const topic in structure[category]) {
 ‎
-‎      structure[category][topic].forEach(enterprise => {
+‎        const topicBlock = document.createElement("div");
+‎        topicBlock.innerHTML = `<h3>${topic.replace("_", " ").toUpperCase()}</h3>`;
+‎        container.appendChild(topicBlock);
 ‎
-‎        const enterpriseBlock = document.createElement("div");
-‎        enterpriseBlock.style.marginLeft = "20px";
-‎        enterpriseBlock.innerHTML = `<h4>${enterprise.toUpperCase()}</h4>`;
+‎        structure[category][topic].forEach(enterprise => {
 ‎
-‎        pillars.forEach(pillar => {
+‎          const enterpriseBlock = document.createElement("div");
+‎          enterpriseBlock.style.marginLeft = "20px";
+‎          enterpriseBlock.innerHTML = `<h4>${enterprise.toUpperCase()}</h4>`;
 ‎
-‎          const pillarBlock = document.createElement("div");
-‎          pillarBlock.style.marginLeft = "20px";
-‎          pillarBlock.innerHTML = `<strong>${pillar.toUpperCase()}</strong><br/>`;
+‎          pillars.forEach(pillar => {
 ‎
-‎          levels.forEach(level => {
+‎            const pillarBlock = document.createElement("div");
+‎            pillarBlock.style.marginLeft = "20px";
+‎            pillarBlock.innerHTML = `<strong>${pillar.toUpperCase()}</strong><br/>`;
 ‎
-‎            const link = document.createElement("a");
+‎            levels.forEach(level => {
 ‎
-‎            link.href =
-‎              `learn.html?category=${category}` +
-‎              `&topic=${topic}` +
-‎              `&enterprise=${enterprise}` +
-‎              `&pillar=${pillar}` +
-‎              `&level=${level}`;
+‎              const link = document.createElement("a");
 ‎
-‎            link.textContent = level.toUpperCase();
-‎            link.style.display = "inline-block";
-‎            link.style.marginRight = "10px";
-‎            link.style.marginBottom = "5px";
+‎              link.href =
+‎                `learn.html?category=${category}` +
+‎                `&topic=${topic}` +
+‎                `&enterprise=${enterprise}` +
+‎                `&pillar=${pillar}` +
+‎                `&level=${level}`;
 ‎
-‎            pillarBlock.appendChild(link);
+‎              link.textContent = level.toUpperCase();
+‎              link.style.display = "inline-block";
+‎              link.style.marginRight = "10px";
+‎              link.style.marginBottom = "5px";
+‎
+‎              pillarBlock.appendChild(link);
+‎            });
+‎
+‎            enterpriseBlock.appendChild(pillarBlock);
 ‎          });
 ‎
-‎          enterpriseBlock.appendChild(pillarBlock);
+‎          container.appendChild(enterpriseBlock);
 ‎        });
+‎      }
+‎    }
 ‎
-‎        container.appendChild(enterpriseBlock);
+‎  } catch (error) {
+‎    console.error("❌ Roadmap crashed:", error);
 ‎
-‎      });
+‎    const container = document.getElementById("roadmap-content");
+‎    if (container) {
+‎      container.innerHTML = `<p style="color:red;">Roadmap failed to load: ${error.message}</p>`;
 ‎    }
 ‎  }
 ‎
