@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", initCurriculum);
 
 async function initCurriculum() {
   try {
-    const response = await fetch("../../data/curriculum/curriculum-data.json");
+    const response = await fetch("../data/curriculum/curriculum-data.json");
 
     if (!response.ok) {
       throw new Error("Failed to fetch curriculum data");
