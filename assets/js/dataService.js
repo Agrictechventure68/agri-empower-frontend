@@ -21,7 +21,7 @@ const DataService = {
 
   async loadLearning(domain, category) {
     return await this.fetchJSON(
-      `/data/learning/${domain}/${category}.json`
+      `../data/learning/${domain}/${category}.json`
     );
   },
 
