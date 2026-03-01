@@ -27,7 +27,7 @@ const DataService = {
 
   async loadDiagnostic(domain, category) {
     return await this.fetchJSON(
-      `/data/diagnostic/${domain}/${category}.json`
+      `../data/diagnostic/${domain}/${category}.json`
     );
   }
 
