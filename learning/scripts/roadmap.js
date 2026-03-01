@@ -1,9 +1,4 @@
-‎console.log("🚀 roadmap.js loaded");
-‎Then wrap the entire DOMContentLoaded logic in try/catch:
-‎Replace your current structure with this:
-‎Javascript
-‎Copy code
-‎console.log("🚀 roadmap.js loaded");
+console.log("🚀 roadmap.js loaded");
 ‎
 ‎document.addEventListener("DOMContentLoaded", async () => {
 ‎
