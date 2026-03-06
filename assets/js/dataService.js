@@ -1,34 +1,35 @@
 /* ======================================================
    Agri_Empower Data Service Layer
-   Simulates Backend API (JSON-based)
-   Ready for Supabase & Django Migration
+   Local JSON Loader
+   Ready for Backend API later
    ====================================================== */
 
 const DataService = {
 
   async fetchJSON(path) {
     try {
-      const response = await fetch(path);
-      if (!response.ok) {
-        throw new Error(`Failed to load: ${path}`);
+      const res = await fetch(path);
+
+      if (!res.ok) {
+        throw new Error("Failed to load " + path);
       }
-      return await response.json();
+
+      return await res.json();
+
     } catch (error) {
       console.error("DataService Error:", error);
       return null;
     }
   },
 
-  async loadLearning(domain, category) {
-    return await this.fetchJSON(
-      `../data/learning/${domain}/${category}.json`
-    );
-  },
+  async loadEnterprise(category, topic, enterprise) {
 
-  async loadDiagnostic(domain, category) {
-    return await this.fetchJSON(
-      `../data/diagnostic/${domain}/${category}.json`
-    );
+    const path =
+      `/data/learning/${category}/${topic}/${enterprise}.json`;
+
+    console.log("📦 Loading:", path);
+
+    return await this.fetchJSON(path);
   }
 
 };
