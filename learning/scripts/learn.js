@@ -26,8 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 ‎  console.log("📦 Loading lesson from:", jsonPath);
 ‎
 ‎  try {
-‎    const data = await fetchLearningData(category, topic, enterprise);
-‎
+‎    const data = await DataService.loadEnterprise(category, topic, enterprise);
 ‎    const pillarData = data[pillar];
 ‎    if (!pillarData) throw new Error(`Pillar not found`);
 ‎
