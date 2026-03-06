@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 ‎
 ‎  try {
 ‎    const data = await DataService.loadEnterprise(category, topic, enterprise);
+if (!data) {
+  throw new Error("Enterprise JSON could not be loaded");
+}
 ‎    const pillarData = data[pillar];
 ‎    if (!pillarData) throw new Error(`Pillar not found`);
 ‎
