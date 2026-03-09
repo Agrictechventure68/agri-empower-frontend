@@ -1,3 +1,5 @@
+console.log("🚀 roadmap.js running");
+alert("🚀 roadmap.js running");
 console.log("🚀 roadmap.js loaded");
 ‎
 ‎document.addEventListener("DOMContentLoaded", async () => {
