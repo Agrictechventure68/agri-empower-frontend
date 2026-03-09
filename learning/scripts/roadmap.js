@@ -61,11 +61,11 @@ console.log("🚀 roadmap.js loaded");
 ‎              const link = document.createElement("a");
 ‎
 ‎              link.href =
-‎                ./learn.html?category=`category=${category}` +
-‎                `&topic=${topic}` +
-‎                `&enterprise=${enterprise}` +
-‎                `&pillar=${pillar}` +
-‎                `&level=${level}`;
+  `./learn.html?category=${category}` +
+  `&topic=${topic}` +
+  `&enterprise=${enterprise}` +
+  `&pillar=${pillar}` +
+  `&level=${level}`;
 ‎
 ‎              link.textContent = level.toUpperCase();
 ‎              link.style.display = "inline-block";
