@@ -26,7 +26,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 ‎  console.log("📦 Loading lesson from:", jsonPath);
 ‎
 ‎  try {
-‎    const data = await DataService.loadEnterprise(category, topic, enterprise);
+‎    const url = `../data/learning/${category}/${topic}/${enterprise}.json`;
+
+const res = await fetch(url);
+
+if (!res.ok) {
+  throw new Error("JSON not found at " + url);
+}
+
+const data = await res.json();
+
+if (!data) {
+  throw new Error("Enterprise JSON could not be loaded");
+}
 if (!data) {
   throw new Error("Enterprise JSON could not be loaded");
 }
