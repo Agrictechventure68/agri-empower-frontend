@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Disease & Pest Diagnostics | Agri_Empower</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🩺 Agri_Empower Diagnostic Tool</h1>
+  <p>Crop & Livestock Health | One Health Approach</p>
+</header>
+
+<main>
+
+<section class="card">
+  <h2>Quick Diagnosis</h2>
+
+  <form id="diagnosticForm">
+
+    <label>
+      Select Domain:
+      <select id="domain">
+        <option value="">-- Select Domain --</option>
+        <option value="crops">Crops</option>
+        <option value="livestock">Livestock</option>
+      </select>
+    </label>
+
+    <label>
+      Select Category:
+      <select id="category">
+        <option value="">-- Select Category --</option>
+      </select>
+    </label>
+
+    <label>
+      Select Species:
+      <select id="species">
+        <option value="">-- Select Species --</option>
+      </select>
+    </label>
+
+    <label>
+      Observed Symptom:
+      <input type="text" id="symptom" placeholder="e.g. yellowing_leaves" />
+    </label>
+
+    <button type="submit">Run Diagnosis</button>
+  </form>
+
+  <div id="result"></div>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Agri_Empower | Safe Food • Healthy People</p>
+</footer>
+
+<!-- JS FILES -->
+<script src="../../assets/js/dataService.js"></script>
+<script src="../../assets/js/diagnostic.js"></script>
+
+</body>
+</html>

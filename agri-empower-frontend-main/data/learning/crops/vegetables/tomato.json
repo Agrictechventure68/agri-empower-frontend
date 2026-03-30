@@ -1,0 +1,54 @@
+‎{
+‎  "enterprise": "tomato",
+‎  "title": "Tomato Production",
+‎  "pillars": {
+‎    "production_management": {
+‎      "title": "Production & Farm Management",
+‎      "levels": {
+‎        "foundation": {
+‎          "summary": "Basic tomato cultivation principles",
+‎          "content": ["Land preparation", "Seed selection", "Watering schedules"],
+‎          "video": "https://youtu.be/4EkmtSpM4nc",
+‎          "pdf": ""
+‎        },
+‎        "intermediate": {
+‎          "summary": "Intermediate tomato management",
+‎          "content": ["Soil fertility management", "Integrated pest management", "Irrigation scheduling"],
+‎          "video": "",
+‎          "pdf": ""
+‎        },
+‎        "advanced": {
+‎          "summary": "Advanced tomato production systems",
+‎          "content": ["Greenhouse management", "Varietal selection", "Yield optimization"],
+‎          "video": "",
+‎          "pdf": ""
+‎        },
+‎        "specialisation": {
+‎          "summary": "Specialised tomato practices",
+‎          "content": ["Hydroponics", "Precision farming", "Export market requirements"],
+‎          "video": "",
+‎          "pdf": ""
+‎        }
+‎      }
+‎    },
+‎    "postharvest_processing": {
+‎      "title": "Post-Harvest Handling & Processing",
+‎      "levels": {
+‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+‎      }
+‎    },
+‎    "agribusiness_markets": {
+‎      "title": "Agribusiness & Markets",
+‎      "levels": {
+‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+‎      }
+‎    }
+‎  }
+‎}
+‎

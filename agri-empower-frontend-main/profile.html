@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Farmer Registration | Agri_Empower</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+
+<body>
+
+<h1>👨‍🌾 Farmer Registration</h1>
+<p>Register farmers into the Agri_Empower platform</p>
+
+<form id="farmerForm">
+  <label>Full Name</label>
+  <input type="text" id="full_name" required />
+
+  <label>Phone Number</label>
+  <input type="text" id="phone" required />
+
+  <label>Location</label>
+  <input type="text" id="location" />
+
+  <label>Specialisation</label>
+  <input type="text" id="specialisation" placeholder="e.g Crop Farming, Poultry" />
+
+  <label>Preferred Language</label>
+  <select id="language">
+    <option value="English">English</option>
+    <option value="Yoruba">Yoruba</option>
+    <option value="Igbo">Igbo</option>
+    <option value="Hausa">Hausa</option>
+    <option value="Pidgin">Pidgin</option>
+  </select>
+
+  <button type="submit">Register Farmer</button>
+</form>
+
+<p id="message"></p>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+const SUPABASE_URL = "https://jdhmhavvqfeeyostvoai.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_uVbmMWBOdjGUR0Q0ZoBzcg_8uL9ZSkJ";
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+const form = document.getElementById("farmerForm");
+const message = document.getElementById("message");
+const submitBtn = form.querySelector("button");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "⏳ Registering farmer...";
+  message.textContent = "";
+  message.className = "";
+
+  const full_name = document.getElementById("full_name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const location = document.getElementById("location").value.trim();
+  const specialisation = document.getElementById("specialisation").value.trim();
+  const language = document.getElementById("language").value;
+
+  const phonePattern = /^[0-9]{10,15}$/;
+  if (!phonePattern.test(phone)) {
+    message.className = "error";
+    message.textContent = "❌ Invalid phone number. Enter 10-15 digits.";
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Register Farmer";
+    return;
+  }
+
+  const payload = { full_name, phone, location, specialisation, language };
+
+  try {
+    const { error } = await supabase.from("farmers").insert([payload]);
+
+    if (error) throw error;
+
+    message.className = "success";
+    message.textContent = "✅ Farmer registered successfully!";
+    form.reset();
+
+  } catch (err) {
+    message.className = "error";
+    message.textContent = "❌ " + err.message;
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Register Farmer";
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "overview": {
+    "title": "Aquaculture",
+    "description": "Fish and aquatic species farming."
+  },
+  "modules": [
+    {"id":"production","title":"Aquaculture Systems","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}, 
+    {"id":"processing","title":"Processing & Value Addition","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}, 
+    {"id":"postharvest","title":"Post-Harvest Handling & Storage","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":"","content":[],"video":"","pdf":""}}}, 
+    {"id":"agribusiness","title":"Agribusiness & Markets","levels":{"foundation":{"summary":"","content":[],"video":"","pdf":""},"intermediate":{"summary":"","content":[],"video":"","pdf":""},"advanced":{"summary":"","content":[],"video":"","pdf":""},"specialisation":{"summary":[],"video":"","pdf":""}}}
+  ]
+}

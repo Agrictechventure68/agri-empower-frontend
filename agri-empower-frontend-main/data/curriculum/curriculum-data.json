@@ -1,0 +1,36 @@
+‎[
+‎  {
+‎    "id": "tomato-foundation",
+‎    "title": "Tomato Production – Foundation",
+‎    "domain": "crops",
+‎    "category": "vegetables",
+‎    "enterprise": "tomato",
+‎    "level": "foundation",
+‎    "duration": "4 Weeks",
+‎    "description": "Comprehensive introduction to modern tomato farming from nursery to harvest.",
+‎    "link": "roadmap.html?domain=crops&category=vegetables&enterprise=tomato&level=foundation"
+‎  },
+‎  {
+‎    "id": "poultry-foundation",
+‎    "title": "Poultry Production – Foundation",
+‎    "domain": "livestock",
+‎    "category": "poultry",
+‎    "enterprise": "broiler",
+‎    "level": "foundation",
+‎    "duration": "6 Weeks",
+‎    "description": "Structured training on broiler production, housing, feeding and health management.",
+‎    "link": "roadmap.html?domain=livestock&category=poultry&enterprise=broiler&level=foundation"
+‎  },
+‎  {
+‎    "id": "ugu-advanced",
+‎    "title": "Ugu Production – Advanced",
+‎    "domain": "crops",
+‎    "category": "vegetables",
+‎    "enterprise": "ugu",
+‎    "level": "advanced",
+‎    "duration": "3 Weeks",
+‎    "description": "Advanced agronomic practices for commercial ugu production.",
+‎    "link": "roadmap.html?domain=crops&category=vegetables&enterprise=ugu&level=advanced"
+‎  }
+‎]
+‎

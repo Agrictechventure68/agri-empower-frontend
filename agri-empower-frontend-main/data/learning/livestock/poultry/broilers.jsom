@@ -1,0 +1,54 @@
+‎{
+‎  "enterprise": "broilers",
+‎  "title": "Broiler Production",
+‎  "pillars": {
+‎    "production_management": {
+‎      "title": "Production & Farm Management",
+‎      "levels": {
+‎        "foundation": {
+‎          "summary": "Core broiler production principles",
+‎          "content": ["Housing setup", "Chick management", "Feeding schedules"],
+‎          "video": "",
+‎          "pdf": ""
+‎        },
+‎        "intermediate": {
+‎          "summary": "Intermediate broiler farm management",
+‎          "content": ["Feed formulation", "Health monitoring", "Biosecurity measures"],
+‎          "video": "",
+‎          "pdf": ""
+‎        },
+‎        "advanced": {
+‎          "summary": "Advanced broiler operations",
+‎          "content": ["Vaccination protocols", "Growth optimization", "Farm record keeping"],
+‎          "video": "",
+‎          "pdf": ""
+‎        },
+‎        "specialisation": {
+‎          "summary": "Enterprise scale broiler production",
+‎          "content": ["Commercial scaling", "Financial modelling", "Supply chain management"],
+‎          "video": "",
+‎          "pdf": ""
+‎        }
+‎      }
+‎    },
+‎    "postharvest_processing": {
+‎      "title": "Processing & Value Addition",
+‎      "levels": {
+‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+‎      }
+‎    },
+‎    "agribusiness_markets": {
+‎      "title": "Agribusiness & Markets",
+‎      "levels": {
+‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+‎      }
+‎    }
+‎  }
+‎}
+‎

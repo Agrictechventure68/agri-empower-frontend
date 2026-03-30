@@ -1,0 +1,34 @@
+‎{
+‎  "enterprise": "avocado",
+‎  "title": "Avocado Production",
+‎  "pillars": {
+‎    "production_management": {
+‎      "title": "Production & Farm Management",
+‎      "levels": {
+‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+‎      }
+‎    },
+‎    "postharvest_processing": {
+‎      "title": "Post-Harvest Handling & Processing",
+‎      "levels": {
+‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+‎      }
+‎    },
+‎    "agribusiness_markets": {
+‎      "title": "Agribusiness & Markets",
+‎      "levels": {
+‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+‎      }
+‎    }
+‎  }
+‎}
+‎
