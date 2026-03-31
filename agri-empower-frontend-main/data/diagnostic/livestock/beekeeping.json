@@ -1,1 +1,24 @@
-honey 
+{
+  "category": "beekeeping",
+  "species": {
+    "honey_bees": {
+      "name": "Honey Bees",
+      "learning_category": "beekeeping",
+      "learning_module": "production",
+      "symptoms": {
+        "reduced_honey": {
+          "keywords": ["low honey", "reduced honey"],
+          "cause": "Poor forage availability or weak colony",
+          "solution": "Relocate hive near flowering plants.",
+          "prevention": "Maintain healthy colony population."
+        },
+        "colony_decline": {
+          "keywords": ["dead bees", "colony weak"],
+          "cause": "Pests, disease, or poor nutrition",
+          "solution": "Inspect hive and manage pests promptly.",
+          "prevention": "Routine hive inspection."
+        }
+      }
+    }
+  }
+}

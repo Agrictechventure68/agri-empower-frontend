@@ -1,1 +1,24 @@
-poultry diagnosis 
+{
+  "category": "poultry",
+  "species": {
+    "broilers": {
+      "name": "Broilers",
+      "learning_category": "poultry",
+      "learning_module": "production",
+      "symptoms": {
+        "coughing": {
+          "keywords": ["cough", "coughing", "sneezing"],
+          "cause": "Respiratory infection",
+          "solution": "Isolate affected birds and consult a veterinarian.",
+          "prevention": "Ensure proper ventilation and vaccination."
+        },
+        "diarrhea": {
+          "keywords": ["diarrhea", "watery droppings"],
+          "cause": "Poor feed hygiene or infection",
+          "solution": "Replace feed and provide clean water.",
+          "prevention": "Maintain sanitation and dry litter."
+        }
+      }
+    }
+  }
+}

@@ -1,38 +1,38 @@
 {
-  "enterprise": "tomato",
-  "title": "Tomato Production",
+  "enterprise": "broilers",
+  "title": "Broiler Production",
   "pillars": {
     "production_management": {
       "title": "Production & Farm Management",
       "levels": {
         "foundation": {
-          "summary": "Basic tomato cultivation principles",
-          "content": ["Land preparation", "Seed selection", "Watering schedules"],
-          "video": "https://youtu.be/4EkmtSpM4nc",
+          "summary": "Core broiler production principles",
+          "content": ["Housing setup", "Chick management", "Feeding schedules"],
+          "video": "",
           "pdf": ""
         },
         "intermediate": {
-          "summary": "Intermediate tomato management",
-          "content": ["Soil fertility management", "Integrated pest management", "Irrigation scheduling"],
+          "summary": "Intermediate broiler farm management",
+          "content": ["Feed formulation", "Health monitoring", "Biosecurity measures"],
           "video": "",
           "pdf": ""
         },
         "advanced": {
-          "summary": "Advanced tomato production systems",
-          "content": ["Greenhouse management", "Varietal selection", "Yield optimization"],
+          "summary": "Advanced broiler operations",
+          "content": ["Vaccination protocols", "Growth optimization", "Farm record keeping"],
           "video": "",
           "pdf": ""
         },
         "specialisation": {
-          "summary": "Specialised tomato practices",
-          "content": ["Hydroponics", "Precision farming", "Export market requirements"],
+          "summary": "Enterprise scale broiler production",
+          "content": ["Commercial scaling", "Financial modelling", "Supply chain management"],
           "video": "",
           "pdf": ""
         }
       }
     },
     "postharvest_processing": {
-      "title": "Post-Harvest Handling & Processing",
+      "title": "Processing & Value Addition",
       "levels": {
         "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
         "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},

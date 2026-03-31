@@ -1,0 +1,24 @@
+{
+  "category": "medicinal_crops",
+  "species": {
+    "aloe_vera": {
+      "name": "Aloe Vera",
+      "learning_category": "medicinal_crops",
+      "learning_module": "production",
+      "symptoms": {
+        "leaf_spots": {
+          "keywords": ["brown spots", "leaf spots"],
+          "cause": "Fungal or bacterial infection",
+          "solution": "Trim affected leaves and apply mild fungicide.",
+          "prevention": "Avoid overwatering and ensure airflow."
+        },
+        "wilting": {
+          "keywords": ["wilting", "drooping leaves"],
+          "cause": "Root rot or underwatering",
+          "solution": "Check root health and adjust watering.",
+          "prevention": "Maintain proper watering schedule."
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,24 @@
-sheep and goats 
+{
+  "category": "land_animals",
+  "species": {
+    "goats": {
+      "name": "Goats",
+      "learning_category": "land_animals",
+      "learning_module": "production",
+      "symptoms": {
+        "loss_of_appetite": {
+          "keywords": ["not eating", "loss of appetite"],
+          "cause": "Illness, stress, or poor feed",
+          "solution": "Check feed quality and isolate sick animals.",
+          "prevention": "Routine deworming and clean housing."
+        },
+        "coughing": {
+          "keywords": ["cough", "coughing"],
+          "cause": "Respiratory infection",
+          "solution": "Provide veterinary treatment.",
+          "prevention": "Proper ventilation and hygiene."
+        }
+      }
+    }
+  }
+}

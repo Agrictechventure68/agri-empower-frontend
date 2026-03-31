@@ -1,1 +1,24 @@
-coconut 
+{
+  "category": "cash_crops",
+  "species": {
+    "cocoa": {
+      "name": "Cocoa",
+      "learning_category": "cash_crops",
+      "learning_module": "production",
+      "symptoms": {
+        "black_pod": {
+          "keywords": ["black pod", "dark pods", "rotting pods"],
+          "cause": "Fungal infection caused by Phytophthora species",
+          "solution": "Remove infected pods and apply recommended fungicide.",
+          "prevention": "Maintain proper field sanitation and improve spacing."
+        },
+        "yellowing_leaves": {
+          "keywords": ["yellow leaves", "yellowing"],
+          "cause": "Nutrient deficiency or poor soil fertility",
+          "solution": "Apply balanced fertilizer and organic manure.",
+          "prevention": "Conduct regular soil testing."
+        }
+      }
+    }
+  }
+}

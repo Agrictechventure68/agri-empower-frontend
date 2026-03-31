@@ -1,1 +1,24 @@
-cassava flour 
+{
+  "category": "food_crops",
+  "species": {
+    "cassava": {
+      "name": "Cassava",
+      "learning_category": "food_crops",
+      "learning_module": "production",
+      "symptoms": {
+        "leaf_mosaic": {
+          "keywords": ["mosaic leaves", "patchy leaves", "leaf spots"],
+          "cause": "Cassava mosaic virus",
+          "solution": "Remove infected plants and use disease-free cuttings.",
+          "prevention": "Plant resistant varieties and control whiteflies."
+        },
+        "root_rot": {
+          "keywords": ["root rot", "rotting roots"],
+          "cause": "Poor drainage and fungal infection",
+          "solution": "Improve soil drainage and remove affected roots.",
+          "prevention": "Avoid waterlogged fields."
+        }
+      }
+    }
+  }
+}

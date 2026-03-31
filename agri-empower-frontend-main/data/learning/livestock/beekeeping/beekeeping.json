@@ -1,34 +1,33 @@
-‎{
-‎  "enterprise": "beekeeping",
-‎  "title": "Beekeeping",
-‎  "pillars": {
-‎    "production_management": {
-‎      "title": "Hive Management & Production",
-‎      "levels": {
-‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
-‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
-‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
-‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
-‎      }
-‎    },
-‎    "postharvest_processing": {
-‎      "title": "Honey Processing & Value Addition",
-‎      "levels": {
-‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
-‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
-‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
-‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
-‎      }
-‎    },
-‎    "agribusiness_markets": {
-‎      "title": "Agribusiness & Markets",
-‎      "levels": {
-‎        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
-‎        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
-‎        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
-‎        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
-‎      }
-‎    }
-‎  }
-‎}
-‎
+{
+  "enterprise": "beekeeping",
+  "title": "Beekeeping",
+  "pillars": {
+    "production_management": {
+      "title": "Hive Management & Production",
+      "levels": {
+        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+      }
+    },
+    "postharvest_processing": {
+      "title": "Honey Processing & Value Addition",
+      "levels": {
+        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+      }
+    },
+    "agribusiness_markets": {
+      "title": "Agribusiness & Markets",
+      "levels": {
+        "foundation": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "intermediate": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "advanced": {"summary": "", "content": [], "video": "", "pdf": ""},
+        "specialisation": {"summary": "", "content": [], "video": "", "pdf": ""}
+      }
+    }
+  }
+}

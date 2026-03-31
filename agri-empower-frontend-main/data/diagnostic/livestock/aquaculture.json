@@ -1,1 +1,24 @@
-tilapia prawn 
+{
+  "category": "aquaculture",
+  "species": {
+    "catfish": {
+      "name": "Catfish",
+      "learning_category": "aquaculture",
+      "learning_module": "production",
+      "symptoms": {
+        "surface_gasping": {
+          "keywords": ["gasping", "surface breathing", "coming up"],
+          "cause": "Low dissolved oxygen in water",
+          "solution": "Increase aeration and reduce stocking density.",
+          "prevention": "Monitor water quality regularly."
+        },
+        "slow_growth": {
+          "keywords": ["slow growth", "small size"],
+          "cause": "Poor feed quality or overcrowding",
+          "solution": "Use quality feed and adjust stocking levels.",
+          "prevention": "Maintain feeding schedule and pond hygiene."
+        }
+      }
+    }
+  }
+}
