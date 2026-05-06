@@ -1,0 +1,76 @@
+/* =========================
+   FORM SYSTEM
+========================= */
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* =========================
+   LABELS
+========================= */
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+form button {
+    width: 100%;
+}
+
+/* =========================
+   VALIDATION STATES
+========================= */
+
+.input-error {
+    border-color: red;
+}
+
+.input-success {
+    border-color: green;
+}
+
+/* =========================
+   FORM MESSAGES
+========================= */
+
+.error-message {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 15px;
+}

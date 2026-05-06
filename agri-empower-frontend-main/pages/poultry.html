@@ -1,0 +1,164 @@
+<body>
+
+    <div id="navbar"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <h1>Poultry Management</h1>
+
+        <p>
+            Learn modern poultry farming systems,
+            management, production, biosecurity,
+            and agribusiness development.
+        </p>
+
+    </section>
+
+
+    <!-- LEARNING LEVELS -->
+    <section class="learning-levels">
+
+        <h2>Learning Levels</h2>
+
+        <div class="level-buttons">
+
+            <button onclick="showSection('foundation')">
+                Foundation
+            </button>
+
+            <button onclick="showSection('intermediate')">
+                Intermediate
+            </button>
+
+            <button onclick="showSection('advanced')">
+                Advanced
+            </button>
+
+            <button onclick="showSection('specialization')">
+                Specialization
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DYNAMIC LEARNING CONTENT -->
+    <section id="learning-content">
+
+        <p>Select a learning level to begin.</p>
+
+    </section>
+
+
+    <!-- POULTRY TYPES -->
+    <section class="poultry-types">
+
+        <h2>Poultry Systems</h2>
+
+        <div class="type-buttons">
+
+            <button onclick="showSection('broiler')">
+                Broiler
+            </button>
+
+            <button onclick="showSection('layer')">
+                Layer
+            </button>
+
+            <button onclick="showSection('cockerel')">
+                Cockerel
+            </button>
+
+            <button onclick="showSection('turkey')">
+                Turkey
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECORDS FROM API -->
+    <section>
+
+        <h2>Available Poultry Records</h2>
+
+        <div id="poultry-container"></div>
+
+    </section>
+
+
+    <!-- DOWNLOADABLE RESOURCES -->
+    <section class="downloads">
+
+        <h2>Learning Resources</h2>
+
+        <ul>
+
+            <li>
+                <a
+                    href="../../public/pdfs/poultry/foundation/foundation-guide.pdf"
+                    target="_blank"
+                >
+                    Poultry Foundation Guide
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="../../public/slides/poultry/poultry-introduction.pptx"
+                    target="_blank"
+                >
+                    Poultry Training Slides
+                </a>
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- ASSESSMENT -->
+    <section id="assessment-section">
+
+        <h2>Poultry Assessment</h2>
+
+        <p>
+            Complete assessment to evaluate your understanding.
+        </p>
+
+        <input
+            type="text"
+            id="answer1"
+            placeholder="Enter your answer"
+        >
+
+        <button onclick="submitAssessment()">
+            Submit Assessment
+        </button>
+
+    </section>
+
+
+    <!-- CERTIFICATION -->
+    <section class="certification-section">
+
+        <h2>Certification Pathway</h2>
+
+        <p>
+            Learners who complete all required modules
+            and assessments become eligible for
+            Agri_Empower certification.
+        </p>
+
+    </section>
+
+
+    <!-- JAVASCRIPT MODULES -->
+    <script type="module" src="./poultry-ui.js"></script>
+    <script type="module" src="./poultry-learning.js"></script>
+    <script type="module" src="./poultry-assessment.js"></script>
+
+</body>

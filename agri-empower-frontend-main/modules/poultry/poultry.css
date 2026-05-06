@@ -1,0 +1,111 @@
+/* =========================
+   POULTRY HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #e8f5e9;
+}
+
+/* =========================
+   LEARNING LEVELS
+========================= */
+
+.learning-levels {
+    margin-top: 30px;
+}
+
+.level-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* =========================
+   POULTRY TYPES
+========================= */
+
+.poultry-types {
+    margin-top: 40px;
+}
+
+.type-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* =========================
+   LEARNING CONTENT
+========================= */
+
+#learning-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   POULTRY RECORDS
+========================= */
+
+#poultry-container {
+    margin-top: 20px;
+}
+
+.poultry-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   DOWNLOADS
+========================= */
+
+.downloads {
+    margin-top: 40px;
+}
+
+.downloads ul {
+    margin-top: 20px;
+}
+
+/* =========================
+   ASSESSMENT
+========================= */
+
+#assessment-section {
+    margin-top: 50px;
+}
+
+/* =========================
+   CERTIFICATION
+========================= */
+
+.certification-section {
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .level-buttons,
+    .type-buttons {
+        flex-direction: column;
+    }
+}
